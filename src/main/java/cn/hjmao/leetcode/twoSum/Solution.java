@@ -6,8 +6,12 @@ import java.util.Map;
 /**
  * Created by hjmao on 17/01/2017.
  *
- * URL: https://leetcode.com/problems/two-sum/
+ * URL:
+ * =====
+ * https://leetcode.com/problems/two-sum/
  *
+ * Desc:
+ * =====
  * Given an array of integers, return indices of the two numbers such that they add up to a specific target.
  * You may assume that each input would have exactly one solution.
  */
