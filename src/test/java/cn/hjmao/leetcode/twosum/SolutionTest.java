@@ -1,4 +1,4 @@
-package cn.hjmao.leetcode.twoSum;
+package cn.hjmao.leetcode.twosum;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
