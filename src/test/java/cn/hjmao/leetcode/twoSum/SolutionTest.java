@@ -1,8 +1,10 @@
-package cn.hjmao.leetcode.blank;
+package cn.hjmao.leetcode.twoSum;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import static org.testng.Assert.*;
 
 /**
  * Created by hjmao on 17/01/2017.
@@ -15,5 +17,12 @@ public class SolutionTest {
     this.solution = new Solution();
   }
 
-  // FIXME: add test code here.
+  @Test
+  public void testTwoSum() throws Exception {
+    int[] nums = {2, 7, 11, 15};
+    int target = 9;
+    int[] expected = {0, 1};
+
+    assertEquals(this.solution.twoSum(nums, target), expected);
+  }
 }
