@@ -1,0 +1,70 @@
+
+buildscript {
+  repositories {
+    mavenCentral()
+    maven {
+      url "http://maven.oschina.net/content/groups/public"
+    }
+  }
+  dependencies {
+    classpath 'net.saliman:gradle-cobertura-plugin:2.2.4'
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'checkstyle'
+apply plugin: 'application'
+apply plugin: 'idea'
+
+group = 'cn.hjmao.leetcode'
+version = '0.0.1-SNAPSHOT'
+
+description = """"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+  mavenCentral()
+  maven {
+    url "http://maven.oschina.net/content/groups/public"
+  }
+}
+
+dependencies {
+  compile(
+  )
+
+  testCompile(
+    ['org.testng:testng:6.10']
+  )
+}
+
+sourceSets {
+  main {
+    runtimeClasspath = files(output.resourcesDir) + runtimeClasspath
+  }
+  test {
+    runtimeClasspath = files(output.resourcesDir) + runtimeClasspath
+  }
+}
+
+compileJava {
+  options.compilerArgs << '-Xlint:unchecked'
+}
+
+test {
+  useTestNG() {
+    useDefaultListeners = true
+  }
+  testLogging {
+    events "failed" //, "passed", "skipped", "standardOut", "standardError"
+    afterSuite { desc, result ->
+      if (!desc.parent) {
+        println "Results: ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} successes, ${result.failedTestCount} failures, ${result.skippedTestCount} skipped)"
+      }
+    }
+  }
+}
+
+// mainClassName = "cn.hjmao.leetcode.Main"

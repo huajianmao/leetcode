@@ -1,0 +1,51 @@
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Gradle Files
+.gradle
+build/
+
+# Idea Files
+*.iml
+*.iws
+*.ipr
+.idea/
+out/
+
+etc/tmp/*
+!etc/tmp/README.md
+
+# Latex
+*.aux
+*.bbl
+*.blg
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.pdfsync
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+*.fls
+
+# Mac OS creates
+.DS_Store
