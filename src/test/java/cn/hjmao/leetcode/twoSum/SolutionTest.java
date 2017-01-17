@@ -1,6 +1,5 @@
 package cn.hjmao.leetcode.twoSum;
 
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
