@@ -70,7 +70,7 @@ public class Solution {
         } else if (j == n) {
           rightMin = shortArray[i];
         } else {
-          rightMin = shortArray[i] > longArray[j] ? shortArray[i] : longArray[j];
+          rightMin = shortArray[i] < longArray[j] ? shortArray[i] : longArray[j];
         }
 
         return (leftMax + rightMin) / 2.0;
