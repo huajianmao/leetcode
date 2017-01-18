@@ -33,4 +33,40 @@ public class SolutionTest {
 
     assertEquals(this.solution.findMedianSortedArrays(nums1, nums2), expected);
   }
+
+  @Test
+  public void testFindMedianSortedArrays3() throws Exception {
+    int[] nums1 = {};
+    int[] nums2 = {3, 4};
+    double expected = 3.5;
+
+    assertEquals(this.solution.findMedianSortedArrays(nums1, nums2), expected);
+  }
+
+  @Test
+  public void testFindMedianSortedArrays4() throws Exception {
+    int[] nums1 = {};
+    int[] nums2 = {3, 4, 5};
+    double expected = 4;
+
+    assertEquals(this.solution.findMedianSortedArrays(nums1, nums2), expected);
+  }
+
+  @Test
+  public void testFindMedianSortedArrays5() throws Exception {
+    int[] nums1 = {};
+    int[] nums2 = {3};
+    double expected = 3;
+
+    assertEquals(this.solution.findMedianSortedArrays(nums1, nums2), expected);
+  }
+
+  @Test
+  public void testFindMedianSortedArrays6() throws Exception {
+    int[] nums1 = {1, 1};
+    int[] nums2 = {1, 2};
+    double expected = 1.0;
+
+    assertEquals(this.solution.findMedianSortedArrays(nums1, nums2), expected);
+  }
 }
