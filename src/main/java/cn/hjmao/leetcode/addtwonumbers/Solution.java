@@ -2,18 +2,18 @@ package cn.hjmao.leetcode.addtwonumbers;
 
 /**
  * Created by hjmao on 17/01/2017.
- *
+ * <p>
  * URL:
  * =====
  * https://leetcode.com/problems/add-two-numbers/
- *
+ * <p>
  * Desc:
  * =====
  * You are given two non-empty linked lists representing two non-negative integers.
  * The digits are stored in reverse order and each of their nodes contain a single digit.
  * Add the two numbers and return it as a linked list.
  * You may assume the two numbers do not contain any leading zero, except the number 0 itself.
- *
+ * <p>
  * Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
  * Output: 7 -> 0 -> 8
  */
@@ -21,16 +21,14 @@ package cn.hjmao.leetcode.addtwonumbers;
 class ListNode {
   int val;
   ListNode next;
-  ListNode(int x) { val = x; }
+
+  ListNode(int x) {
+    val = x;
+  }
 
   public boolean isSameAs(ListNode that) {
-    if (this.val == that.val
-        && ((this.next == null && this.next == null)
-             || (this.next != null && this.next.isSameAs(that.next)))) {
-      return true;
-    } else {
-      return false;
-    }
+    return this.val == that.val
+        && ((this.next == null && this.next == null) || (this.next != null && this.next.isSameAs(that.next)));
   }
 }
 

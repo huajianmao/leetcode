@@ -16,21 +16,13 @@ package cn.hjmao.leetcode.reverseinteger;
 
 public class Solution {
   public int reverse(int x) {
-    Long reverse = 0L;
+    long reverse = 0;
 
-    boolean hasSign = x < 0 ? true : false;
-    int abs = Math.abs(x);
-    while (abs / 10 > 0) {
-      reverse = reverse * 10 + abs % 10;
-      abs = abs / 10;
-    }
-    reverse = reverse * 10 + abs;
-    reverse = reverse * (hasSign ? -1 : 1);
+    do {
+      reverse = reverse * 10 + x % 10;
+      x = x / 10;
+    } while (x != 0);
 
-    if (reverse > Integer.MAX_VALUE || reverse < Integer.MIN_VALUE) {
-      return 0;
-    }
-
-    return reverse.intValue();
+    return (reverse > Integer.MAX_VALUE || reverse < Integer.MIN_VALUE) ? 0 : (int) reverse;
   }
 }

@@ -63,4 +63,12 @@ public class SolutionTest {
 
     assertEquals(this.solution.reverse(x), expected);
   }
+
+  @Test
+  public void testReverse7() throws Exception {
+    int x = -1563847412;
+    int expected = 0;
+
+    assertEquals(this.solution.reverse(x), expected);
+  }
 }
