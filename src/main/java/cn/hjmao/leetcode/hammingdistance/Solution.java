@@ -32,7 +32,7 @@ public class Solution {
 
     long xor = x ^ y;
 
-    for (int i=0; i<32; i++) {
+    while (xor != 0) {
       if ((xor & 1) == 1) {
         distance = distance + 1;
       }
