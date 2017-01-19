@@ -24,9 +24,12 @@ package cn.hjmao.leetcode.stringtointeger;
 
 public class Solution {
   public int myAtoi(String str) {
-    int result = 0;
+    long result = 0;
+    if (str == null) {
+      return 0;
+    }
+    str = str.trim();
     if (str.length() == 0) {
-      // FIXME:
       return 0;
     }
 
@@ -46,8 +49,14 @@ public class Solution {
         break;
       }
       result = result * 10 + (digital - '0');
+      if (result * sign > Integer.MAX_VALUE) {
+        return Integer.MAX_VALUE;
+      } else if (result * sign < Integer.MIN_VALUE) {
+        return Integer.MIN_VALUE;
+      }
     }
 
-    return result * sign;
+    result = result * sign;
+    return (int) result;
   }
 }

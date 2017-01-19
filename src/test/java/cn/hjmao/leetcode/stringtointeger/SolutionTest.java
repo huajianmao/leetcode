@@ -63,4 +63,28 @@ public class SolutionTest {
 
     assertEquals(this.solution.myAtoi(str), expected);
   }
+
+  @Test
+  public void testMyAtoi7() throws Exception {
+    String str = "2147483648";
+    int expected = 2147483647;
+
+    assertEquals(this.solution.myAtoi(str), expected);
+  }
+
+  @Test
+  public void testMyAtoi8() throws Exception {
+    String str = "9223372036854775809";
+    int expected = 2147483647;
+
+    assertEquals(this.solution.myAtoi(str), expected);
+  }
+
+  @Test
+  public void testMyAtoi9() throws Exception {
+    String str = "-2147483648";
+    int expected = -2147483648;
+
+    assertEquals(this.solution.myAtoi(str), expected);
+  }
 }
