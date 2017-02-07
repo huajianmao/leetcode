@@ -78,4 +78,13 @@ public class SolutionTest {
 
     assertEquals(this.solution.isMatch(s, p), expected);
   }
+
+  @Test
+  public void testIsMatch8() throws Exception {
+    String s = "ab";
+    String p = "a.";
+    boolean expected = true;
+
+    assertEquals(this.solution.isMatch(s, p), expected);
+  }
 }
