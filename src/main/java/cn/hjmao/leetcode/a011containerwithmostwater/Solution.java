@@ -19,14 +19,19 @@ package cn.hjmao.leetcode.a011containerwithmostwater;
 public class Solution {
   public int maxArea(int[] height) {
     int maxArea = 0;
+    int left = 0;
+    int right = height.length - 1;
 
-    for (int i = 0; i < height.length - 1; i++) {
-      for (int j = i + 1; j < height.length; j++) {
-        int thisHeight = height[i] < height[j] ? height[i] : height[j];
-        int thisArea = (j - i) * thisHeight;
-        if (maxArea < thisArea) {
-          maxArea = thisArea;
-        }
+    while (left < right) {
+      int thisArea = (right - left) * (height[left] > height[right] ? height[right] : height[left]);
+      if (thisArea > maxArea) {
+        maxArea = thisArea;
+      }
+
+      if (height[left] > height[right]) {
+        right = right - 1;
+      } else {
+        left = left + 1;
       }
     }
 
