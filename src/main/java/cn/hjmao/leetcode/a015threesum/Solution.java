@@ -26,14 +26,8 @@ import java.util.*;
  */
 
 public class Solution {
-  private int[] sort(int[] nums) {
-    int[] sorted = {};
-
-    return nums;
-  }
-
-  private List<List<Integer>> brutalForceSolution(int[] nums) {
-    nums = sort(nums);
+  protected List<List<Integer>> brutalForceSolution(int[] nums) {
+    Arrays.sort(nums);
 
     Map<String, List<Integer>> tripletMap = new HashMap<>();
 
@@ -61,58 +55,36 @@ public class Solution {
     return new ArrayList<>(tripletMap.values());
   }
 
-  private List<List<Integer>> recursive(int[] sorted, int left, int right) {
+  protected List<List<Integer>> threeSum1(int[] nums) {
+    Arrays.sort(nums);
+
     List<List<Integer>> triplets = new ArrayList<>();
+    for (int i = 0; i < nums.length - 2; i++) {
+      if (i == 0 || (nums[i] != nums[i - 1])) {
+        int expected = 0 - nums[i];
 
-    if ((sorted != null && (sorted.length < 3 || sorted.length <= left || sorted.length <= right))
-        || 2 * sorted[left] + sorted[right] > 0 || sorted[left] + 2 * sorted[right] < 0) {
-      return triplets;
-    }
-
-    if (left < right - 1) {
-      int expect = 0 - sorted[left] - sorted[right];
-      if (expect >= sorted[left + 1] && expect <= sorted[right - 1]) {
-        int expectedIndex = Arrays.binarySearch(sorted, expect);
-        if (expectedIndex >= 0) {
-          List<Integer> triplet = new ArrayList<>();
-          triplet.add(sorted[left]);
-          triplet.add(expect);
-          triplet.add(sorted[right]);
-          triplets.add(triplet);
+        int left = i + 1;
+        int right = nums.length - 1;
+        while (left < right) {
+          if (nums[left] + nums[right] == expected) {
+            triplets.add(Arrays.asList(nums[i], nums[left], nums[right]));
+            while (left < right && nums[left] == nums[left + 1]) left++;
+            while (left < right && nums[right] == nums[right - 1]) right--;
+            left++;
+            right--;
+          } else if (nums[left] + nums[right] < expected) {
+            left++;
+          } else {
+            right--;
+          }
         }
-
-        for (int i = left + 1; i <= right && sorted[i] == sorted[left]; i++) {
-          left++;
-        }
-        triplets.addAll(recursive(sorted, left + 1, right));
-
-        for (int i = right - 1; i >= left && sorted[i] == sorted[right]; i--) {
-          right--;
-        }
-        triplets.addAll(recursive(sorted, left , right - 1));
-      } else if (expect < sorted[left + 1]) {
-        for (int i = right - 1; i >= left && sorted[i] == sorted[right]; i--) {
-          right--;
-        }
-        triplets.addAll(recursive(sorted, left , right - 1));
-      } else if (expect > sorted[right - 1]) {
-        for (int i = left + 1; i <= right && sorted[i] == sorted[left]; i++) {
-          left++;
-        }
-        triplets.addAll(recursive(sorted, left + 1, right));
       }
     }
 
     return triplets;
   }
 
-  private List<List<Integer>> solution(int[] nums) {
-    Arrays.sort(nums);
-    return recursive(nums, 0, nums.length-1);
-  }
-
   public List<List<Integer>> threeSum(int[] nums) {
-//    return brutalForceSolution(nums);
-    return solution(nums);
+    return threeSum1(nums);
   }
 }
