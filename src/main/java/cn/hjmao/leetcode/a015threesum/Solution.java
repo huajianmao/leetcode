@@ -59,22 +59,39 @@ public class Solution {
     Arrays.sort(nums);
 
     List<List<Integer>> triplets = new ArrayList<>();
-    for (int i = 0; i < nums.length - 2; i++) {
-      if (i == 0 || (nums[i] != nums[i - 1])) {
-        int expected = 0 - nums[i];
+    for (int left = 0; left < nums.length - 2; left++) {
+      if (nums[left] > 0) {
+        break;
+      }
+      if (left > 0 && nums[left] == nums[left - 1]) {
+        continue;
+      }
 
-        int left = i + 1;
+      if (left == 0 || (nums[left] != nums[left - 1])) {
+        int expected = 0 - nums[left];
+
+        int middle = left + 1;
         int right = nums.length - 1;
-        while (left < right) {
-          if (nums[left] + nums[right] == expected) {
-            triplets.add(Arrays.asList(nums[i], nums[left], nums[right]));
-            while (left < right && nums[left] == nums[left + 1]) left++;
-            while (left < right && nums[right] == nums[right - 1]) right--;
-            left++;
+        while (middle < right) {
+          if (nums[middle] + nums[right] == expected) {
+            triplets.add(Arrays.asList(nums[left], nums[middle], nums[right]));
+            while (middle < right && nums[middle] == nums[middle + 1]) {
+              middle++;
+            }
+            while (middle < right && nums[right] == nums[right - 1]) {
+              right--;
+            }
+            middle++;
             right--;
-          } else if (nums[left] + nums[right] < expected) {
-            left++;
+          } else if (nums[middle] + nums[right] < expected) {
+            while (middle < right && nums[middle] == nums[middle + 1]) {
+              middle++;
+            }
+            middle++;
           } else {
+            while (middle < right && nums[right] == nums[right - 1]) {
+              right--;
+            }
             right--;
           }
         }
