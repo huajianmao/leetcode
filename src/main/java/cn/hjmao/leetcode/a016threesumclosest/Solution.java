@@ -41,7 +41,40 @@ public class Solution {
     return closestValue;
   }
 
+  protected int threeSumClosest1(int[] nums, int target) {
+    Arrays.sort(nums);
+
+    int closestValue = Integer.MAX_VALUE;
+    int minDelta = Integer.MAX_VALUE;
+    for (int left = 0; left < nums.length - 2; left++) {
+      if (left > 0 && nums[left] == nums[left - 1]) {
+        continue;
+      }
+      int middle = left + 1;
+      int right = nums.length - 1;
+      while (middle < right) {
+        int thisSum = nums[left] + nums[middle] + nums[right];
+        int thisDelta = Math.abs(thisSum - target);
+        if (thisDelta < minDelta) {
+          minDelta = thisDelta;
+          closestValue = thisSum;
+        }
+        if (minDelta == 0) {
+          return closestValue;
+        }
+
+        if (thisSum > target) {
+          right--;
+        } else {
+          middle++;
+        }
+      }
+    }
+    return closestValue;
+  }
+
   public int threeSumClosest(int[] nums, int target) {
-    return brutalForceSolution(nums, target);
+//    return brutalForceSolution(nums, target);
+    return threeSumClosest1(nums, target);
   }
 }
