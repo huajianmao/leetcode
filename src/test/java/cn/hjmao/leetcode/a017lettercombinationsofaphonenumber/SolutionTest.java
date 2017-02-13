@@ -26,9 +26,25 @@ public class SolutionTest {
 
   @Test
   public void testLetterCombinations1() throws Exception {
-//    String digitals = "23";
-//    List<String> expected = Arrays.asList("ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf");
-//
-//    assert areTwoListsEqual(this.solution.letterCombinations(digitals), expected);
+    String digitals = "#3";
+    List<String> expected = Arrays.asList("D", "E", "F");
+
+    assert areTwoListsEqual(this.solution.letterCombinations(digitals), expected);
+  }
+
+  @Test
+  public void testLetterCombinations2() throws Exception {
+    String digitals = "23";
+    List<String> expected = Arrays.asList("ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf");
+
+    assert areTwoListsEqual(this.solution.letterCombinations(digitals), expected);
+  }
+
+  @Test
+  public void testLetterCombinations3() throws Exception {
+    String digitals = "*3";
+    List<String> expected = Arrays.asList("+d", "+e", "+f");
+
+    assert areTwoListsEqual(this.solution.letterCombinations(digitals), expected);
   }
 }

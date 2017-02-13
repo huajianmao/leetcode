@@ -30,13 +30,43 @@ public class Solution {
       {'p', 'q', 'r', 's'}, {'t', 'u', 'v'}, {'w', 'x', 'y', 'z'}}; // 7, 8, 9
 
   public List<String> letterCombinations(String digits) {
+    List<String> combinations = new ArrayList<>();
     if (digits == null || digits.length() == 0) {
-      return null;
+      return combinations;
     }
 
-    List<String> combinations = new ArrayList<>();
+    boolean upperCase = false;
     for (int i = 0; i < digits.length(); i++) {
+      List<String> newCombinations = new ArrayList<>();
       char thisChar = digits.charAt(i);
+      switch (thisChar) {
+        case '*':
+          if (combinations.size() == 0) {
+            combinations.add("");
+          }
+          for (String combination : combinations) {
+            newCombinations.add(combination + '+');
+          }
+          upperCase = false;
+          break;
+        case '#':
+          upperCase = true;
+          break;
+        default:
+          int number = thisChar - '0';
+          char[] chars = DIGIT_CHAR_MAP_ARRAY[number];
+          if (combinations.size() == 0) {
+            combinations.add("");
+          }
+          for (String combination : combinations) {
+            for (int d = 0; d < chars.length; d++) {
+              newCombinations.add(combination + (upperCase ? Character.toUpperCase(chars[d]) : chars[d]));
+            }
+          }
+          upperCase = false;
+          break;
+      }
+      combinations = newCombinations;
     }
 
     return combinations;
