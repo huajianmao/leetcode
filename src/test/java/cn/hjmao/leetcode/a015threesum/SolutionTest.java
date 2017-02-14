@@ -1,5 +1,6 @@
 package cn.hjmao.leetcode.a015threesum;
 
+import cn.hjmao.utils.AssertUtils;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -16,45 +17,6 @@ public class SolutionTest {
     this.solution = new Solution();
   }
 
-  private static void assertEqualsOfTwoTripletsArray(List<List<Integer>> actual, List<List<Integer>> expected) {
-    if (areEqualsOfTwoTripletsArray(actual, expected)) {
-      assert true;
-    } else {
-      System.err.println("expected: " + expected);
-      System.err.println("actual: " + actual);
-      assert false;
-    }
-  }
-
-  private static boolean areEqualsOfTwoTripletsArray(List<List<Integer>> actual, List<List<Integer>> expected) {
-    if (actual != null && expected != null) {
-      if (actual.size() != expected.size()) {
-        return false;
-      } else {
-        Set<String> actualSet = new HashSet<>();
-        Set<String> expectSet = new HashSet<>();
-        for (int i = 0; i < actual.size(); i++) {
-          List<Integer> actualElement = actual.get(i);
-          int[] actualInts = {actualElement.get(0), actualElement.get(1), actualElement.get(2)};
-          Arrays.sort(actualInts);
-          actualSet.add(actualInts[0] + "," + actualInts[1] + "," + actualInts[2]);
-
-          List<Integer> expectElement = expected.get(i);
-          int[] expectInts = {expectElement.get(0), expectElement.get(1), expectElement.get(2)};
-          Arrays.sort(expectInts);
-          expectSet.add(expectInts[0] + "," + expectInts[1] + "," + expectInts[2]);
-        }
-        return actualSet.containsAll(expectSet) && expectSet.size() == actualSet.size();
-      }
-    } else if (actual == null && expected != null && expected.size() > 0) {
-      return false;
-    } else if (expected == null && actual != null && actual.size() > 0) {
-      return false;
-    } else {
-      return actual == null && expected == null;
-    }
-  }
-
   @Test
   public void testThreeSum1() throws Exception {
     int[] nums = {-1, 0, 1, 2, -1, -4};
@@ -63,7 +25,7 @@ public class SolutionTest {
         Arrays.asList(new Integer[]{-1, 0, 1}),
         Arrays.asList(new Integer[]{-1, -1, 2})
     );
-    assertEqualsOfTwoTripletsArray(this.solution.threeSum(nums), expected);
+    AssertUtils.assertEqualsOfTwoArrays(this.solution.threeSum(nums), expected);
   }
 
   @Test
@@ -71,7 +33,7 @@ public class SolutionTest {
     int[] nums = {};
 
     List<List<Integer>> expected = new ArrayList<>();
-    assertEqualsOfTwoTripletsArray(this.solution.threeSum(nums), expected);
+    AssertUtils.assertEqualsOfTwoArrays(this.solution.threeSum(nums), expected);
   }
 
   @Test
@@ -81,7 +43,7 @@ public class SolutionTest {
     List<List<Integer>> expected = Arrays.asList(
         Arrays.asList(new Integer[]{0, 0, 0})
     );
-    assertEqualsOfTwoTripletsArray(this.solution.threeSum(nums), expected);
+    AssertUtils.assertEqualsOfTwoArrays(this.solution.threeSum(nums), expected);
   }
 
   @Test
@@ -91,7 +53,7 @@ public class SolutionTest {
     List<List<Integer>> expected = Arrays.asList(
         Arrays.asList(new Integer[]{0, 0, 0})
     );
-    assertEqualsOfTwoTripletsArray(this.solution.threeSum(nums), expected);
+    AssertUtils.assertEqualsOfTwoArrays(this.solution.threeSum(nums), expected);
   }
 
   @Test
@@ -101,7 +63,7 @@ public class SolutionTest {
     List<List<Integer>> expected = Arrays.asList(
         Arrays.asList(new Integer[]{-1, 0, 1})
     );
-    assertEqualsOfTwoTripletsArray(this.solution.threeSum(nums), expected);
+    AssertUtils.assertEqualsOfTwoArrays(this.solution.threeSum(nums), expected);
   }
 
   @Test
@@ -111,7 +73,7 @@ public class SolutionTest {
     List<List<Integer>> expected = Arrays.asList(
         Arrays.asList(new Integer[]{-1, -1, 2})
     );
-    assertEqualsOfTwoTripletsArray(this.solution.threeSum(nums), expected);
+    AssertUtils.assertEqualsOfTwoArrays(this.solution.threeSum(nums), expected);
   }
 
   @Test
@@ -123,7 +85,7 @@ public class SolutionTest {
         Arrays.asList(new Integer[]{-2, 0, 2}),
         Arrays.asList(new Integer[]{-1, 0, 1})
     );
-    assertEqualsOfTwoTripletsArray(this.solution.threeSum(nums), expected);
+    AssertUtils.assertEqualsOfTwoArrays(this.solution.threeSum(nums), expected);
   }
 
   @Test
@@ -133,13 +95,13 @@ public class SolutionTest {
     List<List<Integer>> expected = Arrays.asList(
         Arrays.asList(new Integer[]{0, 0, 0})
     );
-    assertEqualsOfTwoTripletsArray(this.solution.threeSum(nums), expected);
+    AssertUtils.assertEqualsOfTwoArrays(this.solution.threeSum(nums), expected);
   }
 
   @Test
   public void testThreeSum9() throws Exception {
     int[] nums = {-13, 5, 13, 12, -2, -11, -1, 12, -3, 0, -3, -7, -7, -5, -3, -15, -2, 14, 14, 13, 6, -11, -11, 5, -15, -14, 5, -5, -2, 0, 3, -8, -10, -7, 11, -5, -10, -5, -7, -6, 2, 5, 3, 2, 7, 7, 3, -10, -2, 2, -12, -11, -1, 14, 10, -9, -15, -8, -7, -9, 7, 3, -2, 5, 11, -13, -15, 8, -3, -7, -12, 7, 5, -2, -6, -3, -10, 4, 2, -5, 14, -3, -1, -10, -3, -14, -4, -3, -7, -4, 3, 8, 14, 9, -2, 10, 11, -10, -4, -15, -9, -1, -1, 3, 4, 1, 8, 1};
     List<List<Integer>> expected = this.solution.brutalForceSolution(nums);
-    assertEqualsOfTwoTripletsArray(this.solution.threeSum(nums), expected);
+    AssertUtils.assertEqualsOfTwoArrays(this.solution.threeSum(nums), expected);
   }
 }
