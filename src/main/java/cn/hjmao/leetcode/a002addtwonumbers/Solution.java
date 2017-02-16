@@ -1,5 +1,7 @@
 package cn.hjmao.leetcode.a002addtwonumbers;
 
+import cn.hjmao.utils.list.ListNode;
+
 /**
  * Created by hjmao on 17/01/2017.
  * <p>
@@ -18,19 +20,6 @@ package cn.hjmao.leetcode.a002addtwonumbers;
  * Output: 7 -> 0 -> 8
  */
 
-class ListNode {
-  int val;
-  ListNode next;
-
-  ListNode(int x) {
-    val = x;
-  }
-
-  public boolean isSameAs(ListNode that) {
-    return this.val == that.val
-        && ((this.next == null && this.next == null) || (this.next != null && this.next.isSameAs(that.next)));
-  }
-}
 
 public class Solution {
   public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

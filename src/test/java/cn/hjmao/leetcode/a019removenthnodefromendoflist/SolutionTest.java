@@ -1,5 +1,7 @@
 package cn.hjmao.leetcode.a019removenthnodefromendoflist;
 
+import cn.hjmao.utils.list.ListNode;
+import cn.hjmao.utils.list.ListNodeUtils;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -28,28 +30,6 @@ public class SolutionTest {
     return head;
   }
 
-  public boolean equals(Object self, Object that) {
-    if (self == null && that == null) {
-      return true;
-    }
-
-    if (!ListNode.class.isInstance(that) || !ListNode.class.isInstance(self)) {
-      return false;
-    } else {
-      ListNode thisTemp = (ListNode) self;
-      ListNode thatTemp = (ListNode) that;
-      while (thisTemp != null) {
-        if (thatTemp == null || thisTemp.val != thatTemp.val) {
-          return false;
-        } else {
-          thisTemp = thisTemp.next;
-          thatTemp = thatTemp.next;
-        }
-      }
-      return thatTemp == null;
-    }
-  }
-
   @Test
   public void testRemoveNthFromEnd1() throws Exception {
     int[] values = {1};
@@ -59,7 +39,7 @@ public class SolutionTest {
     ListNode expected = null;
 
     ListNode actual = this.solution.removeNthFromEnd(head, n);
-    assertEquals(equals(actual, expected), true);
+    assertEquals(ListNodeUtils.equals(actual, expected), true);
   }
 
   @Test
@@ -72,7 +52,7 @@ public class SolutionTest {
     ListNode expected = createListFromArray(expectedValues);
 
     ListNode actual = this.solution.removeNthFromEnd(head, n);
-    assertEquals(equals(actual, expected), true);
+    assertEquals(ListNodeUtils.equals(actual, expected), true);
   }
 
   @Test
@@ -85,6 +65,6 @@ public class SolutionTest {
     ListNode expected = createListFromArray(expectedValues);
 
     ListNode actual = this.solution.removeNthFromEnd(head, n);
-    assertEquals(equals(actual, expected), true);
+    assertEquals(ListNodeUtils.equals(actual, expected), true);
   }
 }

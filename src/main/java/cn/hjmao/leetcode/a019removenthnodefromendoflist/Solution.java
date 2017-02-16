@@ -1,5 +1,7 @@
 package cn.hjmao.leetcode.a019removenthnodefromendoflist;
 
+import cn.hjmao.utils.list.ListNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,15 +26,6 @@ import java.util.List;
  * Given n will always be valid.
  * Try to do this in one pass.
  */
-
-class ListNode {
-  int val;
-  ListNode next;
-
-  ListNode(int x) {
-    val = x;
-  }
-}
 
 public class Solution {
   public ListNode brutalforce(ListNode head, int n) {

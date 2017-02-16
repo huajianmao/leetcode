@@ -1,5 +1,7 @@
 package cn.hjmao.leetcode.a002addtwonumbers;
 
+import cn.hjmao.utils.list.ListNode;
+import cn.hjmao.utils.list.ListNodeUtils;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -31,6 +33,7 @@ public class SolutionTest {
     expected.next = new ListNode(0);
     expected.next.next = new ListNode(8);
 
-    assertTrue(this.solution.addTwoNumbers(l1, l2).isSameAs(expected));
+    ListNode actual = this.solution.addTwoNumbers(l1, l2);
+    assertTrue(ListNodeUtils.equals(actual, expected));
   }
 }
