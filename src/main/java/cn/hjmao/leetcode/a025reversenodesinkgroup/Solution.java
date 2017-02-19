@@ -28,7 +28,8 @@ import java.util.Stack;
  */
 
 public class Solution {
-  public ListNode reverseKGroup(ListNode head, int k) {
+
+  public ListNode reverseKGroup1(ListNode head, int k) {
     ListNode dummy = new ListNode(0);
     ListNode last = dummy;
     Stack<ListNode> stack = new Stack<>();
@@ -50,6 +51,44 @@ public class Solution {
       ListNode thisNode = stack.pop();
       thisNode.next = last.next;
       last.next = thisNode;
+    }
+
+    return dummy.next;
+  }
+
+  public ListNode reverseKGroup(ListNode head, int k) {
+    ListNode dummy = new ListNode(0);
+    ListNode last = dummy;
+    ListNode ktail = null;
+
+    int len = 0;
+    while (head != null) {
+      if (len == 0) {
+        ktail = head;
+      }
+      ListNode next = head.next;
+      head.next = last.next;
+      last.next = head;
+      head = next;
+
+      len++;
+
+      if (len == k) {
+        last = ktail;
+        len = 0;
+      }
+    }
+
+    if (len > 0) {
+      ListNode current = last.next;
+      last.next = null;
+      while (current != null) {
+        ListNode next = current.next;
+        current.next = last.next;
+        last.next = current;
+
+        current = next;
+      }
     }
 
     return dummy.next;
