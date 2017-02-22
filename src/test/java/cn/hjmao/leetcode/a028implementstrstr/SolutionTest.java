@@ -18,5 +18,4 @@ public class SolutionTest {
 
     assertEquals(this.solution.strStr(haystack, needle), expected);
   }
-
 }
