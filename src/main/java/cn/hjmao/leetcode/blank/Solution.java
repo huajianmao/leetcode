@@ -1,4 +1,4 @@
-package cn.hjmao.leetcode.a000blank;
+package cn.hjmao.leetcode.blank;
 
 /**
  * Created by hjmao.
