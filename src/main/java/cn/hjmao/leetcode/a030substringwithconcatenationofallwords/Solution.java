@@ -61,9 +61,81 @@ public class Solution {
   }
 
   /**
+   * @from https://discuss.leetcode.com/topic/54662/92-java-o-n-with-explaination
+   *
+   * A time & space O(n) solution
+   * Run a moving window for wordLen times.
+   * Each time we keep a window of size windowLen (= wordLen * numWord),
+   * each step length is wordLen.
+   * So each scan takes O(sLen / wordLen),
+   * totally takes O(sLen / wordLen * wordLen) = O(sLen) time.
+   *
+   * One trick here is use count
+   * to record the number of exceeded occurrences of word in current window
+   */
+  public static List<Integer> findSubstring(String s, String[] words) {
+    List<Integer> indices = new ArrayList<>();
+    if (s == null || words == null || words.length == 0 || s.length() < words.length * words[0].length()) {
+      return indices;
+    }
+
+    int wordLength = words[0].length();
+    HashMap<String, Integer> wordCountMap = new HashMap<>();
+    for (String word : words) {
+      wordCountMap.put(word, wordCountMap.getOrDefault(word, 0) + 1);
+    }
+
+    int sLength = s.length();
+    int wordCount = words.length;
+    int windowLength = wordLength * wordCount;
+    for (int i = 0; i < wordLength; i++) {
+      HashMap<String, Integer> currentMap = new HashMap<>();
+      int failures = 0;
+      int start = i;
+      for (int lastWordIndex = i; lastWordIndex + wordLength <= sLength; lastWordIndex += wordLength) {
+        if (start + windowLength > sLength) {
+          break;
+        }
+        String word = s.substring(lastWordIndex, lastWordIndex + wordLength);
+        if (!wordCountMap.containsKey(word)) {
+          currentMap.clear();
+          failures = 0;
+          start = lastWordIndex + wordLength;
+          continue;
+        } else {
+          // If the window is full, remove the first word of current window
+          if (lastWordIndex == start + windowLength) {
+            String firstWord = s.substring(start, start + wordLength);
+            start = start + wordLength;
+            int firstWordCount = currentMap.get(firstWord);
+            if (firstWordCount == 1) {
+              currentMap.remove(firstWord);
+            } else {
+              currentMap.put(firstWord, firstWordCount - 1);
+            }
+            if (firstWordCount - 1 >= wordCountMap.get(firstWord)) {
+              failures--;
+            }
+          }
+
+          currentMap.put(word, currentMap.getOrDefault(word, 0) + 1);
+          if (currentMap.get(word) > wordCountMap.get(word)) {
+            failures++;
+          }
+
+          if (failures == 0 && start + windowLength == lastWordIndex + wordLength) {
+            indices.add(start);
+          }
+        }
+      }
+    }
+    return indices;
+  }
+
+  /**
    * @from https://discuss.leetcode.com/topic/35676/accepted-java-solution-12ms-with-explanation
    */
-  public List<Integer> findSubstring(String s, String[] words) {
+  public List<Integer> fastFindSubstring(String s, String[] words) {
     List<Integer> indices = new ArrayList<>();
     if (s == null || words == null || words.length == 0 || s.length() < words.length * words[0].length()) {
       return indices;
