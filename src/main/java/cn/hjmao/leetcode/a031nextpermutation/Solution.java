@@ -27,6 +27,37 @@ package cn.hjmao.leetcode.a031nextpermutation;
 
 public class Solution {
   public void nextPermutation(int[] nums) {
-    // TODO:
+    if (nums == null || nums.length <= 1) {
+      return;
+    }
+
+    int breakerIndex = nums.length - 2;
+    for (; breakerIndex >= 0; breakerIndex--) {
+      if (nums[breakerIndex] < nums[breakerIndex + 1]) {
+        break;
+      }
+    }
+
+    if (breakerIndex >= 0) {
+      int i = nums.length - 1;
+      for (; i >= breakerIndex; i--) {
+        if (nums[i] > nums[breakerIndex]) {
+          break;
+        }
+      }
+      int temp = nums[breakerIndex];
+      nums[breakerIndex] = nums[i];
+      nums[i] = temp;
+    }
+
+    int left = breakerIndex + 1;
+    int right = nums.length - 1;
+    while (left < right) {
+      int temp = nums[left];
+      nums[left] = nums[right];
+      nums[right] = temp;
+      left++;
+      right--;
+    }
   }
 }
