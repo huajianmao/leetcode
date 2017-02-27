@@ -1,4 +1,4 @@
-package cn.hjmao.leetcode.a036validsudoku;
+package cn.hjmao.leetcode.a037sudokusolver;
 
 import org.testng.annotations.Test;
 
@@ -11,7 +11,7 @@ public class SolutionTest {
   private Solution solution = new Solution();
 
   @Test
-  public void testIsValidSudoku1() throws Exception {
+  public void testSolveSudoku1() throws Exception {
     char[][] board = {
         {'5', '3', '.', '.', '7', '.', '.', '.', '.'},
         {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
@@ -23,15 +23,7 @@ public class SolutionTest {
         {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
         {'.', '.', '.', '.', '8', '.', '.', '7', '9'}
     };
-    boolean expected = true;
-    boolean actual = this.solution.isValidSudoku(board);
-
-    assertEquals(actual, expected);
-  }
-
-  @Test
-  public void testIsValidSudoku2() throws Exception {
-    char[][] board = {
+    char[][] expected = {
         {'5', '3', '4', '6', '7', '8', '9', '1', '2'},
         {'6', '7', '2', '1', '9', '5', '3', '4', '8'},
         {'1', '9', '8', '3', '4', '2', '5', '6', '7'},
@@ -42,28 +34,11 @@ public class SolutionTest {
         {'2', '8', '7', '4', '1', '9', '6', '3', '5'},
         {'3', '4', '5', '2', '8', '6', '1', '7', '9'}
     };
-    boolean expected = true;
-    boolean actual = this.solution.isValidSudoku(board);
+    this.solution.solveSudoku(board);
+    char[][] actual = board;
 
-    assertEquals(actual, expected);
-  }
-
-  @Test
-  public void testIsValidSudoku3() throws Exception {
-    char[][] board = {
-        {'5', '3', '.', '.', '9', '.', '.', '.', '.'},
-        {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
-        {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
-        {'8', '.', '.', '.', '6', '.', '.', '.', '3'},
-        {'4', '.', '.', '8', '.', '3', '.', '.', '1'},
-        {'7', '.', '.', '.', '2', '.', '.', '.', '6'},
-        {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
-        {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
-        {'.', '.', '.', '.', '8', '.', '.', '7', '9'}
-    };
-    boolean expected = false;
-    boolean actual = this.solution.isValidSudoku(board);
-
-    assertEquals(actual, expected);
+    for (int i = 0; i < 9; i++) {
+      assertEquals(actual[i], expected[i]);
+    }
   }
 }
