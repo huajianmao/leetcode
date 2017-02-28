@@ -37,7 +37,9 @@ public class SolutionTest {
     this.solution.solveSudoku(board);
     char[][] actual = board;
 
-    assertEquals(actual, expected);
+    for (int i = 0; i < 9; i++) {
+      assertEquals(actual[i], expected[i]);
+    }
   }
 
   @Test
@@ -67,6 +69,8 @@ public class SolutionTest {
     this.solution.solveSudoku(board);
     char[][] actual = board;
 
-    assertEquals(actual, expected);
+    for (int i = 0; i < 9; i++) {
+      assertEquals(actual[i], expected[i]);
+    }
   }
 }
