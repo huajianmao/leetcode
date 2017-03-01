@@ -12,7 +12,7 @@ public class SolutionTest {
 
   @Test
   public void testCountAndSay1() throws Exception {
-    int n = 1;
+    int n = 2;
     String expected = "11";
     String actual = this.solution.countAndSay(n);
 
@@ -21,7 +21,7 @@ public class SolutionTest {
 
   @Test
   public void testCountAndSay2() throws Exception {
-    int n = 2;
+    int n = 3;
     String expected = "21";
     String actual = this.solution.countAndSay(n);
 
@@ -30,7 +30,7 @@ public class SolutionTest {
 
   @Test
   public void testCountAndSay3() throws Exception {
-    int n = 3;
+    int n = 4;
     String expected = "1211";
     String actual = this.solution.countAndSay(n);
 
@@ -39,7 +39,7 @@ public class SolutionTest {
 
   @Test
   public void testCountAndSay4() throws Exception {
-    int n = 4;
+    int n = 5;
     String expected = "111221";
     String actual = this.solution.countAndSay(n);
 
@@ -48,7 +48,7 @@ public class SolutionTest {
 
   @Test
   public void testCountAndSay5() throws Exception {
-    int n = 5;
+    int n = 6;
     String expected = "312211";
     String actual = this.solution.countAndSay(n);
 

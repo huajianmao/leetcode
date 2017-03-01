@@ -1,5 +1,8 @@
 package cn.hjmao.leetcode.a038countandsay;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * Created by hjmao.
  *
@@ -23,17 +26,52 @@ package cn.hjmao.leetcode.a038countandsay;
 
 public class Solution {
   public String countAndSay(int n) {
-    String result = null;
-//    Queue<Integer> queue = new LinkedList<>();
-//    queue.add(1);
-//
-//    for (int i = 0; i < n; i++) {
-//      int lastOne;
-//      while(queue.peek() != 0) {
-//
-//      }
-//    }
+    if (n == 1) {
+      return "1";
+    }
 
-    return result;
+    StringBuilder result = new StringBuilder();
+    Queue<Integer> queue = new LinkedList<>();
+    queue.add(1);
+    queue.add(0);
+
+    int currentInt = -1;
+    int currentIntCount = 0;
+
+    for (int i = 1; i < n;) {
+      int thisInt;
+      while (!queue.isEmpty()) {
+        thisInt = queue.poll();
+
+        if (currentInt == -1) {
+          currentInt = thisInt;
+          currentIntCount = 1;
+          continue;
+        }
+
+        if (thisInt == 0) {
+          queue.add(currentIntCount);
+          queue.add(currentInt);
+          queue.add(0);
+          currentInt = -1;
+          currentIntCount = 0;
+          i++;
+          break;
+        } else if (thisInt == currentInt) {
+          currentIntCount++;
+        } else {
+          queue.add(currentIntCount);
+          queue.add(currentInt);
+          currentInt = thisInt;
+          currentIntCount = 1;
+        }
+      }
+    }
+
+    while (queue.peek() != 0) {
+      result.append(queue.poll());
+    }
+
+    return result.toString();
   }
 }
