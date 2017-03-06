@@ -46,6 +46,22 @@ public class Solution {
     return water;
   }
 
+  /**
+   * @url https://discuss.leetcode.com/topic/18731/7-lines-c-c/2
+   */
+  public int trapSmart(int[] height) {
+    int left = 0;
+    int right = height.length - 1;
+    int level = 0;
+    int water = 0;
+    while (left < right) {
+      int lower = height[height[left] < height[right] ? left++ : right--];
+      level = Math.max(level, lower);
+      water += level - lower;
+    }
+    return water;
+  }
+
   public int trap(int[] height) {
     int water = 0;
 
