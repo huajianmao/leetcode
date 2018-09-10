@@ -67,4 +67,4 @@ test {
   }
 }
 
-// mainClassName = "cn.hjmao.leetcode.Main"
+mainClassName = "cn.hjmao.leetcode.Main"
