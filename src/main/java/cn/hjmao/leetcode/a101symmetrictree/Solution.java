@@ -1,4 +1,8 @@
-package cn.hjmao.leetcode.a101symmetrictree;;
+package cn.hjmao.leetcode.a101symmetrictree;
+
+import cn.hjmao.utils.tree.TreeNode;
+
+;
 
 /**
  * Created by hjmao.
