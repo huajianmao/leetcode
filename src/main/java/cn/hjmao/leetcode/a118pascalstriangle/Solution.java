@@ -1,5 +1,8 @@
 package cn.hjmao.leetcode.a118pascalstriangle;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by hjmao.
  *
