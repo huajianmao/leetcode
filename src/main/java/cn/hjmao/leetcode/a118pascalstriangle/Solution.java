@@ -44,7 +44,7 @@ public class Solution {
           if (i > 1) {
             List<Integer> lastRow = triangle.get(i - 1);
             for (int j = 1; j < lastRow.size(); j++) {
-              thisRow.add(lastRow.get(j-1) + lastRow.get(j));
+              thisRow.add(lastRow.get(j - 1) + lastRow.get(j));
             }
           }
 

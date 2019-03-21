@@ -20,13 +20,13 @@ package cn.hjmao.leetcode.a058lengthoflastword;
 public class Solution {
     public int lengthOfLastWord(String s) {
         int length = 0;
-        int i = s.length() -1;
-        for (; i>=0; i--) {
+        int i = s.length() - 1;
+        for (; i >= 0; i--) {
             if (s.charAt(i) != ' ') {
                 break;
             }
         }
-        for (; i>=0; i--) {
+        for (; i >= 0; i--) {
             if (s.charAt(i) != ' ') {
                 length++;
             } else {

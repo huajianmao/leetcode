@@ -44,7 +44,7 @@ public class SolutionTest {
     public void testIsBalanced3() {
         Integer[] array = {1, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, null, null, 5, 5};
         TreeNode root = TreeNodeUtils.fromArray(array);
-        boolean expect = true;
+        boolean expect = false;
         boolean actual = solution.isBalanced(root);
 
         assertEquals(actual, expect);
@@ -52,7 +52,7 @@ public class SolutionTest {
 
     @Test
     public void testIsBalanced4() {
-        Integer[] array = {1,2,2,3,null,null,3,4,null,null,4};
+        Integer[] array = {1, 2, 2, 3, null, null, 3, 4, null, null, 4};
         TreeNode root = TreeNodeUtils.fromArray(array);
         boolean expect = false;
         boolean actual = solution.isBalanced(root);

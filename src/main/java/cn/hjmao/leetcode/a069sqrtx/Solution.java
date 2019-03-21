@@ -20,13 +20,16 @@ package cn.hjmao.leetcode.a069sqrtx;
 
 public class Solution {
     public int mySqrt(int x) {
-        if (x == 0) return 0;
+        if (x == 0) {
+            return 0;
+        }
 
-        int low = 1, high = x;
+        int low = 1;
+        int high = x;
         int now;
 
         while (true) {
-            now = low + (high - low)/2;
+            now = low + (high - low) / 2;
             if (now > x / now) {
                 high = now - 1;
             } else {

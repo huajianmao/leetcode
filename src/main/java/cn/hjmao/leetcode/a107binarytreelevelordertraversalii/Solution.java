@@ -37,11 +37,13 @@ public class Solution {
 
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
-        if (root == null) { return result; }
+        if (root == null) {
+            return result;
+        }
 
         List<TreeNode> thisLevelSiblings = new ArrayList<>();
         thisLevelSiblings.add(root);
-        while(!thisLevelSiblings.isEmpty()) {
+        while (!thisLevelSiblings.isEmpty()) {
             List<TreeNode> nextLevelSiblings = new ArrayList<>();
             List<Integer> thisLevelValues = new ArrayList<>();
             for (int i = 0; i < thisLevelSiblings.size(); i++) {

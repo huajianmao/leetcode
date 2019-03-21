@@ -22,7 +22,9 @@ public class Solution {
 
   // FIXME: add implementation code herßße.
   public void merge(int[] nums1, int m, int[] nums2, int n) {
-    int indexM = m - 1, indexN = n - 1, pos = m + n - 1;
+    int indexM = m - 1;
+    int indexN = n - 1;
+    int pos = m + n - 1;
 
     while (indexN >= 0) {
       if (indexM >= 0) {

@@ -39,7 +39,8 @@ public class Solution {
   public int maxProfit(int[] prices) {
     int profit = 0;
 
-    int buy = 0, sell = 0;
+    int buy = 0;
+    int sell = 0;
     while (sell < prices.length) {
       if (sell == prices.length - 1 || prices[sell + 1] < prices[sell]) {
         profit += prices[sell] - prices[buy];

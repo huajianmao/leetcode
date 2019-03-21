@@ -25,22 +25,22 @@ public class Solution {
         int[] plused = new int[digits.length + 1];
         plused[0] = 0;
 
-        int i=digits.length-1;
-        for (; i>=0; i--) {
+        int i = digits.length - 1;
+        for (; i >= 0; i--) {
             int digit = digits[i];
             if (digit == 9) {
-                plused[i+1] = 0;
+                plused[i + 1] = 0;
                 plused[i] = 1;
             } else {
-                plused[i+1] = digit + 1;
+                plused[i + 1] = digit + 1;
                 break;
             }
         }
         i--;
-        for (; i>=0; i--) {
-            plused[i+1] = digits[i];
+        for (; i >= 0; i--) {
+            plused[i + 1] = digits[i];
         }
 
-        return plused[0]==1 ? plused : Arrays.copyOfRange(plused, 1, plused.length);
+        return plused[0] == 1 ? plused : Arrays.copyOfRange(plused, 1, plused.length);
     }
 }

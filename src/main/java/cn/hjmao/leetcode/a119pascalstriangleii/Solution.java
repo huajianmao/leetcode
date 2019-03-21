@@ -1,7 +1,6 @@
 package cn.hjmao.leetcode.a119pascalstriangleii;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -39,7 +38,7 @@ public class Solution {
     if (rowIndex >= 0) {
       for (int i = 0; i <= rowIndex; i++) {
         for (int j = i; j >= 1; j--) {
-          row.set(j, row.get(j) + row.get(j-1));
+          row.set(j, row.get(j) + row.get(j - 1));
         }
         row.set(0, 1);
       }
