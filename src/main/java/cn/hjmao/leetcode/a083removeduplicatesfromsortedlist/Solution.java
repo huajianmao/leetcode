@@ -17,7 +17,9 @@ import cn.hjmao.utils.list.ListNode;
 public class Solution {
 
     public ListNode deleteDuplicates(ListNode head) {
-        if (head == null) return head;
+        if (head == null) {
+            return head;
+        }
 
         ListNode start = head;
         ListNode next = head.next;

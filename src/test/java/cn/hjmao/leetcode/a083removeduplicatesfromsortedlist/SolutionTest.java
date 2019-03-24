@@ -1,6 +1,5 @@
 package cn.hjmao.leetcode.a083removeduplicatesfromsortedlist;
 
-import cn.hjmao.utils.AssertUtils;
 import cn.hjmao.utils.list.ListNode;
 import cn.hjmao.utils.list.ListNodeUtils;
 import org.testng.annotations.Test;

@@ -17,7 +17,5 @@ public class SolutionTest {
 
         TreeNode expect = TreeNodeUtils.fromArray(treenums);
         TreeNode actual = solution.sortedArrayToBST(nums);
-
-        System.out.println(actual);
     }
 }

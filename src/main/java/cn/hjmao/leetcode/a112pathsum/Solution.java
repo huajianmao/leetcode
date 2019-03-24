@@ -1,5 +1,7 @@
 package cn.hjmao.leetcode.a112pathsum;
 
+import cn.hjmao.utils.tree.TreeNode;
+
 /**
  * Created by hjmao.
  *

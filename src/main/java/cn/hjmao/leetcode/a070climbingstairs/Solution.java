@@ -20,7 +20,9 @@ public class Solution {
 
     // First 1 step + First 2 steps
     public int climbStairs(int n) {
-        if (n == 1) return 1;
+        if (n == 1) {
+            return 1;
+        }
         int fib1 = 1;
         int fib2 = 2;
         int i = 2;

@@ -2,8 +2,6 @@ package cn.hjmao.leetcode.a101symmetrictree;
 
 import cn.hjmao.utils.tree.TreeNode;
 
-;
-
 /**
  * Created by hjmao.
  *
@@ -25,8 +23,12 @@ public class Solution {
 
   // FIXME: add implementation code here.
   public boolean isSymmetric(TreeNode root) {
-        if (root == null) { return true; }
-        if (root.left == null && root.right == null) { return true; }
+        if (root == null) {
+          return true;
+        }
+        if (root.left == null && root.right == null) {
+          return true;
+        }
         if (root.left != null && root.right != null && root.left.val == root.right.val) {
             TreeNode outer = new TreeNode(0);
             TreeNode inner = new TreeNode(0);

@@ -2,9 +2,7 @@ package cn.hjmao.leetcode.a108convertsortedarraytobinarysearchtree;
 
 import cn.hjmao.utils.tree.TreeNode;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * Created by hjmao.

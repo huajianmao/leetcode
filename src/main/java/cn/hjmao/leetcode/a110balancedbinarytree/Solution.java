@@ -54,16 +54,22 @@ public class Solution {
     }
 
     private int height(TreeNode root) {
-        if (root == null) return 0;
+        if (root == null) {
+            return 0;
+        }
         int left = height(root.left);
         int right = height(root.right);
-        if (Math.abs(left - right) > 1) isBalanced = false;
+        if (Math.abs(left - right) > 1) {
+            isBalanced = false;
+        }
         return Math.max(left, right) + 1;
     }
 
     // Wrong
     public boolean isBalanced1(TreeNode root) {
-        if (root == null) return true;
+        if (root == null) {
+            return true;
+        }
 
         boolean positive = false;
 
@@ -93,11 +99,7 @@ public class Solution {
                 } else {
                     for (int i = 0; i < nextLevelSiblings.size(); i++) {
                         TreeNode thisNode = nextLevelSiblings.get(i);
-                        if (thisNode.left != null || thisNode.right != null) {
-                            return false;
-                        } else {
-                            return true;
-                        }
+                        return thisNode.left == null && thisNode.right == null;
                     }
                 }
             } else {
