@@ -99,13 +99,22 @@ public class SolutionTest {
     boolean actual = this.solution.isMatch(s, p);
     assertEquals(actual, expected);
   }
-//
-//  @Test
-//  public void testIsMatchx11() throws Exception {
-//    String s = "babaaababaabababbbbbbaabaabbabababbaababbaaabbbaaab";
-//    String p = "***bba**a*bbba**aab**b";
-//    boolean expected = ???;
-//    boolean actual = this.solution.isMatch(s, p);
-//    assertEquals(actual, expected);
-//  }
+
+  @Test
+  public void testIsMatchx11() throws Exception {
+    String s = "babaaababaabababbbbbbaabaabbabababbaababbaaabbbaaab";
+    String p = "***bba**a*bbba**aab**b";
+    boolean expected = false;
+    boolean actual = this.solution.isMatch(s, p);
+    assertEquals(actual, expected);
+  }
+
+  @Test
+  public void testIsMatchx12() throws Exception {
+    String s = "abb";
+    String p = "***bba**a*bbba**aab**b";
+    boolean expected = false;
+    boolean actual = this.solution.isMatch(s, p);
+    assertEquals(actual, expected);
+  }
 }

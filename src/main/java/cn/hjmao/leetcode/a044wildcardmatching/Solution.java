@@ -31,6 +31,43 @@ package cn.hjmao.leetcode.a044wildcardmatching;
 
 public class Solution {
   public boolean isMatch(String s, String p) {
+    int sIndex = 0;
+    int pIndex = 0;
+    int match = 0;
+    int pStarIdx = -1;
+
+    while (sIndex < s.length()) {
+      if (pIndex < p.length() && (p.charAt(pIndex) == '?' || s.charAt(sIndex) == p.charAt(pIndex))) {
+        // advancing both pointers
+        sIndex++;
+        pIndex++;
+      } else if (pIndex < p.length() && p.charAt(pIndex) == '*') {
+        // * found, only advancing pattern pointer
+        pStarIdx = pIndex;
+        match = sIndex;
+        pIndex++;
+      } else if (pStarIdx != -1) {
+        // last pattern pointer was *, advancing string pointer
+        pIndex = pStarIdx + 1;
+        match++;
+        sIndex = match;
+      } else {
+        // current pattern pointer is not star,
+        // last patter pointer was not *
+        // characters do not match
+        return false;
+      }
+    }
+
+    //check for remaining characters in pattern
+    while (pIndex < p.length() && p.charAt(pIndex) == '*') {
+      pIndex++;
+    }
+
+    return pIndex == p.length();
+  }
+
+  public boolean isMatch1(String s, String p) {
     if (s.length() == 0) {
       for (int i = 0; i < p.length(); i++) {
         if (p.charAt(i) != '*') {
