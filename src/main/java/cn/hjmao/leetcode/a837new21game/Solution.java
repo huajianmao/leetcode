@@ -43,8 +43,14 @@ package cn.hjmao.leetcode.a837new21game;
 
 public class Solution {
 
-  public double new21Game(int N, int K, int W) {
+  public double new21Game(int n, int k, int w) {
     double probability = 0.0;
+
+    double temp = 0;
+    for (int i = 1; i <= w; i++) {
+      temp += new21Game(n - i, k, w);
+    }
+    probability = temp / k;
 
     return probability;
   }
