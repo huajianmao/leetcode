@@ -8,9 +8,35 @@ import static org.testng.Assert.*;
 
 public class SolutionTest {
 
+  Solution solution = new Solution();
+
   @Test
-  public void testHasCycle() {
-    int[] array = {3,2,0,-4};
-    ListNode head = ListNodeUtils.createListFromArray(array);
+  public void testHasCycle1() {
+    int[] array = {3, 2, 0, -4};
+    int pos = 1;
+    ListNode head = ListNodeUtils.createListFromArray(array, pos);
+    boolean expect = true;
+    boolean actual = solution.hasCycle(head);
+    assertEquals(actual, expect);
+  }
+
+  @Test
+  public void testHasCycle2() {
+    int[] array = {1, 2};
+    int pos = 0;
+    ListNode head = ListNodeUtils.createListFromArray(array, pos);
+    boolean expect = true;
+    boolean actual = solution.hasCycle(head);
+    assertEquals(actual, expect);
+  }
+
+  @Test
+  public void testHasCycle3() {
+    int[] array = {1};
+    int pos = -1;
+    ListNode head = ListNodeUtils.createListFromArray(array, pos);
+    boolean expect = false;
+    boolean actual = solution.hasCycle(head);
+    assertEquals(actual, expect);
   }
 }

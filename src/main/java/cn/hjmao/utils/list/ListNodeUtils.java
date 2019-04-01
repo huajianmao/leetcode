@@ -17,6 +17,32 @@ public class ListNodeUtils {
     return head;
   }
 
+  public static ListNode createListFromArray(int[] nums, int pos) {
+    ListNode head = null;
+    ListNode cycle = null;
+    ListNode tail = null;
+
+    for (int i = nums.length - 1; i >= 0; i--) {
+      ListNode temp = new ListNode(nums[i]);
+      temp.next = head;
+      head = temp;
+
+      if (i == pos) {
+        cycle = temp;
+      }
+
+      if (i == nums.length - 1) {
+        tail = temp;
+      }
+    }
+
+    if (tail != null && cycle != null) {
+      tail.next = cycle;
+    }
+
+    return head;
+  }
+
   public static boolean equals(Object self, Object that) {
     if (self == null && that == null) {
       return true;
