@@ -17,7 +17,7 @@ public class ProblemFetcher {
   private static String PACKAGE_BASE = "cn.hjmao.leetcode";
 
   public static void main(String[] args) throws IOException {
-    String questionUrl = "https://leetcode.com/problems/two-sum/";
+    String questionUrl = "https://leetcode.com/problems/min-stack/";
     Map<String, String> map = getProblem(questionUrl);
 
     String packageName = PACKAGE_BASE + "." + map.get("packageName");
@@ -26,6 +26,9 @@ public class ProblemFetcher {
     String pwd = System.getProperty("user.dir");
     String srcDir = String.join(File.separator, pwd, SRC_BASE, packageDir);
     String testDir = String.join(File.separator, pwd, TEST_BASE, packageDir);
+
+    new File(srcDir).mkdirs();
+    new File(testDir).mkdirs();
 
     System.out.println(srcDir);
     System.out.println(testDir);
