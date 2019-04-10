@@ -17,7 +17,7 @@ public class ProblemFetcher {
   private static String PACKAGE_BASE = "cn.hjmao.leetcode";
 
   public static void main(String[] args) throws IOException {
-    String questionUrl = "https://leetcode.com/problems/excel-sheet-column-title/";
+    String questionUrl = "https://leetcode.com/problems/number-of-1-bits/";
     Map<String, String> map = getProblem(questionUrl);
 
     String packageName = PACKAGE_BASE + "." + map.get("packageName");
