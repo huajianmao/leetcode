@@ -8,7 +8,6 @@ import org.jsoup.Jsoup;
 
 import java.io.*;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
@@ -118,9 +117,9 @@ public class ProblemFetcher {
       writer = new FileWriter(file);
       writer.write(newContent);
     } catch (FileNotFoundException fnfe) {
-
+      fnfe.printStackTrace();
     } catch (IOException ioe) {
-
+      ioe.printStackTrace();
     } finally {
       try {
         reader.close();
