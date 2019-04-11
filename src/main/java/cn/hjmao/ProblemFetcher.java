@@ -6,8 +6,10 @@ import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,7 +19,12 @@ public class ProblemFetcher {
   private static String PACKAGE_BASE = "cn.hjmao.leetcode";
 
   public static void main(String[] args) throws IOException {
-    String questionUrl = "https://leetcode.com/problems/number-of-1-bits/";
+    String questionUrl = "https://leetcode.com/problems/house-robber/";
+    ProblemFetcher fetcher = new ProblemFetcher();
+    fetcher.fetch(questionUrl);
+  }
+
+  private void fetch(String questionUrl) throws IOException {
     Map<String, String> map = getProblem(questionUrl);
 
     String packageName = PACKAGE_BASE + "." + map.get("packageName");
@@ -26,15 +33,23 @@ public class ProblemFetcher {
     String pwd = System.getProperty("user.dir");
     String srcDir = String.join(File.separator, pwd, SRC_BASE, packageDir);
     String testDir = String.join(File.separator, pwd, TEST_BASE, packageDir);
-
     new File(srcDir).mkdirs();
     new File(testDir).mkdirs();
 
-    System.out.println(srcDir);
-    System.out.println(testDir);
+    String blankSolutionFile = String.join(File.separator,
+        pwd,
+        SRC_BASE,
+        PACKAGE_BASE.replaceAll("\\.", File.separator),
+        "blank",
+        "Solution.java");
+    String dstSolutionFile = String.join(File.separator,
+        srcDir,
+        "Solution.java");
+    Files.copy(Paths.get(blankSolutionFile), Paths.get(dstSolutionFile));
+    modifyContent(new File(dstSolutionFile), PACKAGE_BASE + ".blank", packageName);
   }
 
-  private static Map<String, String> getProblem(String questionUrl) throws IOException {
+  private Map<String, String> getProblem(String questionUrl) throws IOException {
     Map<String, String> result = new HashMap<>();
 
     String graphqlUrl = "https://leetcode.com/graphql";
@@ -89,4 +104,30 @@ public class ProblemFetcher {
     }
   }
 
+  private void modifyContent(File file, String from, String to) throws FileNotFoundException {
+    BufferedReader reader = null;
+    FileWriter writer = null;
+    try {
+      reader = new BufferedReader(new FileReader(file));
+      String line = reader.readLine();
+      String newContent = "";
+      while (line != null) {
+        newContent += line.replaceAll(from, to) + System.lineSeparator();
+        line = reader.readLine();
+      }
+      writer = new FileWriter(file);
+      writer.write(newContent);
+    } catch (FileNotFoundException fnfe) {
+
+    } catch (IOException ioe) {
+
+    } finally {
+      try {
+        reader.close();
+        writer.close();
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+    }
+  }
 }
