@@ -40,10 +40,10 @@ public class ProblemFetcher {
         SRC_BASE,
         PACKAGE_BASE.replaceAll("\\.", File.separator),
         "blank",
-        "MyStack.java");
+        "Solution.java");
     String dstSolutionFile = String.join(File.separator,
         srcDir,
-        "MyStack.java");
+        "Solution.java");
     Files.copy(Paths.get(blankSolutionFile), Paths.get(dstSolutionFile));
     modifyContent(new File(dstSolutionFile), PACKAGE_BASE + ".blank", packageName);
   }
