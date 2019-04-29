@@ -1,9 +1,7 @@
 package cn.hjmao.leetcode.a414thirdmaximumnumber;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by hjmao.
@@ -57,7 +55,7 @@ public class Solution {
           break;
         }
       }
-      if ( tops.size() < k && j >= tops.size() && !added) {
+      if (tops.size() < k && j >= tops.size() && !added) {
         tops.add(nums[i]);
       }
     }

@@ -41,7 +41,7 @@ public class SolutionTest {
 
   @Test
   public void testThirdMax5() {
-    int[] nums = {5,2,4,1,3,6,0};
+    int[] nums = {5, 2, 4, 1, 3, 6, 0};
     int expect = 4;
     int actual = solution.thirdMax(nums);
     assertEquals(actual, expect);
