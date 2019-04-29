@@ -1,11 +1,9 @@
 package cn.hjmao.leetcode.mock.question2;
 
-import org.testng.annotations.Test;
-
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.testng.Assert.*;
+import org.testng.annotations.Test;
 
 public class SolutionTest {
 
@@ -21,7 +19,7 @@ public class SolutionTest {
     List<List<Integer>> forest = new ArrayList<>();
     int expect = 6;
     int actual = solution.cutOffTree(forest);
-//    assertEquals(actual, expect);
+    // assertEquals(actual, expect);
     System.err.println("FIXME: in mock.question2.SolutionTest test case 1");
   }
 
@@ -35,7 +33,7 @@ public class SolutionTest {
     List<List<Integer>> forest = new ArrayList<>();
     int expect = -1;
     int actual = solution.cutOffTree(forest);
-//    assertEquals(actual, expect);
+    // assertEquals(actual, expect);
     System.err.println("FIXME: in mock.question2.SolutionTest test case 2");
   }
 
@@ -49,7 +47,7 @@ public class SolutionTest {
     List<List<Integer>> forest = new ArrayList<>();
     int expect = 6;
     int actual = solution.cutOffTree(forest);
-//    assertEquals(actual, expect);
+    // assertEquals(actual, expect);
     System.err.println("FIXME: in mock.question2.SolutionTest test case 3");
   }
 }

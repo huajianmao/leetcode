@@ -1,8 +1,8 @@
 package cn.hjmao.leetcode.mock.question1;
 
-import org.testng.annotations.Test;
+import static org.testng.Assert.assertEquals;
 
-import static org.testng.Assert.*;
+import org.testng.annotations.Test;
 
 public class SolutionTest {
   Solution solution = new Solution();
