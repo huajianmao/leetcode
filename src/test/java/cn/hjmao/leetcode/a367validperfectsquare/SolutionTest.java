@@ -3,6 +3,7 @@ package cn.hjmao.leetcode.a367validperfectsquare;
 import org.testng.annotations.Test;
 
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 import static org.testng.Assert.*;
 
@@ -64,9 +65,9 @@ public class SolutionTest {
 
   @Test
   public void testIsPerfectSquare8() {
-    Random r = new Random();
-    for (int i = 0; i < 10000; i++) {
-      int num = r.nextInt((int) Math.sqrt(Integer.MAX_VALUE));
+    ThreadLocalRandom r = ThreadLocalRandom.current();
+    for (int i = 0; i < 1000; i++) {
+      int num = r.nextInt(1, (int) Math.sqrt(Integer.MAX_VALUE));
       int sqrt = (int) Math.sqrt(num);
       if (sqrt * sqrt == num) {
         assertTrue(solution.isPerfectSquare(num));
