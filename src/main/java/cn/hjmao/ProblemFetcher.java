@@ -1,9 +1,12 @@
 package cn.hjmao;
 
 import okhttp3.*;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.safety.Whitelist;
 
 
 import java.io.*;
@@ -18,7 +21,7 @@ public class ProblemFetcher {
   private static String PACKAGE_BASE = "cn.hjmao.leetcode";
 
   public static void main(String[] args) throws IOException {
-    String questionUrl = "https://leetcode.com/problems/house-robber/";
+    String questionUrl = "https://leetcode.com/problems/add-strings/";
     ProblemFetcher fetcher = new ProblemFetcher();
     fetcher.fetch(questionUrl);
   }
@@ -28,6 +31,8 @@ public class ProblemFetcher {
 
     String packageName = PACKAGE_BASE + "." + map.get("packageName");
     String packageDir = packageName.replaceAll("\\.", File.separator);
+    String content = map.get("content");
+    String code = map.get("code");
 
     String pwd = System.getProperty("user.dir");
     String srcDir = String.join(File.separator, pwd, SRC_BASE, packageDir);
@@ -46,6 +51,9 @@ public class ProblemFetcher {
         "Solution.java");
     Files.copy(Paths.get(blankSolutionFile), Paths.get(dstSolutionFile));
     modifyContent(new File(dstSolutionFile), PACKAGE_BASE + ".blank", packageName);
+    modifyContent(new File(dstSolutionFile), "https://leetcode.com/problems/PROBLEM_TITLE/", questionUrl);
+    modifyContent(new File(dstSolutionFile), "PROBLEM DESCRIPTION.", content);
+    modifyContent(new File(dstSolutionFile), "public class Solution \\{ \\}", code);
   }
 
   private Map<String, String> getProblem(String questionUrl) throws IOException {
@@ -69,6 +77,10 @@ public class ProblemFetcher {
         + "  question(titleSlug:\"" + titleSlug + "\") {\n"
         + "    questionId,\n"
         + "    content,\n"
+        + "    codeSnippets {\n"
+        + "      langSlug, \n"
+        + "      code, \n"
+        + "    },\n"
         + "  }\n"
         + "}\n";
 
@@ -91,11 +103,33 @@ public class ProblemFetcher {
       String id = (String) question.get("questionId");
       id = String.format("%03d", Integer.parseInt(id));
       String content = (String) question.get("content");
+      Document document = Jsoup.parse(content);
+      document.outputSettings(new Document.OutputSettings().prettyPrint(false));
+      document.select("br").append("\n");
+      document.select("p").prepend("\n\n");
+      content = Jsoup.clean(document.html(), "", Whitelist.none(), new Document.OutputSettings().prettyPrint(false));
+      content = content.replaceAll("\r\n", "\n").trim();
+      content = content.replaceAll("\n", "HJMAO_LINE_BREAK * ");
       content = Jsoup.parse(content).text();
+      content = content.replaceAll("HJMAO_LINE_BREAK \\* ", "\n \\* ");
+
       String packageName = "a" + id + titleSlug.replaceAll("-", "");
+
+      JSONArray codeSnippets = (JSONArray) question.get("codeSnippets");
+      String code = null;
+      for (Object object: codeSnippets) {
+        JSONObject codeSnippet = (JSONObject) object;
+        if ("java".equals(codeSnippet.get("langSlug"))) {
+          code = (String) codeSnippet.get("code");
+          break;
+        }
+      }
 
       result.put("packageName", packageName);
       result.put("content", content);
+      if (code != null) {
+        result.put("code", code);
+      }
       return result;
     } catch (Exception e) {
       System.out.println("Parse error! Create it manually please!");

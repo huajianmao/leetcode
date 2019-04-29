@@ -12,7 +12,4 @@ package cn.hjmao.leetcode.blank;
  * PROBLEM DESCRIPTION.
  */
 
-public class Solution {
-
-  // FIXME: add implementation code here.
-}
+public class Solution { }
