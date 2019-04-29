@@ -1,5 +1,9 @@
-# leetcode
+# Leetcode
 
+[![Build Status](https://travis-ci.org/huajianmao/leetcode.svg?branch=master)](https://travis-ci.org/huajianmao/leetcode)
+[![Coverage Status](https://coveralls.io/repos/github/huajianmao/leetcode/badge.svg?branch=master)](https://coveralls.io/github/huajianmao/leetcode?branch=master)
+
+## Introduction
 Code for leetcode problems.
 
 This project uses gradle and testNG to run and test the code.
@@ -18,3 +22,18 @@ When working on a new problem from the leetcode.
  5. new a unit test file for the class and put the test cases from leetcode page
  6. implement the solution method
  7. run it with `gradle test` or right click the `test` directory in the IDE to run the test cases.
+
+## Project Layout
+
+
+## How to use this repo
+
+### Copy blank code to your own package
+
+### Use `ProblemFetcher`
+
+
+## Contribution
+1. Solutions
+2. Test cases
+3. Discussions
