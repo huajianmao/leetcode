@@ -2,9 +2,6 @@
 buildscript {
   repositories {
     mavenCentral()
-    maven {
-      url "http://maven.oschina.net/content/groups/public"
-    }
   }
   dependencies {
   }
@@ -29,9 +26,6 @@ targetCompatibility = 1.8
 
 repositories {
   mavenCentral()
-  maven {
-    url "http://maven.oschina.net/content/groups/public"
-  }
 }
 
 dependencies {

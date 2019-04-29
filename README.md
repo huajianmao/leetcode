@@ -1,39 +1,130 @@
 # Leetcode
+Code snippets and **Test cases** for Leetcode problems.
 
 [![Build Status](https://travis-ci.org/huajianmao/leetcode.svg?branch=master)](https://travis-ci.org/huajianmao/leetcode)
 [![Coverage Status](https://coveralls.io/repos/github/huajianmao/leetcode/badge.svg?branch=master)](https://coveralls.io/github/huajianmao/leetcode?branch=master)
 
+
 ## Introduction
-Code for leetcode problems.
+This project hosts the code and test cases for Leetcode problems.
+Besides, some of the interesting and amazing solutions from the discussion are also included.
 
-This project uses gradle and testNG to run and test the code.
+### Environment
+This project is coded and tested with [Java 8](https://docs.oracle.com/javase/8/docs/api/) and [Gradle 5.4.1](https://docs.gradle.org/5.4.1/userguide/userguide.html).
 
-The solutions are described in `src/main/java/cn/hjmao/leetcode/`,
- and the test cases are put in `src/test/java/cn/hjmao/leetcode/`.
+The test cases are based on the [TestNG](https://testng.org/doc/) framework ([6.14.3](https://www.javadoc.io/doc/org.testng/testng/6.14.3)).
 
+The Google Java code style is used in this project.
+
+### Code Layout
+
+ - `src/main/java/com/leetcode/snippets` holds the original blank code snippets from `leetcode.com` and you may start solving the problems from here.
+ - `src/main/java/com/leetcode/discussion` holds some of the solutions provided by the genius in Leetcode Disucss.
+ - `src/main/java/cn/hjmao/leetcode` holds all my leetcode solutions. The code are in the same code format as the leetcode requires, so it can be directly copied and pasted on the leetcode OJ input box.
+ - `src/test/java/cn/hjmao/leetcode` holds the test cases. You may copy the test cases to yours and just focus on thinking about the core algorithms for the problems.
 You can execute all the test cases with `gradle test`.
 If you have more test cases, you can append the test cases in the test unit files.
 
-When working on a new problem from the leetcode.
- 1. add a new package under `src/main/java/cn/hjmao/leetcode/` with a name of the problem
- 2. new a `Solution` class under the created package or you may copy the `Solution` class from `blank/Solution.java`
- 3. add the problem url and the problem description would be better
- 4. copy the solution method from leetcode page
- 5. new a unit test file for the class and put the test cases from leetcode page
- 6. implement the solution method
- 7. run it with `gradle test` or right click the `test` directory in the IDE to run the test cases.
+ - `src/main/java/cn/hjmao/utils` contains some of the utilities for my solutions.
 
-## Project Layout
+<details><summary>Source Code Layout</summary>
+<p>
+
+``` shell
+src
+├── main
+│   └── java
+│       ├── cn
+│       │   └── hjmao
+│       │       ├── ProblemFetcher.java
+│       │       ├── leetcode
+│       │       │   ├── a001twosum
+│       │       │   │   └── Solution.java
+│       │       │   ├── a002addtwonumbers
+│       │       │   │   └── Solution.java
+│       │       │   ├── ...
+│       │       │   │   └── Solution.java
+│       │       │   └── ...
+│       │       │       └── Solution.java
+│       │       └── utils
+│       │           ├── AssertUtils.java
+│       │           ├── list
+│       │           │   ├── ListNode.java
+│       │           │   └── ListNodeUtils.java
+│       │           └── tree
+│       │               ├── TreeNode.java
+│       │               └── TreeNodeUtils.java
+│       └── com
+│           └── leetcode
+│               ├── discussion
+│               │   ├── a001twosum
+│               │   │   └── Solution.java
+│               │   ├── a002addtwonumbers
+│               │   │   └── Solution.java
+│               │   ├── ...
+│               │   │   └── Solution.java
+│               │   └── ...
+│               │       └── Solution.java
+│               └── snippets
+│                   ├── a001twosum
+│                   │   └── Solution.java
+│                   ├── a002addtwonumbers
+│                   │   └── Solution.java
+│                   ├── ...
+│                   │   └── Solution.java
+│                   └── ...
+│                       └── Solution.java
+└── test
+    └── java
+        └── cn
+            └── hjmao
+                └── leetcode
+                    ├── a001twosum
+                    │   └── SolutionTest.java
+                    ├── a002addtwonumbers
+                    │   └── SolutionTest.java
+                    ├── ...
+                    │   └── SolutionTest.java
+                    └── ...
+                        └── SolutionTest.java
+```
+
+</p>
+</details>
+
 
 
 ## How to use this repo
+ 1. Install [Gradle 5.4.1](https://downloads.gradle.org/distributions/gradle-5.4.1-bin.zip)
 
-### Copy blank code to your own package
+ 2. Clone this project
+    ``` shell
+    git clone https://github.com/huajianmao/leetcode
+    ```
+ 3. Install the dependencies.
+    ``` shell
+    gradle check
+    ```
+ 4. Create your own code package in `src/main/java` for code and `src/test/java` for test cases, for example `your.code.place`
+ 5. Choose a problem and move the corresponding blank snippet code from `src/main/java/com/leetcode/snippets`,
+    so that you do not need to prepare the `Solution` file from scratch. Just focus on problem solving!!!
+    For example, copy the package `a001twosum` to package `your.code.place`. If you are using IDE like Jetbrains IDEA,
+    it would automatically change the package name to yours, otherwise you might have to revise the snippet manually.
+ 6. Copy the test cases code in `cn.hjmao.leetcode` to `your.code.place` package in the `src/test/java`.
+    **NOTICES: If you are using the IDEs, as the IDE would probably insert the `import cn.hjmao.leetcode.xxx.Solution` to the test case code file, you might need to delete it manually.**
+ 7. ***Focus and write the algorithm*** in the code file in `src/main/java/your/code/place/Solution.java`.
+ 8. Run and debug with the copied test cases in `src/main/java/your/code/place/Solution.java`.
 
-### Use `ProblemFetcher`
+### `ProblemFetcher` script
+If a new problem is provided in `leetcode.com`, you might use `ProblemFetcher` to automatically get the problem descriptions and the `Solution` file will be generated in `com.leetcode.snippets`,
+and you can copy it to your code place package.
+But in this case, you have to write the test cases by yourself.
+
+**Notice: You might need to revise the snippet slightly to make it return in the correct type.**
 
 
 ## Contribution
-1. Solutions
-2. Test cases
-3. Discussions
+It would be my honor if you like this repo.
+You are very welcome to submit PRs on solutions, test cases.
+There would probably have lots of issues in this project, if you find some one, please throw a issue to me.
+Please help improving this repo better. Thanks!

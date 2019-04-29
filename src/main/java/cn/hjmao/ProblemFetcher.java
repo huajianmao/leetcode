@@ -18,7 +18,7 @@ import java.util.Map;
 public class ProblemFetcher {
   private static String SRC_BASE = String.join(File.separator, "src", "main", "java");
   private static String TEST_BASE = String.join(File.separator, "src", "test", "java");
-  private static String PACKAGE_BASE = "cn.hjmao.leetcode";
+  private static String PACKAGE_BASE = "com.leetcode.snippets";
 
   public static void main(String[] args) throws IOException {
     String questionUrl = "https://leetcode.com/problems/add-strings/";
