@@ -7,7 +7,6 @@ buildscript {
     }
   }
   dependencies {
-    classpath 'net.saliman:gradle-cobertura-plugin:2.2.4'
   }
 }
 
@@ -33,13 +32,13 @@ repositories {
 
 dependencies {
   compile(
-    ['com.squareup.okhttp3:okhttp:3.14.0'],
+    ['com.squareup.okhttp3:okhttp:3.14.1'],
     ['org.jsoup:jsoup:1.11.3'],
     ['org.json:json:20180813']
   )
 
   testCompile(
-    ['org.testng:testng:6.10']
+    ['org.testng:testng:6.14.3']
   )
 }
 
@@ -54,6 +53,11 @@ sourceSets {
 
 compileJava {
   options.compilerArgs << '-Xlint:unchecked'
+}
+
+checkstyle {
+  toolVersion = '6.19'
+  configDir = file("$rootProject.projectDir/config/checkstyle")
 }
 
 test {
