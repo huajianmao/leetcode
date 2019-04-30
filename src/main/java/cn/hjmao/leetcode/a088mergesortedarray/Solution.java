@@ -29,15 +29,15 @@ public class Solution {
     while (indexN >= 0) {
       if (indexM >= 0) {
         if (nums1[indexM] <= nums2[indexN]) {
-            nums1[pos] = nums2[indexN];
-            indexN--;
-        } else {
-            nums1[pos] = nums1[indexM];
-            indexM--;
-        }
-      } else {
           nums1[pos] = nums2[indexN];
           indexN--;
+        } else {
+          nums1[pos] = nums1[indexM];
+          indexM--;
+        }
+      } else {
+        nums1[pos] = nums2[indexN];
+        indexN--;
       }
       pos--;
     }

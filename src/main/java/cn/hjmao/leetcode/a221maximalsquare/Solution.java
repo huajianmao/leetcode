@@ -15,9 +15,10 @@ package cn.hjmao.leetcode.a221maximalsquare;
 
 public class Solution {
 
-    public int maximalSquare(char[][] matrix) {
-        int square = 4;
 
-        return square;
-    }
+  public int maximalSquare(char[][] matrix) {
+    int square = 4;
+
+    return square;
+  }
 }

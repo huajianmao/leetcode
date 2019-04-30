@@ -23,15 +23,14 @@ import cn.hjmao.utils.tree.TreeNode;
  */
 
 public class Solution {
+  public int maxDepth(TreeNode root) {
+    int depth = 0;
 
-    public int maxDepth(TreeNode root) {
-        int depth = 0;
-
-        if (root != null) {
-            depth += 1;
-            depth += Math.max(maxDepth(root.left), maxDepth(root.right));
-        }
-
-        return depth;
+    if (root != null) {
+      depth += 1;
+      depth += Math.max(maxDepth(root.left), maxDepth(root.right));
     }
+
+    return depth;
+  }
 }

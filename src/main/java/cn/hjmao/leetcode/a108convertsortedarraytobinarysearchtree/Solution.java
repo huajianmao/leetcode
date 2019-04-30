@@ -32,54 +32,54 @@ import java.util.Arrays;
  */
 
 public class Solution {
-    public TreeNode sortedArrayToBST(int[] nums) {
-        TreeNode root = null;
-        if (nums.length > 0) {
-            root = new TreeNode(nums[nums.length / 2]);
-            if (nums.length / 2 > 0) {
-                root.left = sortedArrayToBST(Arrays.copyOfRange(nums, 0, nums.length / 2));
-            }
-            if (nums.length / 2 + 1 < nums.length) {
-                root.right = sortedArrayToBST(Arrays.copyOfRange(nums, nums.length / 2 + 1, nums.length));
-            }
-        }
-        return root;
+  public TreeNode sortedArrayToBST(int[] nums) {
+    TreeNode root = null;
+    if (nums.length > 0) {
+      root = new TreeNode(nums[nums.length / 2]);
+      if (nums.length / 2 > 0) {
+        root.left = sortedArrayToBST(Arrays.copyOfRange(nums, 0, nums.length / 2));
+      }
+      if (nums.length / 2 + 1 < nums.length) {
+        root.right = sortedArrayToBST(Arrays.copyOfRange(nums, nums.length / 2 + 1, nums.length));
+      }
     }
+    return root;
+  }
 
-//    public TreeNode sortedArrayToBST(int[] nums) {
+//public TreeNode sortedArrayToBST(int[] nums) {
 //
-//        TreeNode root = null;
+//    TreeNode root = null;
 //
-//        if (nums.length > 0) {
-//            root = new TreeNode(nums[0]);
-//            List<TreeNode> thisLevelSiblings = new ArrayList<>();
-//            thisLevelSiblings.add(root);
+//    if (nums.length > 0) {
+//        root = new TreeNode(nums[0]);
+//        List<TreeNode> thisLevelSiblings = new ArrayList<>();
+//        thisLevelSiblings.add(root);
 //
-//            int i = 1;
-//            while (i < nums.length) {
-//                List<TreeNode> nextLevelSiblings = new ArrayList<>();
-//                for (int j = 0; j < thisLevelSiblings.size(); j++) {
-//                    TreeNode thisNode = thisLevelSiblings.get(j);
-//                    if (i < nums.length) {
-//                        TreeNode left = new TreeNode(nums[i++]);
-//                        thisNode.left = left;
-//                        nextLevelSiblings.add(left);
-//                    } else {
-//                        break;
-//                    }
-//
-//                    if (i < nums.length) {
-//                        TreeNode right = new TreeNode(nums[i++]);
-//                        thisNode.right = right;
-//                        nextLevelSiblings.add(right);
-//                    } else {
-//                        break;
-//                    }
+//        int i = 1;
+//        while (i < nums.length) {
+//            List<TreeNode> nextLevelSiblings = new ArrayList<>();
+//            for (int j = 0; j < thisLevelSiblings.size(); j++) {
+//                TreeNode thisNode = thisLevelSiblings.get(j);
+//                if (i < nums.length) {
+//                    TreeNode left = new TreeNode(nums[i++]);
+//                    thisNode.left = left;
+//                    nextLevelSiblings.add(left);
+//                } else {
+//                    break;
 //                }
-//                thisLevelSiblings = nextLevelSiblings;
-//            }
-//        }
 //
-//        return root;
+//                if (i < nums.length) {
+//                    TreeNode right = new TreeNode(nums[i++]);
+//                    thisNode.right = right;
+//                    nextLevelSiblings.add(right);
+//                } else {
+//                    break;
+//                }
+//            }
+//            thisLevelSiblings = nextLevelSiblings;
+//        }
 //    }
+//
+//    return root;
+//}
 }

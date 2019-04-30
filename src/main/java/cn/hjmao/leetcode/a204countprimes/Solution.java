@@ -30,7 +30,7 @@ public class Solution {
           count++;
           int maxTimes = n / i;
           for (int times = i; times <= maxTimes; times++) {
-              isNotPrimes[i * times] = true;
+            isNotPrimes[i * times] = true;
           }
         }
       }

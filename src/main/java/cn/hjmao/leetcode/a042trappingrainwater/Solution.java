@@ -47,7 +47,7 @@ public class Solution {
   }
 
   /**
-   * @url https://discuss.leetcode.com/topic/18731/7-lines-c-c/2
+   * from https://discuss.leetcode.com/topic/18731/7-lines-c-c/2
    */
   public int trapSmart(int[] height) {
     int left = 0;
@@ -71,7 +71,7 @@ public class Solution {
     int right = height.length - 1;
     while (left <= right) {
       if (height[left] <= height[right]) {
-         if (height[left] >= maxLeft) {
+        if (height[left] >= maxLeft) {
           maxLeft = height[left];
         } else {
           water += maxLeft - height[left];

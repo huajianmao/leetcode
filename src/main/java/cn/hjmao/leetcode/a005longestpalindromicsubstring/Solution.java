@@ -28,21 +28,21 @@ public class Solution {
 
   private void findLongestStringWithReverseOrder(String s, int i, int left, int right) {
     for (int j = 0; j <= i; j++) {
-        if (left - j < 0 || right + j > s.length() - 1) {
-          break;
-        }
-        char prev = s.charAt(left - j);
-        char next = s.charAt(right + j);
-
-        if (prev != next) {
-          break;
-        }
-
-        if (this.length < right - left + 2 * j) {
-          this.start = left - j;
-          this.length = right - left + 2 * j;
-        }
+      if (left - j < 0 || right + j > s.length() - 1) {
+        break;
       }
+      char prev = s.charAt(left - j);
+      char next = s.charAt(right + j);
+
+      if (prev != next) {
+        break;
+      }
+
+      if (this.length < right - left + 2 * j) {
+        this.start = left - j;
+        this.length = right - left + 2 * j;
+      }
+    }
   }
 
   public String longestPalindrome(String s) {

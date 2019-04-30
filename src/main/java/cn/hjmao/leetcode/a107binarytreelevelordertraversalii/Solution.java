@@ -34,34 +34,33 @@ import java.util.List;
  */
 
 public class Solution {
-
-    public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        List<List<Integer>> result = new ArrayList<>();
-        if (root == null) {
-            return result;
-        }
-
-        List<TreeNode> thisLevelSiblings = new ArrayList<>();
-        thisLevelSiblings.add(root);
-        while (!thisLevelSiblings.isEmpty()) {
-            List<TreeNode> nextLevelSiblings = new ArrayList<>();
-            List<Integer> thisLevelValues = new ArrayList<>();
-            for (int i = 0; i < thisLevelSiblings.size(); i++) {
-                TreeNode sibling = thisLevelSiblings.get(i);
-
-                thisLevelValues.add(sibling.val);
-                if (sibling.left != null) {
-                    nextLevelSiblings.add(sibling.left);
-                }
-                if (sibling.right != null) {
-                    nextLevelSiblings.add(sibling.right);
-                }
-            }
-            result.add(thisLevelValues);
-            thisLevelSiblings = nextLevelSiblings;
-        }
-
-        Collections.reverse(result);
-        return result;
+  public List<List<Integer>> levelOrderBottom(TreeNode root) {
+    List<List<Integer>> result = new ArrayList<>();
+    if (root == null) {
+      return result;
     }
+
+    List<TreeNode> thisLevelSiblings = new ArrayList<>();
+    thisLevelSiblings.add(root);
+    while (!thisLevelSiblings.isEmpty()) {
+      List<TreeNode> nextLevelSiblings = new ArrayList<>();
+      List<Integer> thisLevelValues = new ArrayList<>();
+      for (int i = 0; i < thisLevelSiblings.size(); i++) {
+        TreeNode sibling = thisLevelSiblings.get(i);
+
+        thisLevelValues.add(sibling.val);
+        if (sibling.left != null) {
+          nextLevelSiblings.add(sibling.left);
+        }
+        if (sibling.right != null) {
+          nextLevelSiblings.add(sibling.right);
+        }
+      }
+      result.add(thisLevelValues);
+      thisLevelSiblings = nextLevelSiblings;
+    }
+
+    Collections.reverse(result);
+    return result;
+  }
 }

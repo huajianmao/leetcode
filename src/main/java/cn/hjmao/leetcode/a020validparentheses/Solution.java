@@ -33,7 +33,7 @@ public class Solution {
     for (int i = 0; i < s.length(); i++) {
       char thisChar = s.charAt(i);
       if (thisChar == '(' || thisChar == '[' || thisChar == '{') {
-          stack.push(thisChar);
+        stack.push(thisChar);
       } else if (stack.empty() || stack.pop() != CLOSE_PARENTHESES_MAP.get(thisChar)) {
         return false;
       }
