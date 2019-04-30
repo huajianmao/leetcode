@@ -39,11 +39,13 @@
             <property name="allowByTailComment" value="true"/>
             <property name="allowNonPrintableEscapes" value="true"/>
         </module>
-        <!-- temp comment -->
-        <!--<module name="LineLength">-->
+
+        <module name="LineLength">
+            <!-- By hjmao -->
             <!--<property name="max" value="100"/>-->
-            <!--<property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>-->
-        <!--</module>-->
+            <property name="max" value="120"/>
+            <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
+        </module>
         <module name="AvoidStarImport"/>
         <module name="OneTopLevelClass"/>
         <module name="NoLineWrap"/>

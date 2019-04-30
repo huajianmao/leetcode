@@ -32,9 +32,11 @@ public class Solution {
         return middle;
       }
 
-      if (nums[middle] >= nums[left] && nums[middle] >= nums[right] && !(target >= nums[left] && target < nums[middle])) {
+      if (nums[middle] >= nums[left] && nums[middle] >= nums[right]
+          && !(target >= nums[left] && target < nums[middle])) {
         left = middle + 1;
-      } else if (nums[middle] <= nums[left] && nums[middle] <= nums[right] && !(target <= nums[right] && target > nums[middle])) {
+      } else if (nums[middle] <= nums[left] && nums[middle] <= nums[right]
+          && !(target <= nums[right] && target > nums[middle])) {
         right = middle - 1;
       } else {
         if (nums[middle] > target) {

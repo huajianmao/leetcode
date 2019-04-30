@@ -20,7 +20,8 @@ import java.util.List;
  * Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
  *
  * Note:
- * Although the above answer is in lexicographical order, your answer could be in any order you want.
+ * Although the above answer is in lexicographical order,
+ * your answer could be in any order you want.
  */
 
 public class Solution {
@@ -60,7 +61,8 @@ public class Solution {
           }
           for (String combination : combinations) {
             for (int d = 0; d < chars.length; d++) {
-              newCombinations.add(combination + (upperCase ? Character.toUpperCase(chars[d]) : chars[d]));
+              char c = upperCase ? Character.toUpperCase(chars[d]) : chars[d];
+              newCombinations.add(combination + c);
             }
           }
           upperCase = false;

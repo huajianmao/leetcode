@@ -12,13 +12,15 @@ import java.util.List;
  *
  * Desc:
  * =====
- * The n-queens puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.
+ * The n-queens puzzle is the problem of placing n queens on an n×n chessboard
+ * such that no two queens attack each other.
  *
  *
  *
  * Given an integer n, return all distinct solutions to the n-queens puzzle.
  *
- * Each solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space respectively.
+ * Each solution contains a distinct board configuration of the n-queens' placement,
+ * where 'Q' and '.' both indicate a queen and an empty space respectively.
  *
  * Example:
  *
@@ -67,7 +69,8 @@ public class Solution {
     return result;
   }
 
-  private void helper(int n, List<List<Integer>> queens, List<Integer> thisQueens, List<Integer> xyDiff, List<Integer> xySum) {
+  private void helper(int n, List<List<Integer>> queens, List<Integer> thisQueens,
+                      List<Integer> xyDiff, List<Integer> xySum) {
     int p = thisQueens.size();
     if (p == n) {
       queens.add(thisQueens);
