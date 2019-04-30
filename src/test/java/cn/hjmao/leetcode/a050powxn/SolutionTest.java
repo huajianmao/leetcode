@@ -3,7 +3,7 @@ package cn.hjmao.leetcode.a050powxn;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 /**
  * Created by hjmao on 08/02/2017.

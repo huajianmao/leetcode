@@ -5,7 +5,7 @@ import cn.hjmao.utils.list.ListNodeUtils;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 /**
  * Created by hjmao on 15/02/2017.

@@ -2,7 +2,7 @@ package cn.hjmao.leetcode.a031nextpermutation;
 
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 /**
  * Created by hjmao on 25/02/2017.

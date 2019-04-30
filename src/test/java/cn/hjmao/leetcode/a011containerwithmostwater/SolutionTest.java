@@ -3,7 +3,7 @@ package cn.hjmao.leetcode.a011containerwithmostwater;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 /**
  * Created by hjmao on 07/02/2017.

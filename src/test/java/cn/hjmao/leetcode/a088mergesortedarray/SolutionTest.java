@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertTrue;
 
 public class SolutionTest {
 

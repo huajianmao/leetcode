@@ -4,7 +4,7 @@ import cn.hjmao.utils.tree.TreeNode;
 import cn.hjmao.utils.tree.TreeNodeUtils;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 public class SolutionTest {
 

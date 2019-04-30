@@ -4,7 +4,8 @@ import cn.hjmao.utils.list.ListNode;
 import cn.hjmao.utils.list.ListNodeUtils;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
 
 public class SolutionTest {
   Solution solution = new Solution();

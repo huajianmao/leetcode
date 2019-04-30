@@ -4,7 +4,7 @@ import cn.hjmao.utils.list.ListNode;
 import cn.hjmao.utils.list.ListNodeUtils;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 /**
  * Created by hjmao on 17-2-19.

@@ -2,7 +2,7 @@ package cn.hjmao.leetcode.a155minstack;
 
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 public class MinStackTest {
 

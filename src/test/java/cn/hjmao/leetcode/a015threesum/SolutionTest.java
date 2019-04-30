@@ -4,7 +4,9 @@ import cn.hjmao.utils.AssertUtils;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by hjmao on 17-2-9.

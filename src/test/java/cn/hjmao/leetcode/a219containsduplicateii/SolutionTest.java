@@ -2,7 +2,8 @@ package cn.hjmao.leetcode.a219containsduplicateii;
 
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.assertFalse;
 
 public class SolutionTest {
   Solution solution = new Solution();

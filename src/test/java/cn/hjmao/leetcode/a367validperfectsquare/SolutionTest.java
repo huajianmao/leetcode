@@ -5,7 +5,8 @@ import org.testng.annotations.Test;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
 
 public class SolutionTest {
   Solution solution = new Solution();

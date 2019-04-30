@@ -3,9 +3,10 @@ package cn.hjmao.leetcode.a017lettercombinationsofaphonenumber;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.*;
-
-import static org.testng.Assert.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * Created by hjmao on 12/02/2017.

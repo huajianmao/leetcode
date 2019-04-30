@@ -2,7 +2,7 @@ package cn.hjmao.leetcode.a042trappingrainwater;
 
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 /**
  * Created by hjmao on 17-3-6.

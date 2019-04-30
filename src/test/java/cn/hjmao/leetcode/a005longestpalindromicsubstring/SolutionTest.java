@@ -3,7 +3,8 @@ package cn.hjmao.leetcode.a005longestpalindromicsubstring;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 /**
  * Created by hjmao on 18/01/2017.

@@ -3,7 +3,7 @@ package cn.hjmao.leetcode.a023mergeksortedlists;
 import cn.hjmao.utils.list.ListNode;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 /**
  * Created by hjmao on 17-2-18.

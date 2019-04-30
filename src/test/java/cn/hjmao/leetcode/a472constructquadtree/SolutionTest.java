@@ -3,7 +3,7 @@ package cn.hjmao.leetcode.a472constructquadtree;
 import cn.hjmao.utils.quadtree.Node;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertTrue;
 
 public class SolutionTest {
   Solution solution = new Solution();

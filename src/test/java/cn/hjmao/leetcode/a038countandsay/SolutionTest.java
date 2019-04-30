@@ -2,7 +2,7 @@ package cn.hjmao.leetcode.a038countandsay;
 
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 /**
  * Created by hjmao on 28/02/2017.

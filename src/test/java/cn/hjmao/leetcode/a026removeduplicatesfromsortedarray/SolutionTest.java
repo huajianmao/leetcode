@@ -2,7 +2,7 @@ package cn.hjmao.leetcode.a026removeduplicatesfromsortedarray;
 
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 /**
  * Created by hjmao on 16/02/2017.

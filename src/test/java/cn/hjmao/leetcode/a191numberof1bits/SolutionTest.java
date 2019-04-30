@@ -2,7 +2,7 @@ package cn.hjmao.leetcode.a191numberof1bits;
 
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 public class SolutionTest {
 
