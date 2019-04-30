@@ -18,7 +18,7 @@
 <module name="Checker">
   <property name="charset" value="UTF-8"/>
 
-  <property name="severity" value="warning"/>
+  <property name="severity" value="error"/>
 
   <property name="fileExtensions" value="java, properties, xml"/>
   <!-- Checks for whitespace                               -->
@@ -165,15 +165,14 @@
       <message key="ws.notPreceded"
                value="GenericWhitespace ''{0}'' is not preceded with whitespace."/>
     </module>
-    <!-- temp comment -->
-    <!--<module name="Indentation">-->
-    <!--<property name="basicOffset" value="2"/>-->
-    <!--<property name="braceAdjustment" value="0"/>-->
-    <!--<property name="caseIndent" value="2"/>-->
-    <!--<property name="throwsIndent" value="4"/>-->
-    <!--<property name="lineWrappingIndentation" value="4"/>-->
-    <!--<property name="arrayInitIndent" value="2"/>-->
-    <!--</module>-->
+    <module name="Indentation">
+      <property name="basicOffset" value="2"/>
+      <property name="braceAdjustment" value="0"/>
+      <property name="caseIndent" value="2"/>
+      <property name="throwsIndent" value="4"/>
+      <property name="lineWrappingIndentation" value="4"/>
+      <property name="arrayInitIndent" value="2"/>
+    </module>
     <module name="AbbreviationAsWordInName">
       <property name="ignoreFinal" value="false"/>
       <!-- By hjmao -->
@@ -184,12 +183,16 @@
     <!-- By hjmao -->
     <!--<module name="VariableDeclarationUsageDistance"/>-->
 
-    <!-- temp comment -->
-    <!--<module name="CustomImportOrder">-->
-    <!--<property name="specialImportsRegExp" value="com.google"/>-->
-    <!--<property name="sortImportsInGroupAlphabetically" value="true"/>-->
-    <!--<property name="customImportOrderRules" value="STATIC###SPECIAL_IMPORTS###THIRD_PARTY_PACKAGE###STANDARD_JAVA_PACKAGE"/>-->
-    <!--</module>-->
+    <module name="CustomImportOrder">
+      <property name="specialImportsRegExp" value="com.google"/>
+      <property name="sortImportsInGroupAlphabetically" value="true"/>
+
+      <!-- By hjmao -->
+      <!--<property name="customImportOrderRules"-->
+                <!--value="STATIC###SPECIAL_IMPORTS###THIRD_PARTY_PACKAGE###STANDARD_JAVA_PACKAGE"/>-->
+      <property name="customImportOrderRules"
+                value="SPECIAL_IMPORTS###THIRD_PARTY_PACKAGE###STANDARD_JAVA_PACKAGE###STATIC"/>
+    </module>
     <module name="MethodParamPad"/>
     <module name="OperatorWrap">
       <property name="option" value="NL"/>
@@ -211,7 +214,7 @@
     </module>
     <!-- By hjmao -->
     <!--<module name="JavadocParagraph">-->
-    <!--<property name="allowNewlineParagraph" value="true"/>-->
+      <!--<property name="allowNewlineParagraph" value="true"/>-->
     <!--</module>-->
     <module name="AtclauseOrder">
       <property name="tagOrder" value="@param, @return, @throws, @deprecated"/>
@@ -219,13 +222,13 @@
     </module>
     <!-- By hjmao -->
     <!--<module name="JavadocMethod">-->
-    <!--<property name="scope" value="public"/>-->
-    <!--<property name="allowMissingParamTags" value="true"/>-->
-    <!--<property name="allowMissingThrowsTags" value="true"/>-->
-    <!--<property name="allowMissingReturnTag" value="true"/>-->
-    <!--<property name="minLineCount" value="2"/>-->
-    <!--<property name="allowedAnnotations" value="Override, Test"/>-->
-    <!--<property name="allowThrowsTagsForSubclasses" value="true"/>-->
+      <!--<property name="scope" value="public"/>-->
+      <!--<property name="allowMissingParamTags" value="true"/>-->
+      <!--<property name="allowMissingThrowsTags" value="true"/>-->
+      <!--<property name="allowMissingReturnTag" value="true"/>-->
+      <!--<property name="minLineCount" value="2"/>-->
+      <!--<property name="allowedAnnotations" value="Override, Test"/>-->
+      <!--<property name="allowThrowsTagsForSubclasses" value="true"/>-->
     <!--</module>-->
     <module name="MethodName">
       <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9_]*$"/>

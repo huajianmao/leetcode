@@ -5,18 +5,18 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 public class SolutionTest {
+  private Solution solution = new Solution();
 
-    private Solution solution = new Solution();
+  @Test
+  public void testMaximalSquare() {
+    char[][] matrix = {
+        {1, 0, 1, 0, 0},
+        {1, 0, 1, 1, 1},
+        {1, 1, 1, 1, 1},
+        {1, 0, 0, 1, 0}
+    };
+    int expected = 4;
 
-    @Test
-    public void testMaximalSquare() {
-        char[][] matrix = {
-                {1, 0, 1, 0, 0},
-                {1, 0, 1, 1, 1},
-                {1, 1, 1, 1, 1},
-                {1, 0, 0, 1, 0}};
-        int expected = 4;
-
-        assertEquals(solution.maximalSquare(matrix), expected);
-    }
+    assertEquals(solution.maximalSquare(matrix), expected);
+  }
 }

@@ -1,12 +1,11 @@
 package cn.hjmao.leetcode.mock.question2;
 
+import org.testng.annotations.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import org.testng.annotations.Test;
-
 public class SolutionTest {
-
   Solution solution = new Solution();
 
   @Test

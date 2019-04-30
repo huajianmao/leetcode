@@ -5,10 +5,10 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 public class SolutionTest {
-    Solution solution = new Solution();
+  Solution solution = new Solution();
 
-    @Test
-    public void testIsSameTree() {
+  @Test
+  public void testIsSameTree() {
 
-    }
+  }
 }
