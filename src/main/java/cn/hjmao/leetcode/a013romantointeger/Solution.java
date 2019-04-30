@@ -51,6 +51,8 @@ public class Solution {
             sign = -1;
           }
           break;
+        default:
+          break;
       }
       value = value + sign * DIGIT_VALUE_MAP.get(character);
     }
@@ -96,6 +98,8 @@ public class Solution {
           break;
         case 'M':
           value = value + 1000;
+          break;
+        default:
           break;
       }
     }

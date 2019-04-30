@@ -23,23 +23,23 @@ public class Solution {
 
   // FIXME: add implementation code here.
   public boolean isSymmetric(TreeNode root) {
-        if (root == null) {
-          return true;
-        }
-        if (root.left == null && root.right == null) {
-          return true;
-        }
-        if (root.left != null && root.right != null && root.left.val == root.right.val) {
-            TreeNode outer = new TreeNode(0);
-            TreeNode inner = new TreeNode(0);
-            outer.left = root.left.left;
-            outer.right = root.right.right;
-            inner.left = root.left.right;
-            inner.right = root.right.left;
-            
-            return isSymmetric(outer) && isSymmetric(inner);
-        } else {
-            return false;
-        }        
+    if (root == null) {
+      return true;
+    }
+    if (root.left == null && root.right == null) {
+      return true;
+    }
+    if (root.left != null && root.right != null && root.left.val == root.right.val) {
+      TreeNode outer = new TreeNode(0);
+      TreeNode inner = new TreeNode(0);
+      outer.left = root.left.left;
+      outer.right = root.right.right;
+      inner.left = root.left.right;
+      inner.right = root.right.left;
+
+      return isSymmetric(outer) && isSymmetric(inner);
+    } else {
+      return false;
+    }
   }
 }

@@ -49,6 +49,7 @@ public class Solution {
     }
     return getDigit(base, n, len);
   }
+
   private int getDigit(long base, int n, int len) {
     int numberIndex = (n - 1) / len;
     long number = base + numberIndex;

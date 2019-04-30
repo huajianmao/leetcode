@@ -24,9 +24,7 @@ package cn.hjmao.leetcode.a136singlenumber;
  *
  * Input: [4,1,2,1,2]
  * Output: 4
- */
-
-/**
+ *
  * Hint: location is useless; you only need to find the value;
  *       A xor A = 0; xor is commutative;
  */

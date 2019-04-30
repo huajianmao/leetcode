@@ -37,7 +37,8 @@ import cn.hjmao.utils.quadtree.Node;
  * 
  *
  * 
- * The corresponding quad tree should be as following, where each node is represented as a (isLeaf, val) pair.
+ * The corresponding quad tree should be as following,
+ * where each node is represented as a (isLeaf, val) pair.
  * 
  *
  * For the non-leaf nodes, val can be arbitrary, so it is represented as *.
@@ -48,29 +49,6 @@ import cn.hjmao.utils.quadtree.Node;
  * N is less than 1000 and guaranteened to be a power of 2.
  * If you want to know more about the quad tree, you can refer to its wiki.
  */
-
-/*
-// Definition for a QuadTree node.
-class Node {
-    public boolean val;
-    public boolean isLeaf;
-    public Node topLeft;
-    public Node topRight;
-    public Node bottomLeft;
-    public Node bottomRight;
-
-    public Node() {}
-
-    public Node(boolean _val,boolean _isLeaf,Node _topLeft,Node _topRight,Node _bottomLeft,Node _bottomRight) {
-        val = _val;
-        isLeaf = _isLeaf;
-        topLeft = _topLeft;
-        topRight = _topRight;
-        bottomLeft = _bottomLeft;
-        bottomRight = _bottomRight;
-    }
-};
-*/
 
 class Solution {
   public Node construct(int[][] grid) {

@@ -77,15 +77,17 @@ public class Solution {
     for (int q = 0; q < n; q++) {
       if (!thisQueens.contains(q) && !xySum.contains(p + q) && !xyDiff.contains(p - q)) {
         List<Integer> newQueens = new ArrayList<>();
-        List<Integer> newXYDiff = new ArrayList<>();
-        List<Integer> newXYSum = new ArrayList<>();
         newQueens.addAll(thisQueens);
         newQueens.add(q);
+
+        List<Integer> newXYDiff = new ArrayList<>();
         newXYDiff.addAll(xyDiff);
         newXYDiff.add(p - q);
-        newXYSum.addAll(xySum);
-        newXYSum.add(p + q);
-        helper(n, queens, newQueens, newXYDiff, newXYSum);
+
+        List<Integer> newXySum = new ArrayList<>();
+        newXySum.addAll(xySum);
+        newXySum.add(p + q);
+        helper(n, queens, newQueens, newXYDiff, newXySum);
       }
     }
   }

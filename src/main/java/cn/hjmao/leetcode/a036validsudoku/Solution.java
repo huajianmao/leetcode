@@ -23,7 +23,7 @@ import java.util.HashSet;
 public class Solution {
 
   /**
-   * @url https://discuss.leetcode.com/topic/9748/shared-my-concise-java-code/2
+   * From: https://discuss.leetcode.com/topic/9748/shared-my-concise-java-code/2
    *
    * Just trying to explain how to think about `%` and `/`.
    * These two operators can be helpful for matrix traversal problems.

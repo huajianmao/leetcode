@@ -1,6 +1,10 @@
 package cn.hjmao.leetcode.mock.question1;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by hjmao.

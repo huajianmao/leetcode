@@ -62,7 +62,8 @@ public class Solution {
             stack.push('.');
             validLengths.push(currentLength);
           }
-
+          break;
+        default:
           break;
       }
     }

@@ -11,21 +11,24 @@ public class Node {
   public Node() {
   }
 
-  public Node(boolean _val, boolean _isLeaf, Node _topLeft, Node _topRight, Node _bottomLeft, Node _bottomRight) {
-    val = _val;
-    isLeaf = _isLeaf;
-    topLeft = _topLeft;
-    topRight = _topRight;
-    bottomLeft = _bottomLeft;
-    bottomRight = _bottomRight;
+  public Node(boolean val, boolean isLeaf,
+              Node topLeft, Node topRight, Node bottomLeft, Node bottomRight) {
+    this.val = val;
+    this.isLeaf = isLeaf;
+    this.topLeft = topLeft;
+    this.topRight = topRight;
+    this.bottomLeft = bottomLeft;
+    this.bottomRight = bottomRight;
   }
 
   public boolean equals(Node that) {
     if (this.isLeaf) {
       return that.isLeaf
           && this.val == that.val
-          && this.topLeft == null && this.topRight == null && this.bottomLeft == null && this.bottomRight == null
-          && that.topLeft == null && that.topRight == null && that.bottomLeft == null && that.bottomRight == null;
+          && this.topLeft == null && this.topRight == null
+          && this.bottomLeft == null && this.bottomRight == null
+          && that.topLeft == null && that.topRight == null
+          && that.bottomLeft == null && that.bottomRight == null;
     } else {
       return !that.isLeaf
           && this.topLeft.equals(that.topLeft)

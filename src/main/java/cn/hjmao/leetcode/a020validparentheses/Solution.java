@@ -21,6 +21,7 @@ import java.util.Stack;
 
 public class Solution {
   private static final Map<Character, Character> CLOSE_PARENTHESES_MAP = new HashMap<>();
+
   static {
     CLOSE_PARENTHESES_MAP.put(')', '(');
     CLOSE_PARENTHESES_MAP.put(']', '[');

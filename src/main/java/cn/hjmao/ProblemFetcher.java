@@ -1,6 +1,10 @@
 package cn.hjmao;
 
-import okhttp3.*;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.jsoup.Connection;
@@ -9,17 +13,32 @@ import org.jsoup.nodes.Document;
 import org.jsoup.safety.Whitelist;
 
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * This class fetch the leetcode problem with the GraphQL api.
+ *
+ * @author  Huajian Mao
+ */
 public class ProblemFetcher {
   private static String SRC_BASE = String.join(File.separator, "src", "main", "java");
   private static String TEST_BASE = String.join(File.separator, "src", "test", "java");
   private static String PACKAGE_BASE = "com.leetcode.snippets";
 
+  /**
+   * Fetch runner.
+   *
+   * <p>For each time you want fetch a problem, set the questionUrl please!
+   */
   public static void main(String[] args) throws IOException {
     String questionUrl = "https://leetcode.com/problems/add-strings/";
     ProblemFetcher fetcher = new ProblemFetcher();
@@ -31,9 +50,6 @@ public class ProblemFetcher {
 
     String packageName = PACKAGE_BASE + "." + map.get("packageName");
     String packageDir = packageName.replaceAll("\\.", File.separator);
-    String content = map.get("content");
-    String code = map.get("code");
-
     String pwd = System.getProperty("user.dir");
     String srcDir = String.join(File.separator, pwd, SRC_BASE, packageDir);
     String testDir = String.join(File.separator, pwd, TEST_BASE, packageDir);
@@ -52,8 +68,8 @@ public class ProblemFetcher {
     Files.copy(Paths.get(blankSolutionFile), Paths.get(dstSolutionFile));
     modifyContent(new File(dstSolutionFile), PACKAGE_BASE + ".blank", packageName);
     modifyContent(new File(dstSolutionFile), "https://leetcode.com/problems/PROBLEM_TITLE/", questionUrl);
-    modifyContent(new File(dstSolutionFile), "PROBLEM DESCRIPTION.", content);
-    modifyContent(new File(dstSolutionFile), "public class Solution \\{ \\}", code);
+    modifyContent(new File(dstSolutionFile), "PROBLEM DESCRIPTION.", map.get("content"));
+    modifyContent(new File(dstSolutionFile), "public class Solution \\{ \\}", map.get("code"));
   }
 
   private Map<String, String> getProblem(String questionUrl) throws IOException {
@@ -107,7 +123,12 @@ public class ProblemFetcher {
       document.outputSettings(new Document.OutputSettings().prettyPrint(false));
       document.select("br").append("\n");
       document.select("p").prepend("\n\n");
-      content = Jsoup.clean(document.html(), "", Whitelist.none(), new Document.OutputSettings().prettyPrint(false));
+      content = Jsoup.clean(
+          document.html(),
+          "",
+          Whitelist.none(),
+          new Document.OutputSettings().prettyPrint(false)
+      );
       content = content.replaceAll("\r\n", "\n").trim();
       content = content.replaceAll("\n", "HJMAO_LINE_BREAK * ");
       content = Jsoup.parse(content).text();

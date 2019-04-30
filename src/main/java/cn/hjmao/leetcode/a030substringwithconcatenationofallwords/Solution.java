@@ -1,6 +1,10 @@
 package cn.hjmao.leetcode.a030substringwithconcatenationofallwords;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by hjmao.
@@ -61,7 +65,7 @@ public class Solution {
   }
 
   /**
-   * @from https://discuss.leetcode.com/topic/54662/92-java-o-n-with-explaination
+   * from https://discuss.leetcode.com/topic/54662/92-java-o-n-with-explaination
    *
    * A time & space O(n) solution
    * Run a moving window for wordLen times.
@@ -133,7 +137,7 @@ public class Solution {
   }
 
   /**
-   * @from https://discuss.leetcode.com/topic/35676/accepted-java-solution-12ms-with-explanation
+   * from https://discuss.leetcode.com/topic/35676/accepted-java-solution-12ms-with-explanation
    */
   public List<Integer> fastFindSubstring(String s, String[] words) {
     List<Integer> indices = new ArrayList<>();

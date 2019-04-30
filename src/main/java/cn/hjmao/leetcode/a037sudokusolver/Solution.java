@@ -1,6 +1,6 @@
 package cn.hjmao.leetcode.a037sudokusolver;
 
-import java.util.*;
+import java.util.Arrays;
 
 /**
  * Created by hjmao.

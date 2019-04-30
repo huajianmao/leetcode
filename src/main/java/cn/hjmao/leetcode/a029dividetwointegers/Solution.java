@@ -17,7 +17,7 @@ package cn.hjmao.leetcode.a029dividetwointegers;
 public class Solution {
 
   /**
-   * @FROM: https://discuss.leetcode.com/topic/17600/32-times-bit-shift-operation-in-c-with-o-1-solution
+   * FROM: https://discuss.leetcode.com/topic/17600/32-times-bit-shift-operation-in-c-with-o-1-solution
    *
    * ret = a0 + a1*2 + a2*2^2 + ...... + a29*2^29 + a30*2^30 + a31*2^31; ai = 0 or 1, i = 0......31
    *

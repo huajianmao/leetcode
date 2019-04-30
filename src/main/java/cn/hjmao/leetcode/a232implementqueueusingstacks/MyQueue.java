@@ -41,6 +41,7 @@ public class MyQueue {
   /** Initialize your data structure here. */
   Stack<Integer> reversed = new Stack<>();
   Stack<Integer> input = new Stack<>();
+
   public MyQueue() {
 
   }

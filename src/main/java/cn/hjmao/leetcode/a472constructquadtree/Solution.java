@@ -37,8 +37,8 @@ import cn.hjmao.utils.quadtree.Node;
  *
  *
  *
- * The corresponding quad tree should be as following, where each node is represented as a (isLeaf, val) pair.
- *
+ * The corresponding quad tree should be as following,
+ * where each node is represented as a (isLeaf, val) pair.
  *
  * For the non-leaf nodes, val can be arbitrary, so it is represented as *.
  *

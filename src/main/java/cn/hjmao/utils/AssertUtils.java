@@ -1,6 +1,9 @@
 package cn.hjmao.utils;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * Created by hjmao on 17-2-14.
@@ -30,6 +33,7 @@ public class AssertUtils {
 
     return actualSetStr;
   }
+
   private static boolean areEqualsOfTwoArrays(List<List<Integer>> actual, List<List<Integer>> expected) {
     if (actual != null && expected != null) {
       if (actual.size() != expected.size()) {

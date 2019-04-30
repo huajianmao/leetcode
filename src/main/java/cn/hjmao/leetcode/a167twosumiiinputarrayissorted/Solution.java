@@ -44,21 +44,5 @@ public class Solution {
     }
 
     return new int[] {index1, index2};
-
-//    int[] indices = new int[2];
-//    indices[0] = 1;
-//    indices[1] = numbers.length;
-//
-//    while (indices[0] < indices[1]) {
-//      if (numbers[indices[0] - 1] + numbers[indices[1] - 1] > target) {
-//        indices[1] = indices[1] - 1;
-//      } else if (numbers[indices[0] - 1] + numbers[indices[1] - 1] < target) {
-//        indices[0] = indices[0] + 1;
-//      } else {
-//        break;
-//      }
-//    }
-//
-//    return indices;
   }
 }

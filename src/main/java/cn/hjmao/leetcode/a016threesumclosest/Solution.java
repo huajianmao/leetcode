@@ -1,6 +1,6 @@
 package cn.hjmao.leetcode.a016threesumclosest;
 
-import java.util.*;
+import java.util.Arrays;
 
 /**
  * Created by hjmao.
@@ -74,7 +74,6 @@ public class Solution {
   }
 
   public int threeSumClosest(int[] nums, int target) {
-//    return brutalForceSolution(nums, target);
     return threeSumClosest1(nums, target);
   }
 }

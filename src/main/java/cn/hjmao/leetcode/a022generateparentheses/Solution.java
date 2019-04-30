@@ -1,6 +1,10 @@
 package cn.hjmao.leetcode.a022generateparentheses;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 /**
  * Created by hjmao.
@@ -95,7 +99,6 @@ public class Solution {
   }
 
   public List<String> generateParenthesis(int n) {
-//    List<String> result = generateParenthesisRecursively(n, n);
     List<String> result = solution1(n);
     return result;
   }
