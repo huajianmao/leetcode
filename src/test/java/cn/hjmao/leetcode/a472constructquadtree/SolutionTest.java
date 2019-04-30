@@ -33,7 +33,6 @@ public class SolutionTest {
     Node expect = new Node(true, false, node1, node2, node3, node4);
     Node actual = solution.construct(grid);
 
-//    assertEquals(actual, expect);
     assertTrue(actual.equals(expect));
   }
 }

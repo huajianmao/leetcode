@@ -8,11 +8,11 @@ import static org.testng.Assert.*;
 
 public class SolutionTest {
   Solution solution = new Solution();
-  Random r = new Random();
+  Random random = new Random();
 
   @Test
   public void testGuess1() {
-    int expect = r.nextInt(Integer.MAX_VALUE - 2) + 1;
+    int expect = random.nextInt(Integer.MAX_VALUE - 2) + 1;
     solution.pick(expect);
     assertEquals(0, solution.guess(expect));
     assertEquals(1, solution.guess(expect - 1));
@@ -31,7 +31,7 @@ public class SolutionTest {
   @Test
   public void testGuessNumber2() {
     int n = 1774014697;
-    int expect = r.nextInt(n);
+    int expect = random.nextInt(n);
     solution.pick(expect);
     int actual = solution.guessNumber(n);
     assertEquals(actual, expect);
@@ -40,8 +40,8 @@ public class SolutionTest {
   @Test
   public void testGuessNumber3() {
     for (int i = 0; i < 10000; i++) {
-      int n = r.nextInt(Integer.MAX_VALUE);
-      int expect = r.nextInt(n);
+      int n = random.nextInt(Integer.MAX_VALUE);
+      int expect = random.nextInt(n);
       solution.pick(expect);
       int actual = solution.guessNumber(n);
       assertEquals(actual, expect);

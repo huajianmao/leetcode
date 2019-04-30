@@ -15,6 +15,7 @@ public class SolutionTest {
   public void setUp() throws Exception {
     this.solution = new Solution();
   }
+
   @Test
   public void testConvert() throws Exception {
     String s = "PAYPALISHIRING";
