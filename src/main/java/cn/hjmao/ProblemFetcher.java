@@ -92,6 +92,7 @@ public class ProblemFetcher {
     String postBody = "query{\n"
         + "  question(titleSlug:\"" + titleSlug + "\") {\n"
         + "    questionId,\n"
+        + "    questionFrontendId,\n"
         + "    content,\n"
         + "    codeSnippets {\n"
         + "      langSlug, \n"
@@ -116,7 +117,7 @@ public class ProblemFetcher {
       JSONObject data = (JSONObject) jsonObject.get("data");
       JSONObject question = (JSONObject) data.get("question");
 
-      String id = (String) question.get("questionId");
+      String id = (String) question.get("questionFrontendId");
       id = String.format("%03d", Integer.parseInt(id));
       String content = (String) question.get("content");
       Document document = Jsoup.parse(content);
