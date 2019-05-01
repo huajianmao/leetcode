@@ -40,7 +40,7 @@ public class ProblemFetcher {
    * <p>For each time you want fetch a problem, set the questionUrl please!
    */
   public static void main(String[] args) throws IOException {
-    String questionUrl = "https://leetcode.com/problems/add-strings/";
+    String questionUrl = "https://leetcode.com/problems/path-sum-iii/";
     ProblemFetcher fetcher = new ProblemFetcher();
     fetcher.fetch(questionUrl);
   }
