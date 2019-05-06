@@ -77,11 +77,11 @@ jacocoTestReport {
     xml.enabled = true
   }
   afterEvaluate {
-    getClassDirectories().setFrom(
-        files(getClassDirectories().files.collect {
-          fileTree(dir: it, exclude: ['**/com/leetcode/**'])
-        })
-    )
+//    getClassDirectories().setFrom(
+    classDirectories = files(classDirectories.files.collect {
+      fileTree(dir: it, exclude: '**/com/leetcode/**')
+    })
+//    )
   }
 }
 
