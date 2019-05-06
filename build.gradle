@@ -76,6 +76,13 @@ jacocoTestReport {
   reports {
     xml.enabled = true
   }
+  afterEvaluate {
+    getClassDirectories().setFrom(
+        files(getClassDirectories().files.collect {
+          fileTree(dir: it, exclude: ['**/com/leetcode/**'])
+        })
+    )
+  }
 }
 
 coveralls {
