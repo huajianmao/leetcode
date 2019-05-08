@@ -74,6 +74,21 @@ public class SolutionTest {
     assertEquals(actual, expect);
   }
 
+  @Test
+  public void testArrangeCoins10() {
+    int n = 2147469817;
+    int expect = 65535;
+    int actual = solution.arrangeCoins(n);
+    assertEquals(actual, expect);
+  }
+
+  @Test
+  public void testArrangeCoins11() {
+    int n = 2147451838;
+    int expect = 65535;
+    int actual = solution.arrangeCoins(n);
+    assertEquals(actual, expect);
+  }
 
   @Test
   public void testArrangeCoinsX() {
@@ -85,7 +100,7 @@ public class SolutionTest {
         assertEquals(actual, 0);
       } else {
         int thisLevelTotal = (int)((long)actual * (actual + 1) / 2);
-        int nextLevelTotal = (int)((long)(actual + 1) * (actual + 2) / 2);
+        long nextLevelTotal = (long)(actual + 1) * (actual + 2) / 2;
         assertTrue(thisLevelTotal <= n);
         assertTrue(nextLevelTotal > n);
       }
