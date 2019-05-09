@@ -89,4 +89,4 @@ coveralls {
   jacocoReportPath 'build/reports/jacoco/test/jacocoTestReport.xml'
 }
 
-mainClassName = "cn.hjmao.leetcode.Main"
+mainClassName = group + ".Main"
