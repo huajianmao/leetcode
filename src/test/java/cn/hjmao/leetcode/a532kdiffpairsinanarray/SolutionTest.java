@@ -69,4 +69,14 @@ public class SolutionTest {
 
     assertEquals(actual, expected);
   }
+
+  @Test
+  public void testFindPairs7() throws Exception {
+    int[] nums = {1, 1, 1, 2, 2};
+    int k = 1;
+    int expected = 1;
+    int actual = this.solution.findPairs(nums, k);
+
+    assertEquals(actual, expected);
+  }
 }

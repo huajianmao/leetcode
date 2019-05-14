@@ -1,16 +1,11 @@
-package cn.hjmao.leetcode.a532kdiffpairsinanarray;
-
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+package com.leetcode.snippets.a532kdiffpairsinanarray;
 
 /**
  * Created by hjmao.
  *
  * URL:
  * =====
- * https://leetcode.com/contest/leetcode-weekly-contest-22/problems/k-diff-pairs-in-an-array/
+ * https://leetcode.com/problems/k-diff-pairs-in-an-array/
  *
  * Desc:
  * =====
@@ -40,29 +35,8 @@ import java.util.Set;
  * All the integers in the given input belong to the range: [-1e7, 1e7].
  */
 
-public class Solution {
+class Solution {
   public int findPairs(int[] nums, int k) {
-    Set<Integer> unique = new HashSet<>();
-    Set<Integer> duplicated = new HashSet<>();
-    for (int num: nums) {
-      if (unique.contains(num)) {
-        duplicated.add(num);
-      } else {
-        unique.add(num);
-      }
-    }
-
-    int count = 0;
-    if (k == 0) {
-      return duplicated.size();
-    } else if (k > 0) {
-      for (int num : unique) {
-        if (unique.contains(num - k)) {
-          count++;
-        }
-      }
-    }
-
-    return count;
+    return 0;
   }
 }
