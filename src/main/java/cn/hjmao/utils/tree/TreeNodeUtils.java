@@ -43,11 +43,6 @@ public class TreeNodeUtils {
     return root;
   }
 
-  public static Integer[] toArray(TreeNode root) {
-    List<Integer> nums = new ArrayList<>();
-    return (Integer[]) nums.toArray();
-  }
-
   public static boolean isSameTree(TreeNode p, TreeNode q) {
     Solution solution = new Solution();
     return solution.isSameTree(p, q);

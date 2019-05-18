@@ -8,9 +8,6 @@ public class Node {
   public Node bottomLeft;
   public Node bottomRight;
 
-  public Node() {
-  }
-
   public Node(boolean val, boolean isLeaf,
               Node topLeft, Node topRight, Node bottomLeft, Node bottomRight) {
     this.val = val;
