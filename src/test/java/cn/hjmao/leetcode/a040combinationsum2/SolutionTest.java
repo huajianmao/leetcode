@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 /**
  * Created by hjmao on 17-3-3.
@@ -25,6 +26,6 @@ public class SolutionTest {
         Arrays.asList(1, 1, 6)
     );
     List<List<Integer>> actual = this.solution.combinationSum2(candidates, target);
-    AssertUtils.assertEqualsOfTwoArrays(actual, expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(actual, expected));
   }
 }

@@ -10,15 +10,15 @@ import java.util.Set;
  */
 public class AssertUtils {
 
-  public static void assertEqualsOfTwoArrays(List<List<Integer>> actual, List<List<Integer>> expected) {
-    if (areEqualsOfTwoArrays(actual, expected)) {
-      assert true;
-    } else {
-      System.err.println("expected: " + expected);
-      System.err.println("actual: " + actual);
-      assert false;
-    }
-  }
+  // public static void assertEqualsOfTwoArrays(List<List<Integer>> actual, List<List<Integer>> expected) {
+  //   if (areEqualsOfTwoArrays(actual, expected)) {
+  //     assert true;
+  //   } else {
+  //     System.err.println("expected: " + expected);
+  //     System.err.println("actual: " + actual);
+  //     assert false;
+  //   }
+  // }
 
   private static String list2sortedStr(List<Integer> nums) {
     int[] actualInts = new int[nums.size()];
@@ -34,7 +34,7 @@ public class AssertUtils {
     return actualSetStr;
   }
 
-  private static boolean areEqualsOfTwoArrays(List<List<Integer>> actual, List<List<Integer>> expected) {
+  public static boolean areEqualsOfTwoArrays(List<List<Integer>> actual, List<List<Integer>> expected) {
     if (actual != null && expected != null) {
       if (actual.size() != expected.size()) {
         return false;

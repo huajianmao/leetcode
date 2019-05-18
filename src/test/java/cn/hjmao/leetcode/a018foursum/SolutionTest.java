@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.testng.Assert.assertTrue;
+
 /**
  * Created by hjmao on 17-2-14.
  */
@@ -28,7 +30,7 @@ public class SolutionTest {
         Arrays.asList(-2, -1, 1, 2),
         Arrays.asList(-2, 0, 0, 2)
     );
-    AssertUtils.assertEqualsOfTwoArrays(this.solution.fourSum(nums, target), expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(this.solution.fourSum(nums, target), expected));
   }
 
   @Test
@@ -45,7 +47,7 @@ public class SolutionTest {
         Arrays.asList(-2, 0, 0, 2),
         Arrays.asList(-1, 0, 0, 1)
     );
-    AssertUtils.assertEqualsOfTwoArrays(this.solution.fourSum(nums, target), expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(this.solution.fourSum(nums, target), expected));
   }
 
   @Test
@@ -53,7 +55,7 @@ public class SolutionTest {
     int[] nums = {3, 1, 4, 2, 5, -4, 2, 4, -5};
     int target = -12;
     List<List<Integer>> expected = new ArrayList<>();
-    AssertUtils.assertEqualsOfTwoArrays(this.solution.fourSum(nums, target), expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(this.solution.fourSum(nums, target), expected));
   }
 
   @Test
@@ -64,7 +66,7 @@ public class SolutionTest {
         Arrays.asList(-5, 0, 4, 5),
         Arrays.asList(-3, -2, 4, 5)
     );
-    AssertUtils.assertEqualsOfTwoArrays(this.solution.fourSum(nums, target), expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(this.solution.fourSum(nums, target), expected));
   }
 
   @Test
@@ -74,7 +76,7 @@ public class SolutionTest {
     List<List<Integer>> expected = Arrays.asList(
         Arrays.asList(-5, -4, -3, 1)
     );
-    AssertUtils.assertEqualsOfTwoArrays(this.solution.fourSum(nums, target), expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(this.solution.fourSum(nums, target), expected));
   }
 
   @Test
@@ -82,7 +84,7 @@ public class SolutionTest {
     int[] nums = {0, 1, 1, 1};
     int target = 1000;
     List<List<Integer>> expected = new ArrayList<>();
-    AssertUtils.assertEqualsOfTwoArrays(this.solution.fourSum(nums, target), expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(this.solution.fourSum(nums, target), expected));
   }
 
   @Test
@@ -90,7 +92,7 @@ public class SolutionTest {
     int[] nums = {1, 1, 1, 1000, 1000};
     int target = 3;
     List<List<Integer>> expected = new ArrayList<>();
-    AssertUtils.assertEqualsOfTwoArrays(this.solution.fourSum(nums, target), expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(this.solution.fourSum(nums, target), expected));
   }
 
   @Test
@@ -98,6 +100,6 @@ public class SolutionTest {
     int[] nums = {1, 1, 1000, 1000, 1000};
     int target = 2;
     List<List<Integer>> expected = new ArrayList<>();
-    AssertUtils.assertEqualsOfTwoArrays(this.solution.fourSum(nums, target), expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(this.solution.fourSum(nums, target), expected));
   }
 }

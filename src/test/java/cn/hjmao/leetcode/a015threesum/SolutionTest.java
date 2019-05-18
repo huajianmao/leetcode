@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.testng.Assert.assertTrue;
+
 /**
  * Created by hjmao on 17-2-9.
  */
@@ -27,7 +29,7 @@ public class SolutionTest {
         Arrays.asList(new Integer[]{-1, 0, 1}),
         Arrays.asList(new Integer[]{-1, -1, 2})
     );
-    AssertUtils.assertEqualsOfTwoArrays(this.solution.threeSum(nums), expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(this.solution.threeSum(nums), expected));
   }
 
   @Test
@@ -35,7 +37,7 @@ public class SolutionTest {
     int[] nums = {};
 
     List<List<Integer>> expected = new ArrayList<>();
-    AssertUtils.assertEqualsOfTwoArrays(this.solution.threeSum(nums), expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(this.solution.threeSum(nums), expected));
   }
 
   @Test
@@ -45,7 +47,7 @@ public class SolutionTest {
     List<List<Integer>> expected = Arrays.asList(
         Arrays.asList(new Integer[]{0, 0, 0})
     );
-    AssertUtils.assertEqualsOfTwoArrays(this.solution.threeSum(nums), expected);
+    assertTrue((AssertUtils.areEqualsOfTwoArrays(this.solution.threeSum(nums), expected)));
   }
 
   @Test
@@ -55,7 +57,7 @@ public class SolutionTest {
     List<List<Integer>> expected = Arrays.asList(
         Arrays.asList(new Integer[]{0, 0, 0})
     );
-    AssertUtils.assertEqualsOfTwoArrays(this.solution.threeSum(nums), expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(this.solution.threeSum(nums), expected));
   }
 
   @Test
@@ -65,7 +67,7 @@ public class SolutionTest {
     List<List<Integer>> expected = Arrays.asList(
         Arrays.asList(new Integer[]{-1, 0, 1})
     );
-    AssertUtils.assertEqualsOfTwoArrays(this.solution.threeSum(nums), expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(this.solution.threeSum(nums), expected));
   }
 
   @Test
@@ -75,7 +77,7 @@ public class SolutionTest {
     List<List<Integer>> expected = Arrays.asList(
         Arrays.asList(new Integer[]{-1, -1, 2})
     );
-    AssertUtils.assertEqualsOfTwoArrays(this.solution.threeSum(nums), expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(this.solution.threeSum(nums), expected));
   }
 
   @Test
@@ -87,7 +89,7 @@ public class SolutionTest {
         Arrays.asList(new Integer[]{-2, 0, 2}),
         Arrays.asList(new Integer[]{-1, 0, 1})
     );
-    AssertUtils.assertEqualsOfTwoArrays(this.solution.threeSum(nums), expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(this.solution.threeSum(nums), expected));
   }
 
   @Test
@@ -97,7 +99,7 @@ public class SolutionTest {
     List<List<Integer>> expected = Arrays.asList(
         Arrays.asList(new Integer[]{0, 0, 0})
     );
-    AssertUtils.assertEqualsOfTwoArrays(this.solution.threeSum(nums), expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(this.solution.threeSum(nums), expected));
   }
 
   @Test
@@ -111,6 +113,6 @@ public class SolutionTest {
         -9, -1, -1, 3, 4, 1, 8, 1
     };
     List<List<Integer>> expected = this.solution.brutalForceSolution(nums);
-    AssertUtils.assertEqualsOfTwoArrays(this.solution.threeSum(nums), expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(this.solution.threeSum(nums), expected));
   }
 }

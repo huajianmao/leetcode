@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 /**
  * Created by hjmao on 01/03/2017.
@@ -20,7 +21,7 @@ public class SolutionTest {
     int target = 3;
     List<List<Integer>> expected = Arrays.asList();
     List<List<Integer>> actual = this.solution.combinationSum(candidates, target);
-    AssertUtils.assertEqualsOfTwoArrays(actual, expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(actual, expected));
   }
 
   @Test
@@ -32,7 +33,7 @@ public class SolutionTest {
         Arrays.asList(2, 2)
     );
     List<List<Integer>> actual = this.solution.combinationSum(candidates, target);
-    AssertUtils.assertEqualsOfTwoArrays(actual, expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(actual, expected));
   }
 
   @Test
@@ -44,7 +45,7 @@ public class SolutionTest {
         Arrays.asList(2, 2, 3)
     );
     List<List<Integer>> actual = this.solution.combinationSum(candidates, target);
-    AssertUtils.assertEqualsOfTwoArrays(actual, expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(actual, expected));
   }
 
   @Test
@@ -57,7 +58,7 @@ public class SolutionTest {
         Arrays.asList(2, 2, 2)
     );
     List<List<Integer>> actual = this.solution.combinationSum(candidates, target);
-    AssertUtils.assertEqualsOfTwoArrays(actual, expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(actual, expected));
   }
 
   @Test
@@ -69,6 +70,6 @@ public class SolutionTest {
         Arrays.asList(5, 5)
     );
     List<List<Integer>> actual = this.solution.combinationSum(candidates, target);
-    AssertUtils.assertEqualsOfTwoArrays(actual, expected);
+    assertTrue(AssertUtils.areEqualsOfTwoArrays(actual, expected));
   }
 }
