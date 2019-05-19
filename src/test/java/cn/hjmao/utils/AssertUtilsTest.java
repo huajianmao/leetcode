@@ -6,9 +6,15 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertTrue;
 
 public class AssertUtilsTest {
+
+  @Test
+  public void testObjectCreation() {
+    assertNotNull(new AssertUtils());
+  }
 
   @Test
   public void testNotSameSize() {
