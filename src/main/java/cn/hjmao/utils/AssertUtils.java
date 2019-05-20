@@ -60,4 +60,45 @@ public class AssertUtils {
       return actual == null && expected == null;
     }
   }
+
+  public static String int2dArrayToString(int[][] array) {
+    if (array == null) {
+      return "null";
+    }
+    if (array.length == 0) {
+      return "[]";
+    }
+
+    StringBuilder sb = new StringBuilder("[");
+    for (int[] items : array) {
+      sb.append("[");
+      for (int item: items) {
+        sb.append(Integer.toString(item));
+        sb.append(",");
+      }
+      sb.setCharAt(sb.length() - 1, ']');
+      sb.append(",");
+    }
+
+    sb.setCharAt(sb.length() - 1, ']');
+    return sb.toString();
+  }
+
+  public static String intArrayToString(int[] array) {
+    if (array == null) {
+      return "null";
+    }
+    if (array.length == 0) {
+      return "[]";
+    }
+
+    StringBuilder sb = new StringBuilder("[");
+    for (int item: array) {
+      sb.append(Integer.toString(item));
+      sb.append(",");
+    }
+
+    sb.setCharAt(sb.length() - 1, ']');
+    return sb.toString();
+  }
 }
