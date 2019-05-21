@@ -1,6 +1,7 @@
 # Leetcode
 Code snippets and **Test cases** for Leetcode problems.
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/65a87d5cdda54fbfb849183d37ea7994)](https://app.codacy.com/app/huajianmao/leetcode?utm_source=github.com&utm_medium=referral&utm_content=huajianmao/leetcode&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/huajianmao/leetcode.svg?branch=master)](https://travis-ci.org/huajianmao/leetcode)
 [![Coverage Status](https://coveralls.io/repos/github/huajianmao/leetcode/badge.svg?branch=master)](https://coveralls.io/github/huajianmao/leetcode?branch=master)
 
