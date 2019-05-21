@@ -1,9 +1,7 @@
 package cn.hjmao.leetcode.a496nextgreaterelementi;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 /**
  * Created by hjmao.

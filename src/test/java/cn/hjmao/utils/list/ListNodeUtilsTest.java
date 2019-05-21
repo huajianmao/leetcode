@@ -14,7 +14,7 @@ public class ListNodeUtilsTest {
 
   @Test
   public void testNotSameClassObject1() throws Exception {
-    assertFalse(ListNodeUtils.equals(new String(""), new Integer(1)));
+    assertFalse(ListNodeUtils.equals("", new Integer(1)));
   }
 
   @Test
@@ -24,7 +24,7 @@ public class ListNodeUtilsTest {
 
   @Test
   public void testNotSameClassObject3() throws Exception {
-    assertFalse(ListNodeUtils.equals(new String(""), new ListNode(1)));
+    assertFalse(ListNodeUtils.equals("", new ListNode(1)));
   }
 
   @Test

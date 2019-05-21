@@ -4,10 +4,8 @@ import cn.hjmao.utils.tree.TreeNode;
 import cn.hjmao.utils.tree.TreeNodeUtils;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertEquals;
-
 public class SolutionTest {
-  Solution solution = new Solution();
+  private Solution solution = new Solution();
 
   @Test
   public void testSortedArrayToBST() {
@@ -16,5 +14,6 @@ public class SolutionTest {
 
     TreeNode expect = TreeNodeUtils.fromArray(treenums);
     TreeNode actual = solution.sortedArrayToBST(nums);
+    assert TreeNodeUtils.isSameTree(actual, expect);
   }
 }

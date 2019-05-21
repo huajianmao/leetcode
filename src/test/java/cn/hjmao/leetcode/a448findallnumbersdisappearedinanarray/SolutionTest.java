@@ -4,12 +4,11 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 import static org.testng.Assert.assertEquals;
 
 public class SolutionTest {
-  Solution solution = new Solution();
+  private Solution solution = new Solution();
 
   @Test
   public void testFindDisappearedNumbers1() {

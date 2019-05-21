@@ -54,7 +54,7 @@ public class Solution {
     int numberIndex = (n - 1) / len;
     long number = base + numberIndex;
     n -= numberIndex * len;
-    int pow = (int) Math.pow(10, len - n);
+    int pow = (int) Math.pow(10, (double) len - n);
     int digit = (int) (number % (pow * 10) / pow);
     return digit;
   }

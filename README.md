@@ -3,7 +3,10 @@ Code snippets and **Test cases** for Leetcode problems.
 
 [![Build Status](https://travis-ci.org/huajianmao/leetcode.svg?branch=master)](https://travis-ci.org/huajianmao/leetcode)
 [![Coverage Status](https://coveralls.io/repos/github/huajianmao/leetcode/badge.svg?branch=master)](https://coveralls.io/github/huajianmao/leetcode?branch=master)
-
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=huajianmao_leetcode&metric=ncloc)](https://sonarcloud.io/dashboard?id=huajianmao_leetcode)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=huajianmao_leetcode&metric=bugs)](https://sonarcloud.io/dashboard?id=huajianmao_leetcode)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=huajianmao_leetcode&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=huajianmao_leetcode)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/095e4b25c3164e558dd15614dfec5f4f)](https://www.codacy.com/app/huajianmao/leetcode?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=huajianmao/leetcode&amp;utm_campaign=Badge_Grade)
 
 ## Introduction
 This project hosts the code and test cases for Leetcode problems.
@@ -19,11 +22,14 @@ The Google Java code style is used in this project.
 ### Code Layout
 
  - `src/main/java/com/leetcode/snippets` holds the original blank code snippets from `leetcode.com` and you may start solving the problems from here.
+
  - `src/main/java/com/leetcode/discussion` holds some of the solutions provided by the genius in Leetcode Disucss.
+
  - `src/main/java/cn/hjmao/leetcode` holds all my leetcode solutions. The code are in the same code format as the leetcode requires, so it can be directly copied and pasted on the leetcode OJ input box.
+
  - `src/test/java/cn/hjmao/leetcode` holds the test cases. You may copy the test cases to yours and just focus on thinking about the core algorithms for the problems.
-You can execute all the test cases with `gradle test`.
-If you have more test cases, you can append the test cases in the test unit files.
+    You can execute all the test cases with `gradle test`.
+    If you have more test cases, you can append the test cases in the test unit files.
 
  - `src/main/java/cn/hjmao/utils` contains some of the utilities for my solutions.
 
@@ -92,8 +98,6 @@ src
 </p>
 </details>
 
-
-
 ## How to use this repo
  1. Install [Gradle 5.4.1](https://downloads.gradle.org/distributions/gradle-5.4.1-bin.zip)
 
@@ -101,18 +105,24 @@ src
     ``` shell
     git clone https://github.com/huajianmao/leetcode
     ```
+    
  3. Install the dependencies.
     ``` shell
     gradle check
     ```
+
  4. Create your own code package in `src/main/java` for code and `src/test/java` for test cases, for example `your.code.place`
+
  5. Choose a problem and move the corresponding blank snippet code from `src/main/java/com/leetcode/snippets`,
     so that you do not need to prepare the `Solution` file from scratch. Just focus on problem solving!!!
     For example, copy the package `a001twosum` to package `your.code.place`. If you are using IDE like Jetbrains IDEA,
     it would automatically change the package name to yours, otherwise you might have to revise the snippet manually.
+
  6. Copy the test cases code in `cn.hjmao.leetcode` to `your.code.place` package in the `src/test/java`.
     **NOTICES: If you are using the IDEs, as the IDE would probably insert the `import cn.hjmao.leetcode.xxx.Solution` to the test case code file, you might need to delete it manually.**
+
  7. ***Focus and write the algorithm*** in the code file in `src/main/java/your/code/place/Solution.java`.
+
  8. Run and debug with the copied test cases in `src/main/java/your/code/place/Solution.java`.
 
 ### `ProblemFetcher` script
@@ -121,7 +131,6 @@ and you can copy it to your code place package.
 But in this case, you have to write the test cases by yourself.
 
 **Notice: You might need to revise the snippet slightly to make it return in the correct type.**
-
 
 ## Contribution
 It would be my honor if you like this repo.

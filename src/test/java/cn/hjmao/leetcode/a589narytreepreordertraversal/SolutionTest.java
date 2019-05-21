@@ -1,7 +1,6 @@
 package cn.hjmao.leetcode.a589narytreepreordertraversal;
 
 import cn.hjmao.utils.narytree.Node;
-import cn.hjmao.utils.tree.TreeNodeUtils;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -10,7 +9,7 @@ import java.util.List;
 import static org.testng.Assert.assertEquals;
 
 public class SolutionTest {
-  Solution solution = new Solution();
+  private Solution solution = new Solution();
 
   @Test
   public void testPreorder1() {

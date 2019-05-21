@@ -62,39 +62,6 @@ import cn.hjmao.utils.list.ListNode;
 
 public class Solution {
   public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-    int lengthA = 0;
-    int lengthB = 0;
-
-    ListNode temp = headA;
-    while (temp != null) {
-      lengthA++;
-      temp = temp.next;
-    }
-    temp = headB;
-    while (temp != null) {
-      lengthB++;
-      temp = temp.next;
-    }
-
-    ListNode longer = lengthA > lengthB ? headA : headB;
-    ListNode shorter = !(lengthA > lengthB) ? headA : headB;
-
-    int delta = Math.abs(lengthA - lengthB);
-    for (int i = 0; i < delta; i++) {
-      longer = longer.next;
-    }
-    while (longer != null) {
-      if (longer.equals(shorter)) {
-        return longer;
-      }
-      longer = longer.next;
-      shorter = shorter.next;
-    }
-
-    return null;
-  }
-
-  public ListNode ok1(ListNode headA, ListNode headB) {
     ListNode posA = headA;
     ListNode posB = headB;
     while (posA != posB) {
@@ -104,22 +71,22 @@ public class Solution {
     return posA;
   }
 
-  public ListNode ok(ListNode headA, ListNode headB) {
-    ListNode posA = headA;
-    ListNode posB = headB;
-    while (posA != null) {
-      posA = posA.next;
-      posB = posB == null ? headA : posB.next;
-    }
-
-    posA = headB;
-    posB = posB == null ? headA : posB.next;
-
-    while (posA != null && !posA.equals(posB)) {
-      posA = posA.next;
-      posB = posB == null ? headA : posB.next;
-    }
-
-    return posA;
-  }
+  // public ListNode ok1(ListNode headA, ListNode headB) {
+  //   ListNode posA = headA;
+  //   ListNode posB = headB;
+  //   while (posA != null) {
+  //     posA = posA.next;
+  //     posB = posB == null ? headA : posB.next;
+  //   }
+  //
+  //   posA = headB;
+  //   posB = posB == null ? headA : posB.next;
+  //
+  //   while (posA != null && !posA.equals(posB)) {
+  //     posA = posA.next;
+  //     posB = posB == null ? headA : posB.next;
+  //   }
+  //
+  //   return posA;
+  // }
 }

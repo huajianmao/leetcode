@@ -30,36 +30,36 @@ public class Solution {
     DIGIT_VALUE_MAP.put('M', 1000);
   }
 
-  private int solution1(String s) {
-    int value = 0;
-    for (int i = 0; i < s.length(); i++) {
-      Character character = s.charAt(i);
-      int sign = 1;
-      switch (character) {
-        case 'C':
-          if (i + 1 < s.length() && (s.charAt(i + 1) == 'D' || s.charAt(i + 1) == 'M')) {
-            sign = -1;
-          }
-          break;
-        case 'X':
-          if (i + 1 < s.length() && (s.charAt(i + 1) == 'L' || s.charAt(i + 1) == 'C')) {
-            sign = -1;
-          }
-          break;
-        case 'I':
-          if (i + 1 < s.length() && (s.charAt(i + 1) == 'V' || s.charAt(i + 1) == 'X')) {
-            sign = -1;
-          }
-          break;
-        default:
-          break;
-      }
-      value = value + sign * DIGIT_VALUE_MAP.get(character);
-    }
-
-    return value;
-  }
-
+  // private int solution1(String s) {
+  //   int value = 0;
+  //   for (int i = 0; i < s.length(); i++) {
+  //     Character character = s.charAt(i);
+  //     int sign = 1;
+  //     switch (character) {
+  //       case 'C':
+  //         if (i + 1 < s.length() && (s.charAt(i + 1) == 'D' || s.charAt(i + 1) == 'M')) {
+  //           sign = -1;
+  //         }
+  //         break;
+  //      case 'X':
+  //        if (i + 1 < s.length() && (s.charAt(i + 1) == 'L' || s.charAt(i + 1) == 'C')) {
+  //          sign = -1;
+  //         }
+  //         break;
+  //       case 'I':
+  //         if (i + 1 < s.length() && (s.charAt(i + 1) == 'V' || s.charAt(i + 1) == 'X')) {
+  //           sign = -1;
+  //         }
+  //         break;
+  //       default:
+  //         break;
+  //     }
+  //     value = value + sign * DIGIT_VALUE_MAP.get(character);
+  //   }
+  //
+  //   return value;
+  // }
+  //
 
   private int solution2(String s) {
     int value = 0;

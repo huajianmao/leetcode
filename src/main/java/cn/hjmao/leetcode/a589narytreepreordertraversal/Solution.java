@@ -3,7 +3,6 @@ package cn.hjmao.leetcode.a589narytreepreordertraversal;
 import cn.hjmao.utils.narytree.Node;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 

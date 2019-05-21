@@ -18,7 +18,16 @@ public class Node {
     this.bottomRight = bottomRight;
   }
 
-  public boolean equals(Node that) {
+  @Override
+  public boolean equals(Object thatOne) {
+    if (this == thatOne) {
+      return true;
+    }
+    if (thatOne == null || getClass() != thatOne.getClass()) {
+      return false;
+    }
+    Node that = (Node) thatOne;
+
     if (this.isLeaf) {
       return that.isLeaf
           && this.val == that.val
@@ -33,5 +42,10 @@ public class Node {
           && this.bottomLeft.equals(that.bottomLeft)
           && this.bottomRight.equals(that.bottomRight);
     }
+  }
+
+  @Override
+  public int hashCode() {
+    return super.hashCode();
   }
 }

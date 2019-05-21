@@ -1,3 +1,5 @@
+*.hprof
+
 *.class
 *.swp
 

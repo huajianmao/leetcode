@@ -2,9 +2,6 @@ package cn.hjmao.leetcode.a110balancedbinarytree;
 
 import cn.hjmao.utils.tree.TreeNode;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by hjmao.
  * <p>
@@ -63,48 +60,5 @@ public class Solution {
       isBalanced = false;
     }
     return Math.max(left, right) + 1;
-  }
-
-  // Wrong
-  public boolean isBalanced1(TreeNode root) {
-    if (root == null) {
-      return true;
-    }
-
-    boolean positive = false;
-
-    List<TreeNode> thisLevelSiblings = new ArrayList<>();
-    thisLevelSiblings.add(root);
-
-    while (true) {
-      boolean hasNullChild = false;
-      List<TreeNode> nextLevelSiblings = new ArrayList<>();
-      for (int i = 0; i < thisLevelSiblings.size(); i++) {
-        TreeNode thisNode = thisLevelSiblings.get(i);
-        if (thisNode.left != null) {
-          nextLevelSiblings.add(thisNode.left);
-        } else {
-          hasNullChild = true;
-        }
-
-        if (thisNode.right != null) {
-          nextLevelSiblings.add(thisNode.right);
-        } else {
-          hasNullChild = true;
-        }
-      }
-      if (hasNullChild) {
-        if (nextLevelSiblings.size() == 0) {
-          return true;
-        } else {
-          for (int i = 0; i < nextLevelSiblings.size(); i++) {
-            TreeNode thisNode = nextLevelSiblings.get(i);
-            return thisNode.left == null && thisNode.right == null;
-          }
-        }
-      } else {
-        thisLevelSiblings = nextLevelSiblings;
-      }
-    }
   }
 }

@@ -17,7 +17,7 @@ public class NumArrayTest {
 
   @Test
   public void testSumRange2() {
-    int[] nums = {};
-    NumArray numArray = new NumArray(nums);
+    // int[] nums = {};
+    // NumArray numArray = new NumArray(nums);
   }
 }

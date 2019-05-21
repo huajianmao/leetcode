@@ -53,7 +53,7 @@ public class Solution {
             }
             validLengths.clear();
           } else {
-            Character topChar = stack.pop();
+            stack.pop();
             currentLength = currentLength + 2;
             if (!stack.empty() && stack.peek() == '.') {
               stack.pop();

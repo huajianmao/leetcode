@@ -11,6 +11,8 @@ import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.safety.Whitelist;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 import java.io.BufferedReader;
@@ -30,34 +32,47 @@ import java.util.Map;
  * @author  Huajian Mao
  */
 public class ProblemFetcher {
+  private static final Logger LOGGER = LoggerFactory.getLogger(ProblemFetcher.class);
   private static String SRC_BASE = String.join(File.separator, "src", "main", "java");
   private static String TEST_BASE = String.join(File.separator, "src", "test", "java");
   private static String PACKAGE_BASE = "com.leetcode.snippets";
 
+  private String url;
+  private String path;
+
+  public ProblemFetcher(String url, String path) {
+    this.url = url;
+    this.path = path;
+  }
+
   /**
    * Fetch runner.
    *
-   * <p>For each time you want fetch a problem, set the questionUrl please!
+   * For each time you want fetch a problem, set the questionUrl please!
    */
   public static void main(String[] args) throws IOException {
     String questionUrl = "https://leetcode.com/problems/path-sum-iii/";
-    ProblemFetcher fetcher = new ProblemFetcher();
-    fetcher.fetch(questionUrl);
+    String pwd = System.getProperty("user.dir");
+    ProblemFetcher fetcher = new ProblemFetcher(questionUrl, pwd);
+    fetcher.fetch();
   }
 
-  private void fetch(String questionUrl) throws IOException {
-    Map<String, String> map = getProblem(questionUrl);
+  public boolean fetch() throws IOException {
+    if (this.url == null || this.path == null) {
+      return false;
+    }
+
+    Map<String, String> map = getProblem();
 
     String packageName = PACKAGE_BASE + "." + map.get("packageName");
     String packageDir = packageName.replaceAll("\\.", File.separator);
-    String pwd = System.getProperty("user.dir");
-    String srcDir = String.join(File.separator, pwd, SRC_BASE, packageDir);
-    String testDir = String.join(File.separator, pwd, TEST_BASE, packageDir);
+    String srcDir = String.join(File.separator, this.path, SRC_BASE, packageDir);
+    String testDir = String.join(File.separator, this.path, TEST_BASE, packageDir);
     new File(srcDir).mkdirs();
     new File(testDir).mkdirs();
 
     String blankSolutionFile = String.join(File.separator,
-        pwd,
+        this.path,
         SRC_BASE,
         PACKAGE_BASE.replaceAll("\\.", File.separator),
         "blank",
@@ -67,16 +82,18 @@ public class ProblemFetcher {
         "Solution.java");
     Files.copy(Paths.get(blankSolutionFile), Paths.get(dstSolutionFile));
     modifyContent(new File(dstSolutionFile), PACKAGE_BASE + ".blank", packageName);
-    modifyContent(new File(dstSolutionFile), "https://leetcode.com/problems/PROBLEM_TITLE/", questionUrl);
+    modifyContent(new File(dstSolutionFile), "https://leetcode.com/problems/PROBLEM_TITLE/", this.url);
     modifyContent(new File(dstSolutionFile), "PROBLEM DESCRIPTION.", map.get("content"));
     modifyContent(new File(dstSolutionFile), "public class Solution \\{ \\}", map.get("code"));
+
+    return true;
   }
 
-  private Map<String, String> getProblem(String questionUrl) throws IOException {
+  private Map<String, String> getProblem() throws IOException {
     Map<String, String> result = new HashMap<>();
 
     String graphqlUrl = "https://leetcode.com/graphql";
-    Connection.Response response = Jsoup.connect(questionUrl)
+    Connection.Response response = Jsoup.connect(this.url)
         .method(Connection.Method.GET)
         .execute();
     String csrftoken = response.cookie("csrftoken");
@@ -88,7 +105,7 @@ public class ProblemFetcher {
         .build();
 
     String pattern = "https://leetcode.com/problems/(.*)/";
-    String titleSlug = questionUrl.replaceAll(pattern, "$1");
+    String titleSlug = this.url.replaceAll(pattern, "$1");
     String postBody = "query{\n"
         + "  question(titleSlug:\"" + titleSlug + "\") {\n"
         + "    questionId,\n"
@@ -103,7 +120,7 @@ public class ProblemFetcher {
 
     Request request = new Request.Builder()
         .addHeader("Content-Type", "application/graphql")
-        .addHeader("Referer", questionUrl)
+        .addHeader("Referer", this.url)
         .addHeader("Cookie", "__cfduid=" + cfduid + ";" + "csrftoken=" + csrftoken)
         .addHeader("x-csrftoken", csrftoken)
         .url(graphqlUrl)
@@ -155,7 +172,7 @@ public class ProblemFetcher {
       return result;
     } catch (Exception e) {
       System.out.println("Parse error! Create it manually please!");
-      return null;
+      return new HashMap<>();
     }
   }
 
@@ -173,15 +190,27 @@ public class ProblemFetcher {
       writer = new FileWriter(file);
       writer.write(newContent);
     } catch (FileNotFoundException fnfe) {
-      fnfe.printStackTrace();
+      LOGGER.error("file not found", fnfe);
+      // fnfe.printStackTrace();
     } catch (IOException ioe) {
-      ioe.printStackTrace();
+      LOGGER.error("io exception", ioe);
+      // ioe.printStackTrace();
     } finally {
-      try {
-        reader.close();
-        writer.close();
-      } catch (IOException e) {
-        e.printStackTrace();
+      if (reader != null) {
+        try {
+          reader.close();
+        } catch (IOException e) {
+          LOGGER.error("io exception", e);
+          // e.printStackTrace();
+        }
+      }
+      if (writer != null) {
+        try {
+          writer.close();
+        } catch (IOException e) {
+          LOGGER.error("context", e);
+          // e.printStackTrace();
+        }
       }
     }
   }

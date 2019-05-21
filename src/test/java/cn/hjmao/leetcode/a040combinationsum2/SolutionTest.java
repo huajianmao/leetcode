@@ -6,14 +6,13 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 /**
  * Created by hjmao on 17-3-3.
  */
 public class SolutionTest {
-  Solution solution = new Solution();
+  private Solution solution = new Solution();
 
   @Test
   public void testCombinationSum21() throws Exception {

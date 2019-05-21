@@ -1,7 +1,5 @@
 package cn.hjmao.leetcode.a492constructtherectangle;
 
-import java.util.Arrays;
-
 /**
  * Created by hjmao.
  *

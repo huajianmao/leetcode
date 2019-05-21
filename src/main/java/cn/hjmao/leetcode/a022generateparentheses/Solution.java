@@ -1,7 +1,6 @@
 package cn.hjmao.leetcode.a022generateparentheses;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -29,34 +28,34 @@ import java.util.Queue;
  */
 
 public class Solution {
-  private List<String> generateParenthesisRecursively(int left, int right) {
-    if (left == 0) {
-      String thisResult = "";
-      while (right > 0) {
-        thisResult += ")";
-        right--;
-      }
-      return Arrays.asList(thisResult);
-    }
-
-    List<String> thisResults = new LinkedList<>();
-    if (left == right) {
-      List<String> results = generateParenthesisRecursively(left - 1, right);
-      for (String it : results) {
-        thisResults.add("(" + it);
-      }
-    } else {
-      List<String> results = generateParenthesisRecursively(left - 1, right);
-      for (String it : results) {
-        thisResults.add("(" + it);
-      }
-      results = generateParenthesisRecursively(left, right - 1);
-      for (String it : results) {
-        thisResults.add(")" + it);
-      }
-    }
-    return thisResults;
-  }
+  // private List<String> generateParenthesisRecursively(int left, int right) {
+  //   if (left == 0) {
+  //     String thisResult = "";
+  //     while (right > 0) {
+  //       thisResult += ")";
+  //       right--;
+  //     }
+  //     return Arrays.asList(thisResult);
+  //   }
+  //
+  //   List<String> thisResults = new LinkedList<>();
+  //   if (left == right) {
+  //     List<String> results = generateParenthesisRecursively(left - 1, right);
+  //     for (String it : results) {
+  //       thisResults.add("(" + it);
+  //     }
+  //   } else {
+  //     List<String> results = generateParenthesisRecursively(left - 1, right);
+  //     for (String it : results) {
+  //       thisResults.add("(" + it);
+  //     }
+  //     results = generateParenthesisRecursively(left, right - 1);
+  //     for (String it : results) {
+  //      thisResults.add(")" + it);
+  //    }
+  //  }
+  //   return thisResults;
+  // }
 
   class StringCount {
     String val;

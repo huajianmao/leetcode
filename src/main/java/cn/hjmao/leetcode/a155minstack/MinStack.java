@@ -1,6 +1,7 @@
 package cn.hjmao.leetcode.a155minstack;
 
-import java.util.Stack;
+import java.util.Deque;
+import java.util.LinkedList;
 
 /**
  * Created by hjmao.
@@ -21,40 +22,37 @@ import java.util.Stack;
  *
  * Example:
  *
- * MinStack minStack = new MinStack();
- * minStack.push(-2);
- * minStack.push(0);
- * minStack.push(-3);
- * minStack.getMin();   --> Returns -3.
- * minStack.pop();
- * minStack.top();      --> Returns 0.
- * minStack.getMin();   --> Returns -2.
+ * MinStack minValueStack = new MinStack();
+ * minValueStack.push(-2);
+ * minValueStack.push(0);
+ * minValueStack.push(-3);
+ * minValueStack.getMin();   --> Returns -3.
+ * minValueStack.pop();
+ * minValueStack.top();      --> Returns 0.
+ * minValueStack.getMin();   --> Returns -2.
  */
 
 public class MinStack {
-  private Stack<Integer> stack = new Stack<>();
-  private Stack<Integer> minStack = new Stack<>();
-
-  public MinStack() {
-  }
+  private Deque<Integer> stack = new LinkedList<>();
+  private Deque<Integer> minValueStack = new LinkedList<>();
 
   public void push(int x) {
     stack.push(x);
-    if (minStack.empty()) {
-      minStack.push(x);
+    if (minValueStack.isEmpty()) {
+      minValueStack.push(x);
     } else {
-      int minTop = minStack.peek();
+      int minTop = minValueStack.peek();
       if (x < minTop) {
-        minStack.push(x);
+        minValueStack.push(x);
       } else {
-        minStack.push(minTop);
+        minValueStack.push(minTop);
       }
     }
   }
 
   public void pop() {
     stack.pop();
-    minStack.pop();
+    minValueStack.pop();
   }
 
   public int top() {
@@ -62,6 +60,6 @@ public class MinStack {
   }
 
   public int getMin() {
-    return minStack.peek();
+    return minValueStack.peek();
   }
 }

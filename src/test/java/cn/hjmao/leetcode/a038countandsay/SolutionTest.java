@@ -8,7 +8,7 @@ import static org.testng.Assert.assertEquals;
  * Created by hjmao on 28/02/2017.
  */
 public class SolutionTest {
-  Solution solution = new Solution();
+  private Solution solution = new Solution();
 
   @Test
   public void testCountAndSay1() throws Exception {

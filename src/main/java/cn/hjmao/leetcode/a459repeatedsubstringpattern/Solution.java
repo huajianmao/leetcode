@@ -1,8 +1,5 @@
 package cn.hjmao.leetcode.a459repeatedsubstringpattern;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * Created by hjmao.
  *

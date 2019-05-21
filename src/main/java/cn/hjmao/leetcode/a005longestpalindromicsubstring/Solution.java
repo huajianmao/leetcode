@@ -46,8 +46,6 @@ public class Solution {
   }
 
   public String longestPalindrome(String s) {
-    String palindrome = "";
-
     for (int i = 0; i < s.length(); i++) {
       findLongestStringWithReverseOrder(s, i, i, i + 1);
       findLongestStringWithReverseOrder(s, i, i, i);

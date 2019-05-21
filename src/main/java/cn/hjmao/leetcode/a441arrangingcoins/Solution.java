@@ -42,7 +42,7 @@ package cn.hjmao.leetcode.a441arrangingcoins;
 class Solution {
   public int arrangeCoins(int n) {
     long nl = (long) n;
-    long k = (int) Math.sqrt(nl * 2);
+    long k = (int) Math.sqrt((double) nl * 2);
     int supply = k * (k + 1) / 2 <= nl ? 0 : -1;
     return n > 0 ? (int) k + supply : 0;
   }

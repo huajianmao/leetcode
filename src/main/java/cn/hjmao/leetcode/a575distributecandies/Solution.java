@@ -1,6 +1,5 @@
 package cn.hjmao.leetcode.a575distributecandies;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 

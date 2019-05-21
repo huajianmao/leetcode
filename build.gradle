@@ -14,6 +14,7 @@ plugins {
   id 'idea'
   id 'jacoco'
   id 'com.github.kt3k.coveralls' version '2.8.2'
+  id "org.sonarqube" version "2.7"
 }
 
 group = 'cn.hjmao.leetcode'
@@ -32,11 +33,13 @@ dependencies {
   compile(
     ['com.squareup.okhttp3:okhttp:3.14.1'],
     ['org.jsoup:jsoup:1.11.3'],
-    ['org.json:json:20180813']
+    ['org.json:json:20180813'],
+    ['org.apache.logging.log4j:log4j-slf4j-impl:2.11.2']
   )
 
   testCompile(
-    ['org.testng:testng:6.14.3']
+    ['org.testng:testng:6.14.3'],
+    ['org.mockito:mockito-core:2.27.0']
   )
 }
 
@@ -79,7 +82,7 @@ jacocoTestReport {
   afterEvaluate {
 //    getClassDirectories().setFrom(
     classDirectories = files(classDirectories.files.collect {
-      fileTree(dir: it, exclude: '**/com/leetcode/**')
+      fileTree(dir: it, excludes: ['**/com/leetcode/**', 'src/main/java/cn/hjmao/ProblemFetcher*'])
     })
 //    )
   }
@@ -89,4 +92,13 @@ coveralls {
   jacocoReportPath 'build/reports/jacoco/test/jacocoTestReport.xml'
 }
 
+sonarqube {
+  properties {
+    property 'sonar.projectKey', 'huajianmao_leetcode'
+    property 'sonar.organization', 'huajianmao-github'
+    property 'sonar.host.url', 'https://sonarcloud.io'
+    property 'sonar.login', '811822b24c24fed7a4ed2cab65db600c7844b1cb'
+    property 'sonar.exclusions', 'src/main/java/com/leetcode/**/*, src/main/java/cn/hjmao/ProblemFetcher*'
+  }
+}
 mainClassName = group + ".Main"

@@ -18,8 +18,6 @@ public class Solution {
       return false;
     }
 
-    boolean isPalindrome = false;
-
     int left = x;
     int reverse = 0;
     while (left / 10 > 0) {

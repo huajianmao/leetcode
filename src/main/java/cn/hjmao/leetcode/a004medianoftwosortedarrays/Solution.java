@@ -30,7 +30,7 @@ public class Solution {
     int n = longArray.length;
     int totalSize = m + n;
 
-    // TODO: the idea is to keep the two apart in the same length.
+    // the idea is to keep the two apart in the same length.
     //       i + j == nums1Len - i + nums2Len - j
     //    && max (i part + j part) <= min(nums1Len-i part + nums2Len-j part)
     //    i is processed as left part / 2, and j is calculated from the equal length equation,

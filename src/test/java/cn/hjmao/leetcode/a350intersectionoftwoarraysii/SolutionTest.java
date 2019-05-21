@@ -7,7 +7,7 @@ import java.util.Arrays;
 import static org.testng.Assert.assertEquals;
 
 public class SolutionTest {
-  Solution solution = new Solution();
+  private Solution solution = new Solution();
 
   @Test
   public void testIntersection1() {

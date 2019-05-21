@@ -2,8 +2,6 @@ package cn.hjmao.leetcode.a501findmodeinbinarysearchtree;
 
 import cn.hjmao.utils.tree.TreeNode;
 
-import java.util.Map;
-
 /**
  * Created by hjmao.
  *
@@ -41,6 +39,12 @@ import java.util.Map;
  * (Assume that the implicit stack space incurred due to recursion does not count).
  */
 class Solution {
+  private int currVal;
+  private int currCount = 0;
+  private int maxCount = 0;
+  private int modeCount = 0;
+  private int[] modes;
+
   public int[] findMode(TreeNode root) {
     inorder(root);
     modes = new int[modeCount];
@@ -49,12 +53,6 @@ class Solution {
     inorder(root);
     return modes;
   }
-
-  private int currVal;
-  private int currCount = 0;
-  private int maxCount = 0;
-  private int modeCount = 0;
-  private int[] modes;
 
   private void handleValue(int val) {
     if (val != currVal) {

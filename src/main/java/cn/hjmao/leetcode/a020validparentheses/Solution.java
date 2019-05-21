@@ -34,7 +34,7 @@ public class Solution {
       char thisChar = s.charAt(i);
       if (thisChar == '(' || thisChar == '[' || thisChar == '{') {
         stack.push(thisChar);
-      } else if (stack.empty() || stack.pop() != CLOSE_PARENTHESES_MAP.get(thisChar)) {
+      } else if (stack.empty() || !stack.pop().equals(CLOSE_PARENTHESES_MAP.get(thisChar))) {
         return false;
       }
     }

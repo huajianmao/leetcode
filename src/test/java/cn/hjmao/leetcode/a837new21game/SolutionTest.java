@@ -6,7 +6,7 @@ package cn.hjmao.leetcode.a837new21game;
 
 public class SolutionTest {
 
-//  Solution solution = new Solution();
+//  private Solution solution = new Solution();
 
 //  @Test
 //  public void testNew21Game1() {

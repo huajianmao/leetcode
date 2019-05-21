@@ -39,12 +39,8 @@ import java.util.Stack;
 
 public class MyQueue {
   /** Initialize your data structure here. */
-  Stack<Integer> reversed = new Stack<>();
-  Stack<Integer> input = new Stack<>();
-
-  public MyQueue() {
-
-  }
+  private Stack<Integer> reversed = new Stack<>();
+  private Stack<Integer> input = new Stack<>();
 
   /** Push element x to the back of queue. */
   public void push(int x) {

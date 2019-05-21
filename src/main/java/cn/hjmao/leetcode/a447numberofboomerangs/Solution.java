@@ -85,8 +85,8 @@ class Solution {
   }
 
   private long distance(int[] point1, int[] point2) {
-    long deltaX = point2[0] - point1[0];
-    long deltaY = point2[1] - point1[1];
+    long deltaX = (long) point2[0] - point1[0];
+    long deltaY = (long) point2[1] - point1[1];
 
     return deltaX * deltaX + deltaY * deltaY;
   }
