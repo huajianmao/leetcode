@@ -3,5 +3,18 @@ language: java
 jdk:
   - openjdk8
 
+addons:
+  sonarcloud:
+    organization: "sonarcloud"
+    token:
+      secure: "ksdAQnt8GuziAxw5P3QvVb8+5grIbRWo3ek948PiwI7A17b05SVD6Lbe7ViP2CGh55DB3hSD87oAzorvP6d3AQlFLGXQsHdwW5doTkF0HH7Kz/lhLYDvt3kEME7isawDsjBjvQT9ldkt8sEf7z9n3Ccmt9CwuxguNFmY+920+HXD6ORUYWtBOq1DbcoWms/1EuAQum7Yus5OOMMDIhOJJYbesIYk03uKwXYZJqT5Yom4b6HrjLpVXB575vmm73mIr9pW3uViXYxJIqa+j2E93/ERiWSnVnre6DZ61JQnOBLPW9ek1QvpGmNodVytibEVNjYvgg/qIhhJvINp7ZXPGDSv/aPBnJ721W5fLWGv4wapuYtxWrbhvRNh9kzDg+tkFl1Ab7Tg40mwDIuqxfufJarW6lCLPWsYer5ouiCcjAufDHPbCikxIqX0bIMx3LfRVM/jYx41LkSh/UikFyBn6QJZako/ZQ6PbJ54hNuzt+Kog5aKNZYbZljqKIa1wS7rkIkAtXwFe8kX3t7KkXZH4Z7hlOYAr5P0dJyvp9h4LoHhV7Xss61aTfj69UoCCBwGI4t4LHj4+oyJrC+tMh8Ha8TYkPgeAn2G1GKjV0R16yxDLl+600xeO5KFtcPAka+eggkqgxvrkVk7Qe+LALYm7Y7uBEE14ACjONiU4xVT8js="
+
+script:
+- sonar-scanner
+
+cache:
+  directories:
+  - '$HOME/.sonar/cache'
+
 after_success:
   - gradle jacocoTestReport coveralls

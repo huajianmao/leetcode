@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SolutionTest {
-  Solution solution = new Solution();
+  private Solution solution = new Solution();
 
   @Test
   public void testCutOffTree1() {

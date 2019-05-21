@@ -155,7 +155,7 @@ public class ProblemFetcher {
       return result;
     } catch (Exception e) {
       System.out.println("Parse error! Create it manually please!");
-      return null;
+      return new HashMap<>();
     }
   }
 
@@ -177,11 +177,19 @@ public class ProblemFetcher {
     } catch (IOException ioe) {
       ioe.printStackTrace();
     } finally {
-      try {
-        reader.close();
-        writer.close();
-      } catch (IOException e) {
-        e.printStackTrace();
+      if (reader != null) {
+        try {
+          reader.close();
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
+      }
+      if (writer != null) {
+        try {
+          writer.close();
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
       }
     }
   }
