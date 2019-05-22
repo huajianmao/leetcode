@@ -39,10 +39,8 @@ public class Solution {
     List<List<Integer>> hasMeLists = new ArrayList<>();
     if (target == candidates[length - 1]) {
       hasMeLists.add(new ArrayList<>());
-    } else if (candidates[length - 1] < target) {
-      if (length > 1) {
-        hasMeLists = combinate(candidates, target - candidates[length - 1], length - 1);
-      }
+    } else if (candidates[length - 1] < target && length > 1) {
+      hasMeLists = combinate(candidates, target - candidates[length - 1], length - 1);
     }
     for (List<Integer> listHasMe: hasMeLists) {
       listHasMe.add(candidates[length - 1]);

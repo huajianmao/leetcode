@@ -26,7 +26,9 @@ class Solution {
     StringBuilder sb = new StringBuilder();
     int carry = 0;
     String extra = "";
-    for (int i = num1.length() - 1, j = num2.length() - 1; i >= 0 || j >= 0 || carry == 1; i--, j--) {
+    int i = num1.length() - 1;
+    int j = num2.length() - 1;
+    for (; i >= 0 || j >= 0 || carry == 1; i--, j--) {
       if ((i < 0 || j < 0) && carry == 0) {
         extra += i >= 0 ? num1.substring(0, i + 1) : "";
         extra += j >= 0 ? num2.substring(0, j + 1) : "";

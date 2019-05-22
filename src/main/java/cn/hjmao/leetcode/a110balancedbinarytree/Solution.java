@@ -43,7 +43,7 @@ import cn.hjmao.utils.tree.TreeNode;
  */
 
 public class Solution {
-  boolean isBalanced = true;
+  private boolean isBalanced = true;
 
   public boolean isBalanced(TreeNode root) {
     height(root);

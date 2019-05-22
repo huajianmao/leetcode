@@ -40,11 +40,7 @@ import java.util.List;
 
 public class MyStack {
   /** Initialize your data structure here. */
-  List<Integer> queue = new ArrayList<>();
-
-  public MyStack() {
-
-  }
+  private List<Integer> queue = new ArrayList<>();
 
   /** Push element x onto stack. */
   public void push(int x) {

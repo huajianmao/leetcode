@@ -1,6 +1,5 @@
 package cn.hjmao.leetcode.a594longestharmonioussubsequence;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 

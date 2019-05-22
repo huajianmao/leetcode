@@ -58,9 +58,9 @@ public class Solution {
   // }
 
   class StringCount {
-    String val;
-    int left;
-    int right;
+    private String val;
+    private int left;
+    private int right;
 
     StringCount(String val, int left, int right) {
       this.val = val;
