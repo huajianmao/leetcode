@@ -99,6 +99,7 @@ sonarqube {
     property 'sonar.host.url', 'https://sonarcloud.io'
     property 'sonar.login', '811822b24c24fed7a4ed2cab65db600c7844b1cb'
     property 'sonar.exclusions', 'src/main/java/com/leetcode/**/*, src/main/java/cn/hjmao/ProblemFetcher*'
+    property 'sonar.jacoco.reportPaths', 'build/reports/jacoco/test/jacocoTestReport.xml'
   }
 }
 mainClassName = group + ".Main"
