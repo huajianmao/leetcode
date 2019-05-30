@@ -4,8 +4,8 @@ import org.testng.annotations.Test;
 
 import java.util.Random;
 
-import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
 
 public class SolutionTest {
   private Solution solution = new Solution();
