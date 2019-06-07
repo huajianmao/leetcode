@@ -1,7 +1,6 @@
 package cn.hjmao.leetcode.a628maximumproductofthreenumbers;
 
 import java.util.Arrays;
-import java.util.PriorityQueue;
 
 /**
  * Created by hjmao.
