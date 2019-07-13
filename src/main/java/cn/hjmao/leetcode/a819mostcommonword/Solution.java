@@ -1,4 +1,4 @@
-package cn.hjmao.leetcode.mock.question1;
+package cn.hjmao.leetcode.a819mostcommonword;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -11,7 +11,7 @@ import java.util.Set;
  *
  * URL:
  * =====
- * https://leetcode.com/interview/1
+ * https://leetcode.com/problems/most-common-word/
  *
  * Desc:
  * =====
@@ -19,7 +19,8 @@ import java.util.Set;
  * It is guaranteed there is at least one word that isn't banned, and that the answer is unique.
  *
  * Words in the list of banned words are given in lowercase, and free of punctuation.
- * Words in the paragraph are not case sensitive.  The answer is in lowercase.
+ * Words in the paragraph are not case sensitive.
+ * The answer is in lowercase.
  *
  *
  *
@@ -42,14 +43,14 @@ import java.util.Set;
  * 1 <= paragraph.length <= 1000.
  * 0 <= banned.length <= 100.
  * 1 <= banned[i].length <= 10.
- * The answer is unique, and written in lowercase
- * (even if its occurrences in paragraph may have uppercase symbols, and even if it is a proper noun.)
+ * The answer is unique, and written in lowercase (even if its occurrences in paragraph may have uppercase symbols,
+ * and even if it is a proper noun.)
  * paragraph only consists of letters, spaces, or the punctuation symbols !?',;.
  * There are no hyphens or hyphenated words.
- * Words only consist of letters, never apostrophes or other punctuation symbols.
+ * Words only consist of letters, never apostrophes or other punctuation symbols..
  */
 
-public class Solution {
+class Solution {
   public String mostCommonWord(String paragraph, String[] banned) {
     Map<String, Integer> wordCount = new HashMap<>();
     Set<String> bannedSet = new HashSet<>(Arrays.asList(banned));

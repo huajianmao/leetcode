@@ -1,4 +1,4 @@
-package cn.hjmao.leetcode.mock.question1;
+package cn.hjmao.leetcode.a819mostcommonword;
 
 import org.testng.annotations.Test;
 
