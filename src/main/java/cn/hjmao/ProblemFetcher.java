@@ -51,7 +51,7 @@ public class ProblemFetcher {
    * For each time you want fetch a problem, set the questionUrl please!
    */
   public static void main(String[] args) throws IOException {
-    String questionUrl = "https://leetcode.com/problems/shortest-distance-to-a-character/";
+    String questionUrl = "https://leetcode.com/problems/big-countries/";
     String pwd = System.getProperty("user.dir");
     ProblemFetcher fetcher = new ProblemFetcher(questionUrl, pwd);
     fetcher.fetch();
