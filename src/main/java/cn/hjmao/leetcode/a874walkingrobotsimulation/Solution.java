@@ -62,21 +62,22 @@ public class Solution {
       switch (command) {
         case -2:
           direction = axis == 1 ? -direction : direction;
-          axis = axis ^ 0;
+          axis = axis ^ 1;
           break;
         case -1:
           direction = axis == 0 ? -direction : direction;
-          axis = axis ^ 0;
+          axis = axis ^ 1;
           break;
         default:
-          for (int i = 1; i <= command; i++) {
+          int i = 1;
+          for (; i <= command; i++) {
             String temp = axis == 0 ? (pos[0] + i * direction) + " " + pos[1]
                                     : pos[0] + " " + (pos[1] + i * direction);
             if (set.contains(temp)) {
-              pos[axis] = pos[axis] + (i - 1) * direction;
               break;
             }
           }
+          pos[axis] = pos[axis] + (i - 1) * direction;
           max = Math.max(max, pos[0] * pos[0] + pos[1] * pos[1]);
           break;
       }
