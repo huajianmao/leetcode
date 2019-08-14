@@ -47,6 +47,6 @@ class Solution {
       min = Math.min(a[i], min);
       max = Math.max(a[i], max);
     }
-    return Math.max(0, max - min - k -k);
+    return Math.max(0, max - min - k - k);
   }
 }
