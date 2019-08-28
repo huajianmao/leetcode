@@ -3,9 +3,6 @@ Code snippets and **Test cases** for Leetcode problems.
 
 [![Build Status](https://travis-ci.org/huajianmao/leetjava.svg?branch=master)](https://travis-ci.org/huajianmao/leetjava)
 [![Coverage Status](https://coveralls.io/repos/github/huajianmao/leetjava/badge.svg?branch=master)](https://coveralls.io/github/huajianmao/leetjava?branch=master)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=huajianmao_leetjava&metric=ncloc)](https://sonarcloud.io/dashboard?id=huajianmao_leetjava)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=huajianmao_leetjava&metric=bugs)](https://sonarcloud.io/dashboard?id=huajianmao_leetjava)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=huajianmao_leetjava&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=huajianmao_leetjava)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/095e4b25c3164e558dd15614dfec5f4f)](https://www.codacy.com/app/huajianmao/leetjava?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=huajianmao/leetjava&amp;utm_campaign=Badge_Grade)
 
 ## Introduction
