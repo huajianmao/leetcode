@@ -1,9 +1,9 @@
 # Leetcode
 Code snippets and **Test cases** for Leetcode problems.
 
-[![Build Status](https://travis-ci.org/huajianmao/leetjava.svg?branch=master)](https://travis-ci.org/huajianmao/leetjava)
-[![Coverage Status](https://coveralls.io/repos/github/huajianmao/leetjava/badge.svg?branch=master)](https://coveralls.io/github/huajianmao/leetjava?branch=master)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/095e4b25c3164e558dd15614dfec5f4f)](https://www.codacy.com/app/huajianmao/leetjava?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=huajianmao/leetjava&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/huajianmao/leetcode.svg?branch=master)](https://travis-ci.org/huajianmao/leetcode)
+[![Coverage Status](https://coveralls.io/repos/github/huajianmao/leetcode/badge.svg?branch=master)](https://coveralls.io/github/huajianmao/leetcode?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/095e4b25c3164e558dd15614dfec5f4f)](https://www.codacy.com/app/huajianmao/leetcode?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=huajianmao/leetcode&amp;utm_campaign=Badge_Grade)
 
 ## Introduction
 This project hosts the code and test cases for Leetcode problems.
