@@ -1,8 +1,5 @@
 package com.leetcode.snippets.a012integertoroman;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Created by hjmao.
  * <p>

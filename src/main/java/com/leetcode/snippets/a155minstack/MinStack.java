@@ -1,8 +1,5 @@
 package com.leetcode.snippets.a155minstack;
 
-import java.util.Deque;
-import java.util.LinkedList;
-
 /**
  * Created by hjmao.
  *
@@ -36,9 +33,11 @@ public class MinStack {
   protected static final boolean SOLUTION_DONE = false;
 
   public void push(int x) {
+    // Implement here
   }
 
   public void pop() {
+    // Implement here
   }
 
   public int top() {

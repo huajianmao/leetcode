@@ -27,6 +27,8 @@ public class NumArray {
   protected static final boolean SOLUTION_DONE = false;
 
   public NumArray(int[] nums) {
+    // TODO:
+    System.out.println(nums);
   }
 
   public int sumRange(int i, int j) {

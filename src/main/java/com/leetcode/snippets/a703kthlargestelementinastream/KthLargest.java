@@ -35,7 +35,8 @@ class KthLargest {
   protected static final boolean SOLUTION_DONE = false;
 
   public KthLargest(int k, int[] nums) {
-
+    // TODO:
+    System.out.println(nums);
   }
 
   public int add(int val) {

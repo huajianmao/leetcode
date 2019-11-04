@@ -1,7 +1,5 @@
 package com.leetcode.snippets.a706designhashmap;
 
-import java.util.List;
-
 /**
  * Created by hjmao.
  *
@@ -46,13 +44,14 @@ class MyHashMap {
    * Initialize your data structure here.
    */
   public MyHashMap() {
+    // TODO:
   }
 
   /**
    * value will always be non-negative.
    */
   public void put(int key, int value) {
-
+    // TODO:
   }
 
   /**
@@ -66,6 +65,6 @@ class MyHashMap {
    * Removes the mapping of the specified value key if this map contains a mapping for the key.
    */
   public void remove(int key) {
-
+    // TODO:
   }
 }

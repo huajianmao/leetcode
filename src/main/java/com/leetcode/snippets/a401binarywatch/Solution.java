@@ -1,6 +1,5 @@
 package com.leetcode.snippets.a401binarywatch;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

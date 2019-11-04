@@ -43,7 +43,8 @@ public class ListNodeUtils {
     return head;
   }
 
-  public static String listNodeToString(ListNode node) {
+  public static String listNodeToString(ListNode head) {
+    ListNode node = head;
     if (node == null) {
       return "[]";
     }

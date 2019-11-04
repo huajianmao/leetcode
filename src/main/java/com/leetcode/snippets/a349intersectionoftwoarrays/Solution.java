@@ -1,8 +1,5 @@
 package com.leetcode.snippets.a349intersectionoftwoarrays;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * Created by hjmao.
  *

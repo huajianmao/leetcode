@@ -50,15 +50,15 @@ import cn.hjmao.utils.list.ListNode;
 class MyLinkedList {
   protected static final boolean SOLUTION_DONE = false;
 
-  ListNode head;
-  ListNode tail;
-  int length = 0;
+  protected ListNode head;
+  protected ListNode tail;
+  protected int length = 0;
   
   /**
    * Initialize your data structure here.
    */
   public MyLinkedList() {
-
+    // TODO:
   }
 
   /**
@@ -73,14 +73,14 @@ class MyLinkedList {
    * After the insertion, the new node will be the first node of the linked list.
    */
   public void addAtHead(int val) {
-
+    // TODO:
   }
 
   /**
    * Append a node of value val to the last element of the linked list.
    */
   public void addAtTail(int val) {
-
+    // TODO:
   }
 
   /**
@@ -89,13 +89,13 @@ class MyLinkedList {
    * If index is greater than the length, the node will not be inserted.
    */
   public void addAtIndex(int index, int val) {
-
+    // TODO:
   }
 
   /**
    * Delete the index-th node in the linked list, if the index is valid.
    */
   public void deleteAtIndex(int index) {
-
+    // TODO:
   }
 }
