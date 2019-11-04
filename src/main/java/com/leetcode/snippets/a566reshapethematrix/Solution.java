@@ -52,6 +52,8 @@ package com.leetcode.snippets.a566reshapethematrix;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[][] matrixReshape(int[][] nums, int r, int c) {
     return new int[0][0];
   }

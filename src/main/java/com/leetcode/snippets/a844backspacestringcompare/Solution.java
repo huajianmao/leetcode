@@ -43,6 +43,8 @@ package com.leetcode.snippets.a844backspacestringcompare;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean backspaceCompare(String s, String t) {
     return false;
   }

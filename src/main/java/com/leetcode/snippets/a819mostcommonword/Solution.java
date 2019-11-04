@@ -45,6 +45,8 @@ package com.leetcode.snippets.a819mostcommonword;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String mostCommonWord(String paragraph, String[] banned) {
     return null;
   }

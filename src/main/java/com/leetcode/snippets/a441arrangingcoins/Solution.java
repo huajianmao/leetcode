@@ -40,6 +40,8 @@ package com.leetcode.snippets.a441arrangingcoins;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int arrangeCoins(int n) {
 
     return 0;

@@ -49,6 +49,8 @@ import cn.hjmao.utils.tree.TreeNode;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String tree2str(TreeNode t) {
     return null;
   }

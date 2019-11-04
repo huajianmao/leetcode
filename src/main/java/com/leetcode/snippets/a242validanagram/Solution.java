@@ -27,6 +27,8 @@ package com.leetcode.snippets.a242validanagram;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean isAnagram(String s, String t) {
     return false;
   }

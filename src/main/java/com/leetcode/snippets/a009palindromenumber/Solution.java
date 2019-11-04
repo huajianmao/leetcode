@@ -13,6 +13,8 @@ package com.leetcode.snippets.a009palindromenumber;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean isPalindrome(int x) {
     return false;
   }

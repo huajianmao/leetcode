@@ -36,6 +36,8 @@ package com.leetcode.snippets.a1046laststoneweight;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int lastStoneWeight(int[] stones) {
     return -1;
   }

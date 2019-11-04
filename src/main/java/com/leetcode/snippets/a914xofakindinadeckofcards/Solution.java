@@ -50,6 +50,8 @@ package com.leetcode.snippets.a914xofakindinadeckofcards;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean hasGroupsSizeX(int[] deck) {
     return false;
   }

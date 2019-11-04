@@ -19,6 +19,8 @@ package com.leetcode.snippets.a088mergesortedarray;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public void merge(int[] nums1, int m, int[] nums2, int n) {
   }

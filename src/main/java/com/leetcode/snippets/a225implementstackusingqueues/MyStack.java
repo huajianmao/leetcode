@@ -39,6 +39,7 @@ import java.util.List;
  */
 
 public class MyStack {
+  protected static final boolean SOLUTION_DONE = false;
 
   public void push(int x) {
   }

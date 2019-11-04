@@ -28,6 +28,8 @@ package com.leetcode.snippets.a812largesttrianglearea;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public double largestTriangleArea(int[][] points) {
     return -1;
   }

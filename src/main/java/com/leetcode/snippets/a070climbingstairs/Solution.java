@@ -17,6 +17,8 @@ package com.leetcode.snippets.a070climbingstairs;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public int climbStairs(int n) {
     return -1;

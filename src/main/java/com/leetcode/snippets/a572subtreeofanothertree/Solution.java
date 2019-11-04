@@ -49,6 +49,8 @@ import cn.hjmao.utils.tree.TreeNode;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean isSubtree(TreeNode s, TreeNode t) {
     return false;
   }

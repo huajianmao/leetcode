@@ -37,6 +37,8 @@ package com.leetcode.snippets.a700searchinabinarysearchtree;
 import cn.hjmao.utils.tree.TreeNode;
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public TreeNode searchBST(TreeNode root, int val) {
     return null;
   }

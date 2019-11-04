@@ -28,6 +28,8 @@ import cn.hjmao.utils.tree.TreeNode;
  *           20   13
  */
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public TreeNode convertBST(TreeNode root) {
     return null;
   }

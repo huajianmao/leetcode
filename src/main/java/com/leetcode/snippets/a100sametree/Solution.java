@@ -17,6 +17,8 @@ import cn.hjmao.utils.tree.TreeNode;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean isSameTree(TreeNode p, TreeNode q) {
     return false;
   }

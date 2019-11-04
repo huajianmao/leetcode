@@ -40,6 +40,8 @@ import cn.hjmao.utils.tree.TreeNode;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int pathSum(TreeNode root, int sum) {
     return 0;
   }

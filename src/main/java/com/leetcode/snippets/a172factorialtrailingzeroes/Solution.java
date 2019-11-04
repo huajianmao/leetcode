@@ -25,6 +25,8 @@ package com.leetcode.snippets.a172factorialtrailingzeroes;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int trailingZeroes(int n) {
     return -1;
   }

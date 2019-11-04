@@ -21,6 +21,8 @@ import java.util.HashSet;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean isValidSudoku(char[][] board) {
     return false;
   }

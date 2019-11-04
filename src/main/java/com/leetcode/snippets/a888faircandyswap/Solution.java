@@ -53,6 +53,8 @@ package com.leetcode.snippets.a888faircandyswap;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[] fairCandySwap(int[] a, int[] b) {
     return null;
   }

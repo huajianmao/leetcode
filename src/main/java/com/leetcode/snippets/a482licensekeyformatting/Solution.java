@@ -40,6 +40,8 @@ package com.leetcode.snippets.a482licensekeyformatting;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String licenseKeyFormatting(String s, int k) {
     return null;
   }

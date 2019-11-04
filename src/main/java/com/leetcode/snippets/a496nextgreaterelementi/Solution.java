@@ -37,6 +37,8 @@ package com.leetcode.snippets.a496nextgreaterelementi;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[] nextGreaterElement(int[] nums1, int[] nums2) {
     return new int[nums1.length];
   }

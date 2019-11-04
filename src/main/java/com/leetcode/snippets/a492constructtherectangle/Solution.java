@@ -35,6 +35,8 @@ package com.leetcode.snippets.a492constructtherectangle;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[] constructRectangle(int area) {
     return new int[2];
   }

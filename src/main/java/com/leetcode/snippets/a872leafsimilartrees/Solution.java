@@ -29,6 +29,8 @@ import cn.hjmao.utils.tree.TreeNode;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean leafSimilar(TreeNode root1, TreeNode root2) {
     return false;
   }

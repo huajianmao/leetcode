@@ -47,6 +47,8 @@ import cn.hjmao.utils.tree.TreeNode;
  * Note: The given binary tree has not more than 10000 nodes. The height of the tree is not more than 1000.
  */
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int longestUnivaluePath(TreeNode root) {
     return Integer.MIN_VALUE;
   }

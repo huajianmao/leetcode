@@ -66,6 +66,8 @@ package com.leetcode.snippets.a443stringcompression;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int compress(char[] chars) {
 
     return 0;

@@ -39,6 +39,8 @@ package com.leetcode.snippets.a599minimumindexsumoftwolists;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String[] findRestaurant(String[] list1, String[] list2) {
     return new String[0];
   }

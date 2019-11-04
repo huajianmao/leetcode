@@ -15,6 +15,8 @@ package com.leetcode.snippets.a007reverseinteger;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int reverse(int x) {
     return 0;
   }

@@ -40,6 +40,8 @@ package com.leetcode.snippets.a1005maximizesumofarrayafterknegations;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int largestSumAfterKNegations(int[] a, int k) {
     return -1;
   }

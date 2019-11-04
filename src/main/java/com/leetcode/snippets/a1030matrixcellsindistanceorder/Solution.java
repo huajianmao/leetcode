@@ -47,6 +47,8 @@ package com.leetcode.snippets.a1030matrixcellsindistanceorder;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[][] allCellsDistOrder(int r, int c, int r0, int c0) {
     return null;
   }

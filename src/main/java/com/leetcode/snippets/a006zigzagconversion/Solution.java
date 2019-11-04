@@ -24,6 +24,8 @@ package com.leetcode.snippets.a006zigzagconversion;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String convert(String s, int numRows) {
     return null;
   }

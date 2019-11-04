@@ -22,6 +22,8 @@ package com.leetcode.snippets.a027removeelement;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int removeElement(int[] nums, int val) {
     return -1;
   }

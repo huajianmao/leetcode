@@ -33,6 +33,8 @@ package com.leetcode.snippets.a876middleofthelinkedlist;
 import cn.hjmao.utils.list.ListNode;
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public ListNode middleNode(ListNode head) {
     return null;
   }

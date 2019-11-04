@@ -28,6 +28,8 @@ import java.util.List;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public ListNode removeNthFromEnd(ListNode head, int n) {
     return null;
   }

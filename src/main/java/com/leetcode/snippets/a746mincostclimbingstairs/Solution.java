@@ -29,6 +29,8 @@ package com.leetcode.snippets.a746mincostclimbingstairs;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int minCostClimbingStairs(int[] cost) {
     return -1;
   }

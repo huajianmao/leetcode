@@ -42,6 +42,8 @@ import java.util.List;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public List<List<Integer>> largeGroupPositions(String s) {
     return null;
   }

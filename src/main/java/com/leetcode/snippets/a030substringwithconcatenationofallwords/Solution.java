@@ -27,6 +27,8 @@ import java.util.List;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public static List<Integer> findSubstring(String s, String[] words) {
     return null;

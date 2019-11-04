@@ -27,6 +27,8 @@ package com.leetcode.snippets.a137singlenumberii;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int singleNumber(int[] nums) {
     return -1;
   }

@@ -15,6 +15,8 @@ package com.leetcode.snippets.a029dividetwointegers;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public int divide(int dividend, int divisor) {
     return -1;

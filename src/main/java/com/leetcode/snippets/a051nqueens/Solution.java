@@ -40,6 +40,8 @@ import java.util.List;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public List<List<String>> solveNQueens(int n) {
     return null;

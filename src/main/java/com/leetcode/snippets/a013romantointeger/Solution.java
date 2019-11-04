@@ -17,6 +17,8 @@ import java.util.Map;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public int romanToInt(String s) {
     return -1;

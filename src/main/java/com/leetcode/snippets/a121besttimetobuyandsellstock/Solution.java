@@ -30,6 +30,8 @@ package com.leetcode.snippets.a121besttimetobuyandsellstock;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int maxProfit(int[] prices) {
     return -1;
   }

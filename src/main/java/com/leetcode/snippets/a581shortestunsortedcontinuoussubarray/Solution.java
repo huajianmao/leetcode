@@ -26,6 +26,8 @@ package com.leetcode.snippets.a581shortestunsortedcontinuoussubarray;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int findUnsortedSubarray(int[] nums) {
     return -1;
   }

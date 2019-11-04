@@ -29,6 +29,8 @@ package com.leetcode.snippets.a796rotatestring;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean rotateString(String a, String b) {
     return false;
   }

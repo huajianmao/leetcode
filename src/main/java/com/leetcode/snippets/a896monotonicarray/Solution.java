@@ -45,6 +45,8 @@ package com.leetcode.snippets.a896monotonicarray;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean isMonotonic(int[] a) {
     return false;
   }

@@ -51,6 +51,8 @@ package com.leetcode.snippets.a893groupsofspecialequivalentstrings;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int numSpecialEquivGroups(String[] a) {
     return -1;
   }

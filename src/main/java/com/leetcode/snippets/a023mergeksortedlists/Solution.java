@@ -19,6 +19,8 @@ import java.util.PriorityQueue;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public ListNode mergeKLists(ListNode[] lists) {
     return null;

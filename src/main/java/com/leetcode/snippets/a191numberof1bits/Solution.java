@@ -41,6 +41,8 @@ package com.leetcode.snippets.a191numberof1bits;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int hammingWeight(int n) {
     return -1;
   }

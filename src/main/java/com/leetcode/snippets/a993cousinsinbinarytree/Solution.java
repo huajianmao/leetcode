@@ -41,6 +41,8 @@ import cn.hjmao.utils.tree.TreeNode;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean isCousins(TreeNode root, int x, int y) {
     return false;
   }

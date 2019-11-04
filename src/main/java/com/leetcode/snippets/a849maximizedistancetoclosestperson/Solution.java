@@ -39,6 +39,8 @@ package com.leetcode.snippets.a849maximizedistancetoclosestperson;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int maxDistToClosest(int[] seats) {
     return -1;
   }

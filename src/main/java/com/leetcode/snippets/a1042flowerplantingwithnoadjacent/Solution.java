@@ -44,6 +44,8 @@ package com.leetcode.snippets.a1042flowerplantingwithnoadjacent;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[] gardenNoAdj(int n, int[][] paths) {
     return null;
   }

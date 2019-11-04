@@ -32,6 +32,8 @@ package com.leetcode.snippets.a198houserobber;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public int rob(int[] nums) {
     return -1;

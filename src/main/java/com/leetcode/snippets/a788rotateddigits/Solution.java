@@ -32,6 +32,8 @@ package com.leetcode.snippets.a788rotateddigits;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int rotatedDigits(int n) {
     return -1;
   }

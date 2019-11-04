@@ -28,6 +28,8 @@ import java.util.Queue;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public List<String> generateParenthesis(int n) {
     return null;

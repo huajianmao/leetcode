@@ -23,6 +23,8 @@ package com.leetcode.snippets.a283movezeroes;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public void moveZeroes(int[] nums) {
   }
 }

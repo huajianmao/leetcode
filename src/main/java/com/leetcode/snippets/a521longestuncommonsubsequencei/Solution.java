@@ -35,6 +35,8 @@ package com.leetcode.snippets.a521longestuncommonsubsequencei;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int findLUSlength(String a, String b) {
     return -1;
   }

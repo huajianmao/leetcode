@@ -22,6 +22,8 @@ package com.leetcode.snippets.a035searchinsertposition;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int searchInsert(int[] nums, int target) {
     return -1;
   }

@@ -35,6 +35,8 @@ package com.leetcode.snippets.a575distributecandies;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int distributeCandies(int[] candies) {
     return 0;
   }

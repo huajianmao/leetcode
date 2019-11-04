@@ -31,6 +31,8 @@ package com.leetcode.snippets.a867transposematrix;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[][] transpose(int[][] a) {
     return null;
   }

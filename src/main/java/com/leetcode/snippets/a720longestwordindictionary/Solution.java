@@ -43,6 +43,8 @@ package com.leetcode.snippets.a720longestwordindictionary;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String longestWord(String[] words) {
     return null;
   }

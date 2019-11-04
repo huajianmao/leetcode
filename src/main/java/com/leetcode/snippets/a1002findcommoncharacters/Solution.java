@@ -36,6 +36,8 @@ import java.util.List;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public List<String> commonChars(String[] a) {
     return null;
   }

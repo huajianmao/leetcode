@@ -1,7 +1,5 @@
 package cn.hjmao.utils.tree;
 
-import cn.hjmao.leetcode.a100sametree.Solution;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,7 +42,16 @@ public class TreeNodeUtils {
   }
 
   public static boolean isSameTree(TreeNode p, TreeNode q) {
-    Solution solution = new Solution();
-    return solution.isSameTree(p, q);
+    if (p == null && q == null) {
+      return true;
+    } else if (p == null || q == null) {
+      return false;
+    } else {
+      if (p.val == q.val) {
+        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+      } else {
+        return false;
+      }
+    }
   }
 }

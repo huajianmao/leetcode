@@ -26,6 +26,8 @@ package com.leetcode.snippets.a821shortestdistancetoacharacter;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[] shortestToChar(String s, char c) {
     return null;
   }

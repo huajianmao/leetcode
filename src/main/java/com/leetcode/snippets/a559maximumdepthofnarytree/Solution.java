@@ -27,7 +27,10 @@ import cn.hjmao.utils.narytree.Node;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int maxDepth(Node root) {
     return -1;
   }
+
 }

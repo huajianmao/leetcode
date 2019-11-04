@@ -53,6 +53,8 @@ package com.leetcode.snippets.a048rotateimage;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public void rotate(int[][] matrix) {
   }
 }

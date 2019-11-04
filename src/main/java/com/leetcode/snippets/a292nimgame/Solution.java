@@ -27,6 +27,8 @@ package com.leetcode.snippets.a292nimgame;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean canWinNim(int n) {
     return false;
   }

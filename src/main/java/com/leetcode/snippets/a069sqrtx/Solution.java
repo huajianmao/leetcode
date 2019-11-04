@@ -19,6 +19,8 @@ package com.leetcode.snippets.a069sqrtx;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int mySqrt(int x) {
     return -1;
   }

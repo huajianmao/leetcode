@@ -30,6 +30,8 @@ import cn.hjmao.utils.tree.TreeNode;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int minDepth(TreeNode root) {
     return -1;
   }

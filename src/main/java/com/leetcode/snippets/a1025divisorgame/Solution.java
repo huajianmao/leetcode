@@ -38,6 +38,8 @@ package com.leetcode.snippets.a1025divisorgame;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean divisorGame(int n) {
     return false;
   }

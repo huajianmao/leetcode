@@ -14,6 +14,8 @@ package com.leetcode.snippets.a004medianoftwosortedarrays;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public double findMedianSortedArrays(int[] nums1, int[] nums2) {
     return 0;
   }

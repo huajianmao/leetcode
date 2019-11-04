@@ -30,6 +30,8 @@ package com.leetcode.snippets.a922sortarraybyparityii;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[] sortArrayByParityII(int[] a) {
     return null;
   }

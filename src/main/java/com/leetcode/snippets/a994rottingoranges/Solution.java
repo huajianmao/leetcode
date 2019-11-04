@@ -44,6 +44,8 @@ package com.leetcode.snippets.a994rottingoranges;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int orangesRotting(int[][] grid) {
     return -2;
   }

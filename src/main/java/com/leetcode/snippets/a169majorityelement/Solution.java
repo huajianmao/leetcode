@@ -27,6 +27,8 @@ import java.util.Arrays;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int majorityElement(int[] nums) {
     return -1;
   }

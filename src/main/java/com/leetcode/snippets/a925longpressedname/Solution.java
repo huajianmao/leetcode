@@ -46,6 +46,8 @@ package com.leetcode.snippets.a925longpressedname;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean isLongPressedName(String name, String typed) {
     return false;
   }

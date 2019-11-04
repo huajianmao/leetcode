@@ -38,6 +38,8 @@ package com.leetcode.snippets.a1013partitionarrayintothreepartswithequalsum;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean canThreePartsEqualSum(int[] a) {
     return false;
   }

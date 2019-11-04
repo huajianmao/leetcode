@@ -19,6 +19,8 @@ package com.leetcode.snippets.a204countprimes;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int countPrimes(int n) {
     return -1;
   }

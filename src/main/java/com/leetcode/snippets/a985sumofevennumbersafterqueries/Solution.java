@@ -40,6 +40,8 @@ package com.leetcode.snippets.a985sumofevennumbersafterqueries;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[] sumEvenAfterQueries(int[] a, int[][] queries) {
     return null;
   }

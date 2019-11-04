@@ -12,4 +12,6 @@ package com.leetcode.snippets.blank;
  * PROBLEM DESCRIPTION.
  */
 
-public class Solution { }
+public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+}

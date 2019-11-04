@@ -22,6 +22,8 @@ import java.util.Stack;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public int longestValidParentheses(String s) {
     return -1;

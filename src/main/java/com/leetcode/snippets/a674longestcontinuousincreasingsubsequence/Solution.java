@@ -27,6 +27,8 @@ package com.leetcode.snippets.a674longestcontinuousincreasingsubsequence;
 
 // CHECKSTYLE.OFF: AbbreviationAsWordInName
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int findLengthOfLCIS(int[] nums) {
     return -1;
   }

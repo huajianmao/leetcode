@@ -43,6 +43,8 @@ package com.leetcode.snippets.a953verifyinganaliendictionary;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean isAlienSorted(String[] words, String order) {
     return false;
   }

@@ -30,6 +30,8 @@ import java.util.List;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public List<List<Integer>> generate(int numRows) {
     return null;
   }

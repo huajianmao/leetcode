@@ -22,6 +22,8 @@ package com.leetcode.snippets.a258adddigits;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int addDigits(int num) {
     return -1;
   }

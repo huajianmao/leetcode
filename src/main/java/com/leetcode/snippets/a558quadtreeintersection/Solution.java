@@ -85,6 +85,8 @@ import cn.hjmao.utils.quadtree.Node;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public Node intersect(Node quadTree1, Node quadTree2) {
     return null;
   }

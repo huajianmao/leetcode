@@ -25,6 +25,8 @@ package com.leetcode.snippets.a434numberofsegmentsinastring;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int countSegments(String s) {
     return 0;
   }

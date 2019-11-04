@@ -38,6 +38,8 @@ package com.leetcode.snippets.a941validmountainarray;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean validMountainArray(int[] a) {
     return false;
   }

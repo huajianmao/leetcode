@@ -25,6 +25,8 @@ import java.util.List;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public List<String> letterCombinations(String digits) {
     return null;

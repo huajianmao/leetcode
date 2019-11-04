@@ -38,6 +38,8 @@ package com.leetcode.snippets.a657robotreturntoorigin;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean judgeCircle(String moves) {
     return false;
   }

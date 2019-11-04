@@ -36,6 +36,8 @@ package com.leetcode.snippets.a884uncommonwordsfromtwosentences;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String[] uncommonFromSentences(String a, String b) {
     return null;
   }

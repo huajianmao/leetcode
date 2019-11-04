@@ -46,6 +46,8 @@ import cn.hjmao.utils.tree.TreeNode;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int findSecondMinimumValue(TreeNode root) {
     return Integer.MIN_VALUE;
   }

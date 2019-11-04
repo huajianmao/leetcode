@@ -48,6 +48,8 @@ package com.leetcode.snippets.a598rangeadditionii;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int maxCount(int m, int n, int[][] ops) {
     return -1;
   }

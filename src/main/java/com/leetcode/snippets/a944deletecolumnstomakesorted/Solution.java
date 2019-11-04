@@ -50,6 +50,8 @@ package com.leetcode.snippets.a944deletecolumnstomakesorted;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int minDeletionSize(String[] a) {
     return -1;
   }

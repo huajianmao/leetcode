@@ -22,6 +22,8 @@ package com.leetcode.snippets.a686repeatedstringmatch;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int repeatedStringMatch(String a, String b) {
     return Integer.MIN_VALUE;
   }

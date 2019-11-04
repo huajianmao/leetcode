@@ -42,6 +42,8 @@ import cn.hjmao.utils.list.ListNode;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public void deleteNode(ListNode node) {
   }
 }

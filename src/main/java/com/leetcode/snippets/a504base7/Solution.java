@@ -23,6 +23,8 @@ package com.leetcode.snippets.a504base7;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String convertToBase7(int num) {
     return null;
   }

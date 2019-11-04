@@ -35,6 +35,8 @@ package com.leetcode.snippets.a961nrepeatedelementinsize2narray;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int repeatedNTimes(int[] a) {
     return -1;
   }

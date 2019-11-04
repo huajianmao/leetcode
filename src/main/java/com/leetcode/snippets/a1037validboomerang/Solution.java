@@ -31,6 +31,8 @@ package com.leetcode.snippets.a1037validboomerang;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean isBoomerang(int[][] points) {
     return false;
   }

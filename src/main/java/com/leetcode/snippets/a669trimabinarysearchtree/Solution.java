@@ -50,6 +50,8 @@ import cn.hjmao.utils.tree.TreeNode;
  *  1
  */
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public TreeNode trimBST(TreeNode root, int l, int r) {
     return null;
   }

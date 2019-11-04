@@ -42,6 +42,8 @@ import cn.hjmao.utils.tree.TreeNode;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
     return null;
   }

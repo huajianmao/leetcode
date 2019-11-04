@@ -38,6 +38,8 @@ package com.leetcode.snippets.a190reversebits;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public int reverseBits(int n) {
     return -1;

@@ -36,6 +36,8 @@ package com.leetcode.snippets.a832flippinganimage;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[][] flipAndInvertImage(int[][] a) {
     return null;
   }

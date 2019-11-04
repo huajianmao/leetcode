@@ -30,6 +30,8 @@ package com.leetcode.snippets.a628maximumproductofthreenumbers;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int maximumProduct(int[] nums) {
     return -1;
   }

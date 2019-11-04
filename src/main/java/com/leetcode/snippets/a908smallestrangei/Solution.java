@@ -40,6 +40,8 @@ package com.leetcode.snippets.a908smallestrangei;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int smallestRangeI(int[] a, int k) {
     return -1;
   }

@@ -46,6 +46,8 @@ package com.leetcode.snippets.a824goatlatin;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String toGoatLatin(String s) {
     return null;
   }

@@ -28,6 +28,8 @@ package com.leetcode.snippets.a665nondecreasingarray;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean checkPossibility(int[] nums) {
     return false;
   }

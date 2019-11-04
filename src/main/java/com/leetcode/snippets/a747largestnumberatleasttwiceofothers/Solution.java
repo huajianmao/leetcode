@@ -37,6 +37,8 @@ package com.leetcode.snippets.a747largestnumberatleasttwiceofothers;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int dominantIndex(int[] nums) {
     return -2;
   }

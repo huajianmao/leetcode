@@ -19,6 +19,8 @@ package com.leetcode.snippets.a011containerwithmostwater;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int maxArea(int[] height) {
     return -1;
   }

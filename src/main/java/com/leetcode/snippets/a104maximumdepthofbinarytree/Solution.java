@@ -23,6 +23,8 @@ import cn.hjmao.utils.tree.TreeNode;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int maxDepth(TreeNode root) {
     return -1;
   }

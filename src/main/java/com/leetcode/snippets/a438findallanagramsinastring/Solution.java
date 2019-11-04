@@ -44,6 +44,8 @@ import java.util.List;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public List<Integer> findAnagrams(String s, String p) {
 
     return null;

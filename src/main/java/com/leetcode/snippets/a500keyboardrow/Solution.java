@@ -30,6 +30,8 @@ package com.leetcode.snippets.a500keyboardrow;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String[] findWords(String[] words) {
     return new String[0];
   }

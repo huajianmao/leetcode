@@ -51,6 +51,8 @@ package com.leetcode.snippets.a744findsmallestlettergreaterthantarget;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public char nextGreatestLetter(char[] letters, char target) {
     return '\0';
   }

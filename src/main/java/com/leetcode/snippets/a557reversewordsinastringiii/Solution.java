@@ -20,6 +20,8 @@ package com.leetcode.snippets.a557reversewordsinastringiii;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String reverseWords(String s) {
     return null;
   }

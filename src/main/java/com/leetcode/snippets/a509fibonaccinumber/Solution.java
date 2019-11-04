@@ -46,6 +46,8 @@ package com.leetcode.snippets.a509fibonaccinumber;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int fib(int n) {
     return 0;
   }

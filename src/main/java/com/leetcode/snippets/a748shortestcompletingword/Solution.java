@@ -41,6 +41,8 @@ package com.leetcode.snippets.a748shortestcompletingword;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String shortestCompletingWord(String licensePlate, String[] words) {
     return null;
   }

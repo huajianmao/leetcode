@@ -26,6 +26,8 @@ package com.leetcode.snippets.a268missingnumber;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int missingNumber(int[] nums) {
     return -1;
   }

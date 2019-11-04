@@ -23,6 +23,8 @@ package com.leetcode.snippets.a485maxconsecutiveones;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int findMaxConsecutiveOnes(int[] nums) {
     return 0;
   }

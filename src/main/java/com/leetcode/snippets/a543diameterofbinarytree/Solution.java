@@ -29,6 +29,8 @@ import cn.hjmao.utils.tree.TreeNode;
 
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int diameterOfBinaryTree(TreeNode root) {
     return -1;
   }

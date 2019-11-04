@@ -41,6 +41,8 @@ package com.leetcode.snippets.a1009complementofbase10integer;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int bitwiseComplement(int n) {
     return -1;
   }

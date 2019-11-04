@@ -18,6 +18,8 @@ package com.leetcode.snippets.a058lengthoflastword;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int lengthOfLastWord(String s) {
     return -1;
   }

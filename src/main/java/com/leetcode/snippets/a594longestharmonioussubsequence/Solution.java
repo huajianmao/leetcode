@@ -24,6 +24,8 @@ package com.leetcode.snippets.a594longestharmonioussubsequence;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int findLHS(int[] nums) {
     return -1;
   }

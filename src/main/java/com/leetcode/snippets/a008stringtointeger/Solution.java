@@ -24,6 +24,8 @@ package com.leetcode.snippets.a008stringtointeger;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int myAtoi(String str) {
     return -1;
   }

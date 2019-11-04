@@ -15,6 +15,8 @@ package com.leetcode.snippets.a001twosum;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[] twoSum(int[] nums, int target) {
     int[] result = new int[2];
 

@@ -25,6 +25,8 @@ package com.leetcode.snippets.a506relativeranks;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String[] findRelativeRanks(int[] nums) {
     return new String[0];
   }

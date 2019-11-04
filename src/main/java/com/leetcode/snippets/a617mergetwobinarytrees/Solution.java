@@ -40,6 +40,8 @@ import cn.hjmao.utils.tree.TreeNode;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
     return null;
   }

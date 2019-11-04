@@ -48,6 +48,8 @@ package com.leetcode.snippets.a1033movingstonesuntilconsecutive;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[] numMovesStones(int a, int b, int c) {
     return null;
   }

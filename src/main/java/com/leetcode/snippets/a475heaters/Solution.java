@@ -43,6 +43,8 @@ package com.leetcode.snippets.a475heaters;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int findRadius(int[] houses, int[] heaters) {
     return 0;
   }

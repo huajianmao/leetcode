@@ -54,6 +54,8 @@ package com.leetcode.snippets.a997findthetownjudge;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int findJudge(int n, int[][] trust) {
     return -2;
   }

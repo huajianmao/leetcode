@@ -18,6 +18,8 @@ import java.util.Arrays;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public void solveSudoku(char[][] board) {
 
   }

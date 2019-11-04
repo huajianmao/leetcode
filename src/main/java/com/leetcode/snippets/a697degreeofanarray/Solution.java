@@ -34,6 +34,8 @@ package com.leetcode.snippets.a697degreeofanarray;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int findShortestSubArray(int[] nums) {
     return -1;
   }

@@ -52,6 +52,8 @@ import cn.hjmao.utils.tree.TreeNode;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public TreeNode increasingBST(TreeNode root) {
     return root;
   }

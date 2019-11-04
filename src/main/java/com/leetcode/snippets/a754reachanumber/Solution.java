@@ -35,6 +35,8 @@ package com.leetcode.snippets.a754reachanumber;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int reachNumber(int target) {
     return Integer.MIN_VALUE;
   }

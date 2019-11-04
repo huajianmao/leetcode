@@ -15,6 +15,8 @@ package com.leetcode.snippets.a053maximumsubarray;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public int maxSubArray(int[] nums) {
     return -1;

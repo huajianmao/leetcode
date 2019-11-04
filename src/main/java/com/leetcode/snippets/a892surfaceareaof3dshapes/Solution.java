@@ -42,6 +42,8 @@ package com.leetcode.snippets.a892surfaceareaof3dshapes;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int surfaceArea(int[][] grid) {
     return -1;
   }

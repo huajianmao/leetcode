@@ -23,6 +23,8 @@ package com.leetcode.snippets.a005longestpalindromicsubstring;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public String longestPalindrome(String s) {
     return null;

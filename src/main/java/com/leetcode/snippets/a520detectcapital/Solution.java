@@ -30,6 +30,8 @@ package com.leetcode.snippets.a520detectcapital;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean detectCapitalUse(String word) {
     return false;
   }

@@ -30,6 +30,8 @@ import java.util.List;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public List<Integer> selfDividingNumbers(int left, int right) {
     return null;
   }

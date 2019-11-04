@@ -28,6 +28,8 @@ package com.leetcode.snippets.a551studentattendancerecordi;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean checkRecord(String s) {
     return false;
   }

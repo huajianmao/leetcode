@@ -33,6 +33,7 @@ import java.util.LinkedList;
  */
 
 public class MinStack {
+  protected static final boolean SOLUTION_DONE = false;
 
   public void push(int x) {
   }

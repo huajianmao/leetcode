@@ -53,6 +53,8 @@ package com.leetcode.snippets.a682baseballgame;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int calPoints(String[] ops) {
     return Integer.MIN_VALUE;
   }

@@ -51,6 +51,8 @@ import cn.hjmao.utils.quadtree.Node;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public Node construct(int[][] grid) {
     return null;
   }

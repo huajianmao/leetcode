@@ -14,6 +14,8 @@ package com.leetcode.snippets.a221maximalsquare;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
 
   public int maximalSquare(char[][] matrix) {

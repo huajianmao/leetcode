@@ -39,6 +39,8 @@ package com.leetcode.snippets.a455assigncookies;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int findContentChildren(int[] g, int[] s) {
     return 0;
   }

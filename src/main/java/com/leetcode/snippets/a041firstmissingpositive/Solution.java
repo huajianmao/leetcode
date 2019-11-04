@@ -19,6 +19,8 @@ package com.leetcode.snippets.a041firstmissingpositive;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public int firstMissingPositive(int[] nums) {
     return -1;

@@ -36,6 +36,8 @@ package com.leetcode.snippets.a299bullsandcows;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String getHint(String secret, String guess) {
     return null;
   }

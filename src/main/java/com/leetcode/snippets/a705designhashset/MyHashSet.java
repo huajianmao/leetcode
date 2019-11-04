@@ -37,6 +37,7 @@ package com.leetcode.snippets.a705designhashset;
  */
 
 class MyHashSet {
+  protected static final boolean SOLUTION_DONE = false;
 
   /**
    * Initialize your data structure here.

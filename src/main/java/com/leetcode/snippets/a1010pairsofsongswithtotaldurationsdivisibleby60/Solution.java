@@ -36,6 +36,8 @@ package com.leetcode.snippets.a1010pairsofsongswithtotaldurationsdivisibleby60;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int numPairsDivisibleBy60(int[] time) {
     return -1;
   }

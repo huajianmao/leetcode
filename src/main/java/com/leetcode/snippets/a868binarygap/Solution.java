@@ -51,6 +51,8 @@ package com.leetcode.snippets.a868binarygap;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int binaryGap(int n) {
     return -1;
   }

@@ -52,6 +52,8 @@ package com.leetcode.snippets.a1021removeoutermostparentheses;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String removeOuterParentheses(String s) {
     return null;
   }

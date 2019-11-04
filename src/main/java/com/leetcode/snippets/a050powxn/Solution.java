@@ -13,6 +13,8 @@ package com.leetcode.snippets.a050powxn;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public double myPow(double x, int n) {
     return 0;

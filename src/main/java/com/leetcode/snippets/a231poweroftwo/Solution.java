@@ -28,6 +28,8 @@ package com.leetcode.snippets.a231poweroftwo;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean isPowerOfTwo(int n) {
     return false;
   }

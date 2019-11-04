@@ -25,6 +25,8 @@ package com.leetcode.snippets.a633sumofsquarenumbers;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean judgeSquareSum(int c) {
     return false;
   }

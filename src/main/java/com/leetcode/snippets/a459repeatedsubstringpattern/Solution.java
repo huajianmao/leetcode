@@ -32,6 +32,8 @@ package com.leetcode.snippets.a459repeatedsubstringpattern;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean repeatedSubstringPattern(String s) {
     return false;
   }

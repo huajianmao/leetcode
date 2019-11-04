@@ -27,6 +27,8 @@ package com.leetcode.snippets.a045jumpgaameii;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public int jump(int[] nums) {
     return -1;

@@ -46,6 +46,8 @@ package com.leetcode.snippets.a929uniqueemailaddresses;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int numUniqueEmails(String[] emails) {
     return -1;
   }

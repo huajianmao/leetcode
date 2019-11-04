@@ -32,6 +32,8 @@ package com.leetcode.snippets.a703kthlargestelementinastream;
  */
 
 class KthLargest {
+  protected static final boolean SOLUTION_DONE = false;
+
   public KthLargest(int k, int[] nums) {
 
   }

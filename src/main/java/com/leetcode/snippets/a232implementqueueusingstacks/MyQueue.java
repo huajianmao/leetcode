@@ -38,6 +38,7 @@ import java.util.Stack;
  */
 
 public class MyQueue {
+  protected static final boolean SOLUTION_DONE = false;
 
   public void push(int x) {
   }

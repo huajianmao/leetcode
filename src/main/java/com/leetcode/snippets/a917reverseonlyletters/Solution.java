@@ -34,6 +34,8 @@ package com.leetcode.snippets.a917reverseonlyletters;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String reverseOnlyLetters(String s) {
     return null;
   }

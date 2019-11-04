@@ -32,6 +32,8 @@ package com.leetcode.snippets.a836rectangleoverlap;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean isRectangleOverlap(int[] rec1, int[] rec2) {
     return false;
   }

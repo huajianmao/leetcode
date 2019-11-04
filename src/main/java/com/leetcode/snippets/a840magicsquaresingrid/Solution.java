@@ -44,6 +44,8 @@ package com.leetcode.snippets.a840magicsquaresingrid;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int numMagicSquaresInside(int[][] grid) {
     return -1;
   }

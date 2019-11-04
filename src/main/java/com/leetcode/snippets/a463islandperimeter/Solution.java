@@ -31,6 +31,8 @@ package com.leetcode.snippets.a463islandperimeter;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int islandPerimeter(int[][] grid) {
     return 0;
   }

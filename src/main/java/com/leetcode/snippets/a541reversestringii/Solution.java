@@ -25,6 +25,8 @@ package com.leetcode.snippets.a541reversestringii;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String reverseStr(String s, int k) {
     return null;
   }

@@ -74,6 +74,8 @@ package com.leetcode.snippets.a999availablecapturesforrook;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int numRookCaptures(char[][] board) {
     return -1;
   }

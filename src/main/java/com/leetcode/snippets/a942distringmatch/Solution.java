@@ -36,6 +36,8 @@ package com.leetcode.snippets.a942distringmatch;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[] diStringMatch(String s) {
     return null;
   }

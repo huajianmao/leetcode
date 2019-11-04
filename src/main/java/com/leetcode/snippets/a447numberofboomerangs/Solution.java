@@ -29,6 +29,8 @@ package com.leetcode.snippets.a447numberofboomerangs;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int numberOfBoomerangs(int[][] points) {
     return 0;
   }

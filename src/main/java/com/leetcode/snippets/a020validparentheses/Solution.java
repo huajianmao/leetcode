@@ -20,6 +20,8 @@ import java.util.Stack;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public boolean isValid(String s) {
     return false;

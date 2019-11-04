@@ -19,6 +19,8 @@ import java.util.Stack;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int trap(int[] height) {
     return -1;
   }

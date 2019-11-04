@@ -31,6 +31,8 @@ package com.leetcode.snippets.a278firstbadversion;
  */
 
 public class Solution extends VersionControl {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int firstBadVersion(int n) {
     return -1;
   }

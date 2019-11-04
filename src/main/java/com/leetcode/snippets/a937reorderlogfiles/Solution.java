@@ -38,6 +38,8 @@ package com.leetcode.snippets.a937reorderlogfiles;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String[] reorderLogFiles(String[] logs) {
     return null;
   }

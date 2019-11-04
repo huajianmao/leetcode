@@ -38,6 +38,8 @@ package com.leetcode.snippets.a693binarynumberwithalternatingbits;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean hasAlternatingBits(int n) {
     return false;
   }

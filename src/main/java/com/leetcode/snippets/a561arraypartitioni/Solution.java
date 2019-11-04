@@ -26,6 +26,8 @@ package com.leetcode.snippets.a561arraypartitioni;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int arrayPairSum(int[] nums) {
     return -1;
   }

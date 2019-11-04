@@ -35,6 +35,8 @@ package com.leetcode.snippets.a263uglynumber;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean isUgly(int num) {
     return false;
   }

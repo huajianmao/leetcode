@@ -53,6 +53,8 @@ package com.leetcode.snippets.a806numberoflinestowritestring;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[] numberOfLines(int[] widths, String s) {
     return null;
   }

@@ -41,6 +41,8 @@ package com.leetcode.snippets.a733floodfill;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
     return null;
   }

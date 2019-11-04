@@ -42,6 +42,8 @@ import cn.hjmao.utils.tree.TreeNode;
  * Output: False
  */
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean findTarget(TreeNode root, int k) {
     return false;
   }

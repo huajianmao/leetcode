@@ -43,6 +43,8 @@ package com.leetcode.snippets.a724findpivotindex;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int pivotIndex(int[] nums) {
     return -2;
   }

@@ -36,6 +36,8 @@ package com.leetcode.snippets.a171excelsheetcolumnnumber;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int titleToNumber(String s) {
     return -1;
   }

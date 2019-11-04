@@ -30,6 +30,8 @@ package com.leetcode.snippets.a010regularexpressionmatching;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public boolean isMatch(String s, String p) {
     return false;

@@ -38,6 +38,8 @@ package com.leetcode.snippets.a7171bitand2bitcharacters;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean isOneBitCharacter(int[] bits) {
     return false;
   }

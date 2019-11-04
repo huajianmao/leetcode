@@ -45,6 +45,8 @@ package com.leetcode.snippets.a766toeplitzmatrix;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean isToeplitzMatrix(int[][] matrix) {
     return false;
   }

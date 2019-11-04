@@ -33,6 +33,8 @@ import cn.hjmao.utils.tree.TreeNode;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int rangeSumBST(TreeNode root, int l, int r) {
     return -1;
   }

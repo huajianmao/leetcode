@@ -21,6 +21,8 @@ package com.leetcode.snippets.a043multiplystrings;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String multiply(String num1, String num2) {
     return null;
   }

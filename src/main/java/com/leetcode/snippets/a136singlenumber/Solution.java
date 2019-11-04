@@ -30,6 +30,8 @@ package com.leetcode.snippets.a136singlenumber;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int singleNumber(int[] nums) {
     return -1;
   }

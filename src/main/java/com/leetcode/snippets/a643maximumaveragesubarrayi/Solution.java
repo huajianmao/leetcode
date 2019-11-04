@@ -26,6 +26,8 @@ package com.leetcode.snippets.a643maximumaveragesubarrayi;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public double findMaxAverage(int[] nums, int k) {
     return Double.MIN_VALUE;
   }

@@ -39,6 +39,8 @@ package com.leetcode.snippets.a696countbinarysubstrings;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int countBinarySubstrings(String s) {
     return -1;
   }

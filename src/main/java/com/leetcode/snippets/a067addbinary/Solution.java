@@ -15,6 +15,8 @@ package com.leetcode.snippets.a067addbinary;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String addBinary(String a, String b) {
     return null;
   }

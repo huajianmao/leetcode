@@ -42,6 +42,8 @@ package com.leetcode.snippets.a859buddystrings;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean buddyStrings(String a, String b) {
     return false;
   }

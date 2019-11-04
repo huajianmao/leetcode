@@ -36,6 +36,8 @@ package com.leetcode.snippets.a532kdiffpairsinanarray;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int findPairs(int[] nums, int k) {
     return 0;
   }

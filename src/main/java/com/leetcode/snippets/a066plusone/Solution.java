@@ -21,6 +21,8 @@ import java.util.Arrays;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[] plusOne(int[] digits) {
     return null;
   }

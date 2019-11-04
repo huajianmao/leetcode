@@ -24,6 +24,8 @@ package com.leetcode.snippets.a125validpalindrome;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public boolean isPalindrome(String s) {
     return false;

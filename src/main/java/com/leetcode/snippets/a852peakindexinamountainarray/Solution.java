@@ -31,6 +31,8 @@ package com.leetcode.snippets.a852peakindexinamountainarray;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int peakIndexInMountainArray(int[] a) {
     return -1;
   }

@@ -32,6 +32,7 @@ import java.util.List;
  */
 
 class RecentCounter {
+  protected static final boolean SOLUTION_DONE = false;
 
   public RecentCounter() {
   }

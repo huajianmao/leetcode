@@ -22,6 +22,8 @@ package com.leetcode.snippets.a034searchforarange;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public int[] searchRange(int[] nums, int target) {
     return null;

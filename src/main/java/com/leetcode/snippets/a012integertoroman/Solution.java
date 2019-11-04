@@ -17,6 +17,8 @@ import java.util.Map;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public String intToRoman(int num) {
     return null;

@@ -25,6 +25,8 @@ import java.util.Queue;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String countAndSay(int n) {
     return null;
   }

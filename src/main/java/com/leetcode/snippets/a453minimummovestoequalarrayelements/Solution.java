@@ -28,6 +28,8 @@ package com.leetcode.snippets.a453minimummovestoequalarrayelements;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int minMoves(int[] nums) {
     return 0;
   }

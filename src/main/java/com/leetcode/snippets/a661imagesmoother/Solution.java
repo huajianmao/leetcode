@@ -37,6 +37,8 @@ package com.leetcode.snippets.a661imagesmoother;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[][] imageSmoother(int[][] m) {
     return new int[0][0];
   }

@@ -21,6 +21,8 @@ package com.leetcode.snippets.a026removeduplicatesfromsortedarray;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int removeDuplicates(int[] nums) {
     return -1;
   }

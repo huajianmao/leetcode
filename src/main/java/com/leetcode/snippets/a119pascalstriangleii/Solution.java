@@ -29,6 +29,8 @@ import java.util.List;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public List<Integer> getRow(int rowIndex) {
     return null;
   }

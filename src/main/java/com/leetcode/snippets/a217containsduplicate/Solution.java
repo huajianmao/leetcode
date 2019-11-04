@@ -32,6 +32,8 @@ import java.util.Set;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public boolean containsDuplicate(int[] nums) {
     return false;

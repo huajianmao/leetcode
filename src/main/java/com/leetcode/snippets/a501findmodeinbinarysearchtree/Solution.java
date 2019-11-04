@@ -39,6 +39,8 @@ import cn.hjmao.utils.tree.TreeNode;
  * (Assume that the implicit stack space incurred due to recursion does not count).
  */
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[] findMode(TreeNode root) {
     return new int[0];
   }

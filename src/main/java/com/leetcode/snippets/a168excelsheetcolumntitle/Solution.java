@@ -36,6 +36,8 @@ package com.leetcode.snippets.a168excelsheetcolumntitle;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String convertToTitle(int n) {
     return null;
   }

@@ -36,6 +36,8 @@ package com.leetcode.snippets.a1047removealladjacentduplicatesinstring;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String removeDuplicates(String s) {
     return null;
   }

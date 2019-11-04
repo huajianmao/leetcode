@@ -1,5 +1,7 @@
 package com.leetcode.snippets.a707designlinkedlist;
 
+import cn.hjmao.utils.list.ListNode;
+
 /**
  * Created by hjmao.
  *
@@ -46,7 +48,12 @@ package com.leetcode.snippets.a707designlinkedlist;
  */
 
 class MyLinkedList {
+  protected static final boolean SOLUTION_DONE = false;
 
+  ListNode head;
+  ListNode tail;
+  int length = 0;
+  
   /**
    * Initialize your data structure here.
    */

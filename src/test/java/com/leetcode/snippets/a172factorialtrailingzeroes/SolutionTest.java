@@ -1,0 +1,27 @@
+package com.leetcode.snippets.a172factorialtrailingzeroes;
+
+import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
+
+public class SolutionTest {
+  private Solution solution = new Solution();
+
+  @Test (enabled = Solution.SOLUTION_DONE)
+  public void testTrailingZeroes1() {
+    int n = 3;
+    int expect = 0;
+
+    int actual = solution.trailingZeroes(n);
+    assertEquals(actual, expect);
+  }
+
+  @Test (enabled = Solution.SOLUTION_DONE)
+  public void testTrailingZeroes2() {
+    int n = 5;
+    int expect = 1;
+
+    int actual = solution.trailingZeroes(n);
+    assertEquals(actual, expect);
+  }
+}

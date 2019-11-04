@@ -1,0 +1,31 @@
+package com.leetcode.snippets.a119pascalstriangleii;
+
+import org.testng.annotations.Test;
+
+import java.util.Arrays;
+import java.util.List;
+
+import static org.testng.Assert.assertEquals;
+
+public class SolutionTest {
+
+  private Solution solution = new Solution();
+
+  @Test (enabled = Solution.SOLUTION_DONE)
+  public void testGetRow0() {
+    int rowIndex = 0;
+    Integer[] expected = {1};
+    List<Integer> expect = Arrays.asList(expected);
+    List<Integer> actual = solution.getRow(rowIndex);
+    assertEquals(actual, expect);
+  }
+
+  @Test (enabled = Solution.SOLUTION_DONE)
+  public void testGetRow3() {
+    int rowIndex = 3;
+    Integer[] expected = {1, 3, 3, 1};
+    List<Integer> expect = Arrays.asList(expected);
+    List<Integer> actual = solution.getRow(rowIndex);
+    assertEquals(actual, expect);
+  }
+}

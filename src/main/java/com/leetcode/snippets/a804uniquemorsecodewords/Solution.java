@@ -44,6 +44,8 @@ package com.leetcode.snippets.a804uniquemorsecodewords;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int uniqueMorseRepresentations(String[] words) {
     return -1;
   }

@@ -13,6 +13,8 @@ package com.leetcode.snippets.a014longestcommonprefix;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String longestCommonPrefix(String[] strs) {
     return null;
   }

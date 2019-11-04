@@ -15,6 +15,8 @@ package com.leetcode.snippets.a028implementstrstr;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int strStr(String haystack, String needle) {
     return -1;
   }

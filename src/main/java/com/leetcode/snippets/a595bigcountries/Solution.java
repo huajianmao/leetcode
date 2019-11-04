@@ -48,4 +48,6 @@ package com.leetcode.snippets.a595bigcountries;
  * HJMAO_LINE_BREAK *
  */
 
-public class Solution { }
+public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+}

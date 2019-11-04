@@ -23,6 +23,8 @@ import java.util.Map;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int lengthOfLongestSubstring(String s) {
     return -1;
   }

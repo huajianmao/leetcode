@@ -45,6 +45,8 @@ package com.leetcode.snippets.a874walkingrobotsimulation;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int robotSim(int[] commands, int[][] obstacles) {
     return -1;
   }

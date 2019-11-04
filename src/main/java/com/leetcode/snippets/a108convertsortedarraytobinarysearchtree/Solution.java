@@ -32,6 +32,8 @@ import java.util.Arrays;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public TreeNode sortedArrayToBST(int[] nums) {
     return null;
   }

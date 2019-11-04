@@ -33,6 +33,8 @@ package com.leetcode.snippets.a189rotatearray;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public void rotate(int[] nums, int k) {
   }

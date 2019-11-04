@@ -47,6 +47,8 @@ package com.leetcode.snippets.a883projectionareaof3dshapes;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int projectionArea(int[][] grid) {
     return -1;
   }

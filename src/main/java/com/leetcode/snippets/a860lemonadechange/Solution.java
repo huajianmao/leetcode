@@ -55,6 +55,8 @@ package com.leetcode.snippets.a860lemonadechange;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean lemonadeChange(int[] bills) {
     return false;
   }

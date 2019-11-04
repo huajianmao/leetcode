@@ -31,6 +31,8 @@ import java.util.List;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public List<Integer> preorder(Node root) {
     return null;
   }

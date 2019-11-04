@@ -28,6 +28,8 @@ package com.leetcode.snippets.a167twosumiiinputarrayissorted;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public int[] twoSum(int[] numbers, int target) {
     return null;

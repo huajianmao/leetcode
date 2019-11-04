@@ -35,6 +35,8 @@ package com.leetcode.snippets.a704binarysearch;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int search(int[] nums, int target) {
     return -2;
   }

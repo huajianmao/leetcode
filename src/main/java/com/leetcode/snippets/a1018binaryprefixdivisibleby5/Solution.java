@@ -43,6 +43,8 @@ import java.util.List;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public List<Boolean> prefixesDivBy5(int[] a) {
     return null;
   }

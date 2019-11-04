@@ -34,6 +34,8 @@ import java.util.List;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public List<Integer> postorder(Node root) {
     return null;
   }

@@ -28,6 +28,8 @@ package com.leetcode.snippets.a709tolowercase;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String toLowerCase(String str) {
     return null;
   }

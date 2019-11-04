@@ -28,6 +28,8 @@ package com.leetcode.snippets.a219containsduplicateii;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
 
   public boolean containsNearbyDuplicate(int[] nums, int k) {
     return false;

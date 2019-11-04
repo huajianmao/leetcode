@@ -39,6 +39,8 @@ import java.util.List;
 */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int getImportance(List<Employee> employees, int id) {
     return -1;
   }

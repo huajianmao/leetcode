@@ -42,6 +42,8 @@ package com.leetcode.snippets.a762primenumberofsetbitsinbinaryrepresentation;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int countPrimeSetBits(int l, int r) {
     return 0;
   }

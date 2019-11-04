@@ -29,6 +29,8 @@ package com.leetcode.snippets.a771jewelsandstones;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int numJewelsInStones(String j, String s) {
     return -1;
   }

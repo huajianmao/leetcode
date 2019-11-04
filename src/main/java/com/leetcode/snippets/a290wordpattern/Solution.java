@@ -39,6 +39,8 @@ import java.util.Map;
  */
 
 public class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean wordPattern(String pattern, String str) {
     return false;
   }

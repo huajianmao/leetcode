@@ -1,0 +1,37 @@
+package com.leetcode.snippets.a070climbingstairs;
+
+import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
+
+public class SolutionTest {
+
+  private Solution solution = new Solution();
+
+  @Test (enabled = Solution.SOLUTION_DONE)
+  public void testClimbStairs() {
+    int n = 2;
+    int expected = 2;
+
+    int actual = solution.climbStairs(n);
+    assertEquals(actual, expected);
+  }
+
+  @Test (enabled = Solution.SOLUTION_DONE)
+  public void testClimbStairs2() {
+    int n = 3;
+    int expected = 3;
+
+    int actual = solution.climbStairs(n);
+    assertEquals(actual, expected);
+  }
+
+  @Test (enabled = Solution.SOLUTION_DONE)
+  public void testClimbStairs35() {
+    int n = 35;
+    int expected = 14930352;
+
+    int actual = solution.climbStairs(n);
+    assertEquals(actual, expected);
+  }
+}

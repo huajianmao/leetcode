@@ -33,6 +33,8 @@ package com.leetcode.snippets.a949largesttimeforgivendigits;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public String largestTimeFromDigits(int[] a) {
     return null;
   }

@@ -24,6 +24,8 @@ package com.leetcode.snippets.a507perfectnumber;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean checkPerfectNumber(int num) {
     return false;
   }

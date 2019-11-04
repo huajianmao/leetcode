@@ -28,6 +28,8 @@ package com.leetcode.snippets.a605canplaceflowers;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean canPlaceFlowers(int[] flowerbed, int n) {
     return false;
   }

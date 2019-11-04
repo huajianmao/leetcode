@@ -27,6 +27,8 @@ package com.leetcode.snippets.a645setmismatch;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int[] findErrorNums(int[] nums) {
     return new int[0];
   }

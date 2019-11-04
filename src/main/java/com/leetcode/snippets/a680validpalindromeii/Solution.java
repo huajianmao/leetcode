@@ -26,6 +26,8 @@ package com.leetcode.snippets.a680validpalindromeii;
  */
 
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public boolean validPalindrome(String s) {
     return false;
   }

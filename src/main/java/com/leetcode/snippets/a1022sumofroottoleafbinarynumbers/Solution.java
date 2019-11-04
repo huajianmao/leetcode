@@ -33,6 +33,8 @@ import cn.hjmao.utils.tree.TreeNode;
  * The answer will not exceed 2^31 - 1.}
  */
 class Solution {
+  protected static final boolean SOLUTION_DONE = false;
+
   public int sumRootToLeaf(TreeNode root) {
     return -1;
   }

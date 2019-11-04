@@ -40,6 +40,8 @@ import java.util.List;
  */
 
 class MyHashMap {
+  protected static final boolean SOLUTION_DONE = false;
+
   /**
    * Initialize your data structure here.
    */

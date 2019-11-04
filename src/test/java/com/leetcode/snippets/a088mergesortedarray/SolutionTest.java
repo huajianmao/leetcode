@@ -1,0 +1,27 @@
+package com.leetcode.snippets.a088mergesortedarray;
+
+import org.testng.annotations.Test;
+
+import java.util.Arrays;
+
+import static org.testng.Assert.assertTrue;
+
+public class SolutionTest {
+  private Solution solution = new Solution();
+
+  @Test (enabled = Solution.SOLUTION_DONE)
+  public void testMerge() {
+    int[] nums1 = {1, 2, 3, 0, 0, 0};
+    int m = 3;
+    int[] nums2 = {2, 5, 6};
+    int n = 3;
+
+    int[] expect = {1, 2, 2, 3, 5, 6};
+    solution.merge(nums1, m, nums2, n);
+
+    Object[] expectObject = {expect};
+    Object[] actualObject = {nums1};
+
+    assertTrue(Arrays.deepEquals(expectObject, actualObject));
+  }
+}
